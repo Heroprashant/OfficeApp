@@ -1,0 +1,161 @@
+{
+    "contacts": [
+        {
+            "id": 0,
+            "employeeId": 1,
+            "firstname": "Marieke",
+            "lastname": "de Rooy",
+            "role": "UX designer",
+            "dateOfBirth": "01-01-1990",
+            "nationality": "NL",
+            "company": "Ciber Nederland",
+            "department": "ADM",
+            "unit": "Microsoft",
+            "team": "Mobility",
+            "manager": "Raymond van Turnhout",
+            "email": "marieke.de.rooy@ciber.com",
+            "phoneNumber": "0402850000",
+            "mobileNumber": "0612345678",
+            "profilephoto": "images/no-avatar-female.png"
+        },
+        {
+            "id": 1,
+            "employeeId": 2,
+            "firstname": "Oktay",
+            "lastname": "Curebal",
+            "role": "Senior Mobile Developer",
+            "dateOfBirth": "01-02-1980",
+            "nationality": "NL",
+            "company": "Ciber Nederland",
+            "department": "ADM",
+            "unit": "Microsoft",
+            "team": "Mobility",
+            "manager": "Raymond van Turnhout",
+            "email": "oktay.curebal@ciber.com",
+            "phoneNumber": "0402850000",
+            "mobileNumber": "0612345678",
+            "profilephoto": "images/no-avatar-male.png"
+        },
+        {
+            "id": 2,
+            "employeeId": 3,
+            "firstname": "Niek",
+            "lastname": "Heezemans",
+            "role": "Managing Consultant Mobile & Online",
+            "dateOfBirth": "01-01-1990",
+            "nationality": "NL",
+            "company": "Ciber Nederland",
+            "department": "ADM",
+            "unit": "Microsoft",
+            "team": "Mobility",
+            "manager": "Raymond van Turnhout",
+            "email": "niek.heezemans@ciber.com",
+            "phoneNumber": "0402850000",
+            "mobileNumber": "0612345678",
+            "profilephoto": "images/no-avatar-male.png"
+        },
+        {
+            "id": 3,
+            "employeeId": 4,
+            "firstname": "Murat",
+            "lastname": "Aydin",
+            "role": "Microsoft Consultant",
+            "dateOfBirth": "01-01-1990",
+            "nationality": "NL",
+            "company": "Ciber Nederland",
+            "department": "ADM",
+            "unit": "Microsoft",
+            "team": "Mobility",
+            "manager": "Raymond van Turnhout",
+            "email": "murat.aydin@ciber.com",
+            "phoneNumber": "0402850000",
+            "mobileNumber": "0612345678",
+            "profilephoto": "images/no-avatar-male.png"
+        }
+    ], 
+    
+    "projects": [
+        {
+            "id": 0,
+            "projectId": 1,
+            "title": "Quander.nl",
+            "description_short": "Lorem ipsum",
+            "description_long": "Lorem ipsum",
+            "createDate": "22-12-2015",
+            "year": "2015",
+            "company": "Ciber Nederland",
+            "department": "ADM",
+            "unit": "Microsoft",
+            "team": "Mobility",
+            "manager": "Niek Heezemans",
+            "tags": [
+                "Bootstrap", "Azure", ".Net", "HTML5", "Interaction Design", "Responsive"
+            ],
+            "projectMainPhoto": "images/ciber-inc-logo.jpg",
+            "projectImages": []
+        },
+        {
+            "id": 1,
+            "projectId": 2,
+            "title": "Prorail App",
+            "description_short": "Lorem ipsum",
+            "description_long": "Lorem ipsum",
+            "createDate": "02-03-2015",
+            "year": "2015",
+            "company": "Ciber Nederland",
+            "department": "SAP",
+            "unit": "SAP",
+            "team": "SAP",
+            "manager": "Jan Janssens",
+            "tags": [
+                "Bootstrap", "Azure", ".Net", "HTML5", "Interaction Design", "Responsive"
+            ],
+            "projectMainPhoto": "images/ciber-inc-logo.jpg",
+            "projectImages": []
+        },
+        {
+            "id": 2,
+            "projectId": 3,
+            "title": "Tankpas",
+            "description_short": "Lorem ipsum",
+            "description_long": "Lorem ipsum",
+            "createDate": "01-01-2015",
+            "year": "2015",
+            "company": "Ciber Nederland",
+            "department": "ADM",
+            "unit": "Microsoft",
+            "team": "Mobility",
+            "manager": "Raymond van Turnhout",
+            "tags": [
+                "Bootstrap", "Azure", ".Net", "HTML5", "Interaction Design", "Responsive"
+            ],
+            "projectMainPhoto": "images/ciber-inc-logo.jpg",
+            "projectImages": []
+        },
+        {
+            "id": 3,
+            "projectId": 4,
+            "title": "Utility in a Box",
+            "description_short": "Lorem ipsum",
+            "description_long": "Lorem ipsum",
+            "createDate": "03-04-2015",
+            "year": "2015",
+            "company": "Ciber Nederland",
+            "department": "ADM",
+            "unit": "Microsoft",
+            "team": "Utilities",
+            "manager": "Rob Robsen",
+            "tags": [
+                "Bootstrap", "Azure", ".Net", "HTML5", "Interaction Design", "Responsive"
+            ],
+            "projectMainPhoto": "images/ciber-inc-logo.jpg",
+            "projectImages": []
+        }
+    ],
+    
+    "news": [
+        {
+            
+        }
+    ]
+}

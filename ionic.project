@@ -1,0 +1,12 @@
+{
+  "name":"Pocapp",
+  "app_id":"com.ciber.pocapp",
+  "proxies":[
+    {
+      "path":"/api",
+      "proxyUrl":"http://example.com/api"
+    }
+  ],
+  "documentRoot":".tmp",
+  "watchPatterns":[".tmp/**/*",".tmp/assets/lib/**/*"]
+}

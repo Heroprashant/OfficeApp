@@ -1,0 +1,38 @@
+<ion-view view-title="Dashboard">
+	<ion-content>
+		<div class="list list-inset">
+			<label class="item item-input">
+				<i class="icon ion-search placeholder-icon"></i>
+				<input type="text" placeholder="Search" ng-model="dashboard.searchQuery" ng-keyup="dashboard.getSearchResult()">
+      		</label>
+		</div>
+
+		<div class="row">
+			<div class="col col-33 text-center" ng-class="dashboard.subject == 'contacts' ? 'active-subject' : ''" ng-click="dashboard.changeSubject('contacts')">Contacts</div>
+			<div class="col col-33 text-center" ng-class="dashboard.subject == 'projects' ? 'active-subject' : ''" ng-click="dashboard.changeSubject('projects')">Projects</div>
+			<div class="col col-33 text-center" ng-class="dashboard.subject == 'news' ? 'active-subject' : ''" ng-click="dashboard.changeSubject('news')">News</div>
+		</div>
+
+		<div ng-show="dashboard.subject == 'contacts'">
+			<div class="list">
+				<div class="item item-avatar" ng-repeat="contact in dashboard.contacts" ui-sref="Pocapp.userprofile({empId: contact.employeeId})">
+					<img src="{{contact.profilephoto}}">
+					<h2>{{contact.firstname + " " + contact.lastname}}</h2>
+					<p>{{contact.role}}</p>
+				</div>
+			</div>
+		</div>
+
+		<div ng-show="dashboard.subject == 'projects'">
+			<div class="list">
+				<div class="item item-thumbnail-left" ng-repeat="project in dashboard.projects | filter: dashboard.searchQuery" ui-sref="Pocapp.projectdetail({pId: project.projectId})">
+					<img src="{{project.projectMainPhoto}}">
+					<h2>{{project.title}}</h2>
+					<p>{{project.year + ', ' + project.unit + ' ' + project.team}}</p>
+					<!--<p>{{project.tags}}</p>-->
+				</div>
+			</div>
+		</div>
+
+	</ion-content>
+</ion-view>
