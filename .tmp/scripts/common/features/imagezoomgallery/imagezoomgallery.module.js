@@ -10,6 +10,5 @@
   angular
   .module('feature.imagezoomgallery', [
     // Inject dependencies here
-    
   ]);
 })();
