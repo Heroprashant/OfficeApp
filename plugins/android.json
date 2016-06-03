@@ -1,0 +1,33 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "com.adi.plugin.keychainutil": {
+            "PACKAGE_NAME": "com.ciber.pocapp"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.ciber.pocapp"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.ciber.pocapp"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.ciber.pocapp"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.ciber.pocapp"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.ciber.pocapp"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "com.ciber.pocapp"
+        }
+    },
+    "dependent_plugins": {}
+}

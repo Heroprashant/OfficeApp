@@ -33,7 +33,7 @@
 				</div>
 			</div>
 		</div>
-		
+
 		<div ng-show="dashboard.subject == 'news'">
 			<div class="list">
 				<div class="item item-thumbnail-left" ng-repeat="news in dashboard.news | filter: dashboard.searchQuery" ui-sref="Pocapp.newsdetail({nId: news.newsId})">
