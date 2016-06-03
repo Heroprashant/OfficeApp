@@ -79,7 +79,7 @@
 
       projectdetail.closeModal = function () {
         projectdetail.modal.hide();
-        projectdetail.modal.remove()
+        projectdetail.modal.remove();
       };
 
       projectdetail.updateSlideStatus = function (slide) {
