@@ -47,9 +47,9 @@ var order = [
   '**/*.service.js',
   '**/*.factory.js',
   '**/*.model.js',
-  '**/*.directive.js',
   '**/*.filter.js',
   '**/*.controller.js',
+  '**/*.directive.js',
   '**/*.route.js',
 ];
 

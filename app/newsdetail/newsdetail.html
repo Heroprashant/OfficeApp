@@ -2,12 +2,10 @@
     <ion-content>
         <!--{{projectdetail.data}}-->
 
-        <image-zoom-gallery></image-zoom-gallery>
-
         <div class="list card">
 
             <div class="item">
-                <!--<img src="{{projectdetail.data.projectMainPhoto}}">-->
+                <img src="{{projectdetail.data.projectMainPhoto}}">
                 <h2>{{newsdetail.data.title}}</h2>
                 <p>{{newsdetail.data.author + ', ' + newsdetail.data.createDate + ', ' + newsdetail.data.year}}</p>
             </div>
@@ -18,11 +16,9 @@
                     />
                 </ion-scroll>
             </a>
-
-            <!--<a class="item item-icon-left assertive" href="#">
-                <i class="icon ion-music-note"></i> Start listening
-            </a>-->
         </div>
+
+        <image-zoom-gallery images="newsdetail.allImages" style="display: block; color: #ffffff; width: 100%; height: 100px; background: red; position: absolute;"></image-zoom-gallery>
 
     </ion-content>
 </ion-view>

@@ -12,6 +12,22 @@
    * <h2>Methods</h2>
    *
    */
+  //  angular
+  //      .module('feature.imagezoomgallery2')
+  //      .directive('imageZoomGallery', imageZoomGallery);
+   //
+  //  //imageZoomGallery.$inject = [ 'IMAGEZOOMGALLERYCONSTANTS2' ];
+   //
+  //  function imageZoomGallery() {
+  //      return {
+  //        restrict: 'EA',
+  //        template: "<h1>Test Directive 222</h1>",
+  //        controller: function(){
+  //          console.log( 'Heheheheheh' );
+  //        }
+  //      }
+  //  }
+
   angular
     .module('Pocapp.newsdetail')
     .controller('NewsdetailCtrl', NewsdetailCtrl);
