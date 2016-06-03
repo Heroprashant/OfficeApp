@@ -33,6 +33,17 @@
 				</div>
 			</div>
 		</div>
+		
+		<div ng-show="dashboard.subject == 'news'">
+			<div class="list">
+				<div class="item item-thumbnail-left" ng-repeat="news in dashboard.news | filter: dashboard.searchQuery" ui-sref="Pocapp.newsdetail({nId: news.newsId})">
+					<img src="{{news.newsMainPhoto}}">
+					<h2>{{news.title}}</h2>
+					<p>{{news.author + ', ' + news.createDate + ', ' + news.year}}</p>
+					<!--<p>{{project.tags}}</p>-->
+				</div>
+			</div>
+		</div>
 
 	</ion-content>
 </ion-view>

@@ -41,7 +41,8 @@
       /* Cross App Modules */
       'Pocapp.core.models',
       'Pocapp.core.services',
-      'Pocapp.core.layout'
+      'Pocapp.core.layout',
+      'Pocapp.core.features'
       /* 3rd-party Modules */
     ]);
 })(); // End Strict

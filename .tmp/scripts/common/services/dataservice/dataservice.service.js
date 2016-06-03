@@ -27,7 +27,9 @@
       getSearchResult: getSearchResult,
       getByEmployeeId: getByEmployeeId,
       getAllProjects: getAllProjects,
-      getByProjectId: getByProjectId
+      getByProjectId: getByProjectId,
+      getAllNews: getAllNews,
+      getByNewsId: getByNewsId
     };
     return service;
 
@@ -104,6 +106,39 @@
         $http({
             method: 'GET',
             url: DATASERVICECONSTANTS.BASE_URL + '/projects?projectId=' + projectId,
+            timeout: 5000
+        }).then(function successCallback(response) {
+            console.log(response);
+            defer.resolve(response);
+        }, function errorCallback(response) {
+            defer.reject(response);
+        });
+        
+        return defer.promise;
+    }
+    
+    function getAllNews() {
+        defer = $q.defer();
+        // Simple GET request example:
+        $http({
+            method: 'GET',
+            url: DATASERVICECONSTANTS.BASE_URL + '/news',
+            timeout: 5000
+        }).then(function successCallback(response) {
+            defer.resolve(response);
+        }, function errorCallback(response) {
+            defer.reject(response);
+        });
+        
+        return defer.promise;
+    }
+    
+    function getByNewsId(newsId) {
+        defer = $q.defer();
+        // Simple GET request example:
+        $http({
+            method: 'GET',
+            url: DATASERVICECONSTANTS.BASE_URL + '/news?newsId=' + newsId,
             timeout: 5000
         }).then(function successCallback(response) {
             console.log(response);

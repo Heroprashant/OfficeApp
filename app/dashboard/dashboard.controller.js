@@ -72,7 +72,7 @@
             dashboard.getAllProjects();
             break;
           case 'news':
-
+            dashboard.getAllNews();       
             break;
           default:
             break;
@@ -87,6 +87,23 @@
         dataservice.getAllProjects().then(
           function (result) {
             dashboard.projects = result.data;
+          },
+          function (error) {
+            console.log(error);
+          }
+        ).finally(
+          function () {
+            $ionicLoading.hide();
+          })
+      }
+      
+      dashboard.getAllNews = function () {
+        $ionicLoading.show({
+          template: 'Loading...'
+        });
+        dataservice.getAllNews().then(
+          function (result) {
+            dashboard.news = result.data;
           },
           function (error) {
             console.log(error);

@@ -155,7 +155,52 @@
     
     "news": [
         {
-            
+            "id": 0,
+            "newsId": 1,
+            "title": "Utility in a Box",
+            "author": "John Doe",
+            "description_short": "Lorem ipsum",
+            "description_long": "Lorem ipsum",
+            "createDate": "Januari 8", 
+            "year": "2016",
+            "newsMainPhoto": "",
+            "newsImages": []
+        },
+        {
+            "id": 1,
+            "newsId": 2,
+            "title": "Utility in a Box",
+            "author": "John Doe",
+            "description_short": "Lorem ipsum",
+            "description_long": "Lorem ipsum",
+            "createDate": "Januari 8", 
+            "year": "2016",
+            "newsMainPhoto": "",
+            "newsImages": []
+        },
+        {
+            "id": 2,
+            "newsId": 3,
+            "title": "Utility in a Box",
+            "author": "John Doe",
+            "description_short": "Lorem ipsum",
+            "description_long": "Lorem ipsum",
+            "createDate": "Januari 8", 
+            "year": "2016",
+            "newsMainPhoto": "",
+            "newsImages": []
+        },
+        {
+            "id": 3,
+            "newsId": 4,
+            "title": "Utility in a Box",
+            "author": "John Doe",
+            "description_short": "Lorem ipsum",
+            "description_long": "Lorem ipsum",
+            "createDate": "Januari 8", 
+            "year": "2016",
+            "newsMainPhoto": "",
+            "newsImages": []
         }
     ]
 }

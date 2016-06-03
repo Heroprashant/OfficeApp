@@ -34,7 +34,8 @@
      'Pocapp.appload',
      'Pocapp.dashboard',
      'Pocapp.userprofile',
-     'Pocapp.projectdetail'
+     'Pocapp.projectdetail',
+     'Pocapp.newsdetail'
 
     ]);
 })();
