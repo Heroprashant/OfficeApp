@@ -63,6 +63,7 @@
       }
 
       dashboard.changeSubject = function (subject) {
+        dashboard.searchQuery = '';
         switch (subject) {
           case 'contacts':
 
@@ -77,7 +78,6 @@
             break;
         }
         dashboard.subject = subject;
-        dashboard.searchQuery = null;
       }
 
       dashboard.getAllProjects = function () {
