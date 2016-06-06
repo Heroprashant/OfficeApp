@@ -9,16 +9,10 @@
                 <h2>{{newsdetail.data.title}}</h2>
                 <p>{{newsdetail.data.author + ', ' + newsdetail.data.createDate + ', ' + newsdetail.data.year}}</p>
             </div>
-
-            <a class="item item-list-detail">
-                <ion-scroll direction="x">
-                    <img ng-repeat="image in newsdetail.allImages" ng-src="{{image.src}}" ng-click="newsdetail.showImages($index)" class="image-list-thumb"
-                    />
-                </ion-scroll>
-            </a>
+            
         </div>
 
-        <image-zoom-gallery images="newsdetail.allImages" style="display: block; color: #ffffff; width: 100%; height: 100px; background: red; position: absolute;"></image-zoom-gallery>
+        <image-zoom-gallery images="newsdetail.allImages"></image-zoom-gallery>
 
     </ion-content>
 </ion-view>

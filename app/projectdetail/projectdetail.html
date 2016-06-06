@@ -10,15 +10,13 @@
                 <p>{{projectdetail.data.year + ', ' + projectdetail.data.unit + ' ' + projectdetail.data.team}}</p>
             </div>
 
-            <a class="item item-list-detail">
-                <ion-scroll direction="x">
-                    <img ng-repeat="image in projectdetail.allImages" ng-src="{{image.src}}" ng-click="projectdetail.showImages($index)" class="image-list-thumb"/>
-                </ion-scroll>
-            </a>
-
             <!--<a class="item item-icon-left assertive" href="#">
                 <i class="icon ion-music-note"></i> Start listening
             </a>-->
+        </div>
+
+        <div>
+            <image-zoom-gallery galleryId="projectDetail" images="projectdetail.allImages"></image-zoom-gallery>
         </div>
 
         <div class="row">

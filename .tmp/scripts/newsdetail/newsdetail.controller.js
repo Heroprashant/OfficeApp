@@ -47,8 +47,6 @@
         src: 'images/slider/slider_three.jpg'
       }];
 
-    newsdetail.zoomMin = 1;
-
     // Activate all methods
     activateNewsdetail();
 
@@ -63,35 +61,7 @@
           console.log(error);
         }
       )
-
-      newsdetail.showImages = function (index) {
-        newsdetail.activeSlide = index;
-        newsdetail.showModal('template/template-gallery-zoomview.html');
-      };
-
-      newsdetail.showModal = function (templateUrl) {
-        $ionicModal.fromTemplateUrl(templateUrl, {
-          scope: $scope
-        }).then(function (modal) {
-          newsdetail.modal = modal;
-          newsdetail.modal.show();
-        });
-      }
-
-      newsdetail.closeModal = function () {
-        newsdetail.modal.hide();
-        newsdetail.modal.remove();
-      };
-
-      newsdetail.updateSlideStatus = function (slide) {
-        var zoomFactor = $ionicScrollDelegate.$getByHandle('scrollHandle' + slide).getScrollPosition().zoom;
-        if (zoomFactor == newsdetail.zoomMin) {
-          $ionicSlideBoxDelegate.enableSlide(true);
-        } else {
-          $ionicSlideBoxDelegate.enableSlide(false);
-        }
-      };
-
+      
       return newsdetail;
     }
   }
