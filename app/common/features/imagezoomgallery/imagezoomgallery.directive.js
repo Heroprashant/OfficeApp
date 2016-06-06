@@ -14,6 +14,7 @@
       template: '',
       templateUrl: 'common/features/imagezoomgallery/imagezoomgallery.html',
       replace: true,
+      controllerAs: 'izg',
       scope: {
         galleryId: '=',
         images: '='
