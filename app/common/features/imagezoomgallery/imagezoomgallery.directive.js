@@ -4,7 +4,7 @@
 
   angular
     .module('feature.imagezoomgallery')
-    .directive('imageZoomGallery', imageZoomGallery);
+    .directive('imageZoomGallery', imageZoomGallery); 
 
   imageZoomGallery.$inject = ['$ionicModal', '$ionicScrollDelegate', '$ionicSlideBoxDelegate'];
   

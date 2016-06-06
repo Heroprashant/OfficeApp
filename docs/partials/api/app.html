@@ -1,0 +1,20 @@
+<h1><code ng:non-bindable=""></code>
+<div><span class="hint"></span>
+</div>
+</h1>
+<div><div class="app-page"><p><h2 id="pocapp">Pocapp</h2></p>
+<p>Primairy app.module where we can define all core and features modules that we use in this App</p>
+</div><h2 id="example">Example</h2>
+<div class="example"><div class="app-page"><pre class="prettyprint linenums">
+angular
+.module('Pocapp', [
+//Everybody has access to these. Some of these modules like the app.core module have child modules.
+'ionic',
+'Pocapp.core',
+
+// Feature areas
+'Pocapp.dashboard',
+]);
+</pre>
+</div></div>
+</div>

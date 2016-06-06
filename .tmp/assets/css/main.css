@@ -9166,7 +9166,9 @@ a.button {
  */
 @import url(http://fonts.googleapis.com/css?family=Roboto:700,400,300);
 .active-subject {
-  background: red; }
+  background: orange; }
+  .active-subject span {
+    color: red; }
 
 .image-list-thumb {
   padding: 2px 2px 2px 2px;

@@ -1,0 +1,35 @@
+<h1><code ng:non-bindable=""></code>
+<div><span class="hint"></span>
+</div>
+</h1>
+<div><h2 id="dependencies">Dependencies</h2>
+<ul class="dependencies"><li><code ng:non-bindable=""><a href="api/Pocapp">Pocapp</a></code>
+</li>
+</ul>
+<div class="core-page"><p><h2 id="core-module">Core Module</h2></p>
+<p>This module allows to include Core Angular Modules that we need for a MVP App.</p>
+<p>!Important: Configure the DEFAULT_URL in the core.constants.js to set the default App Route.</p>
+</div><h2 id="example">Example</h2>
+<div class="example"><div class="core-page"><pre class="prettyprint linenums">
+(function() {
+     'use strict';
+
+     angular
+     .module('Pocapp.core', [
+       // Angular Modules
+
+       // Core Cross App Modules
+       // Example to load modules necessary for the MVP App to work
+       'Pocapp.core.layout',
+       'Pocapp.core.appload',
+       'Pocapp.core.models',
+       'Pocapp.core.services',
+
+       //3rd-party Modules
+
+     ]);
+
+   })(); // End Strict
+</pre>
+</div></div>
+</div>

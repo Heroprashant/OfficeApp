@@ -1,5 +1,10 @@
+$test: orange;
+
 .active-subject {
-    background: red;
+    background: $test;
+    span{
+        color: red;
+    }
 }
 
 .image-list-thumb {

@@ -29,15 +29,6 @@
 
     function activateDashboard() {
 
-      // dataservice.getAllContacts().then(
-      //   function(result){
-      //     dashboard.contacts = result.data;
-      //   },
-      //   function(error){
-      //     console.log(error);
-      //   }
-      // )
-
       dashboard.getSearchResult = function () {
         if (dashboard.searchQuery != '') {
           if (dashboard.subject == 'contacts') {

@@ -3,9 +3,11 @@
   'use strict';
   /**
    * @ngdoc overview
-   * @name dataservice
+   * @name imagezoomgallery
    * @description
-   * <h1>Data Service</h1>
+   * <h1>Image Zoom Gallery</h1>
+   <p>This is a directive for the image zoom gallery which takes two arguments as parameter for
+   the images and a element id.</p>
    */
   angular
   .module('feature.imagezoomgallery', [
