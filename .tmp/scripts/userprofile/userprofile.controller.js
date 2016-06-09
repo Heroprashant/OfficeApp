@@ -1,6 +1,7 @@
 /* global angular */
 /* global device */
-/* global navigator.contacts */
+/* global navigator */
+/* global ContactName */
 (function () {
   'use strict';
   /**
@@ -48,23 +49,43 @@
 
         userprofile.storeContact = function () {
           if ($window.cordova) {
+            console.log( 'Running!' );
+            console.log( navigator.contacts );
 
-            var contact = { 'displayName': 'Murat Aydin' };
 
-            navigator.contacts.create(contact);
+            //{"fieldType":{"addresses":"addresses","birthday":"birthday","categories":"categories","country":"country","department":"department","displayName":"displayName","emails":"emails","familyName":"familyName","formatted":"formatted","givenName":"givenName","honorificPrefix":"honorificPrefix","honorificSuffix":"honorificSuffix","id":"id","ims":"ims","locality":"locality","middleName":"middleName","name":"name","nickname":"nickname","note":"note","organizations":"organizations","phoneNumbers":"phoneNumbers","photos":"photos","postalCode":"postalCode","region":"region","streetAddress":"streetAddress","title":"title","urls":"urls"}}
 
-            navigator.contacts.save(
+            var contact = navigator.contacts.create();
+            contact.displayName = 'Plumber2';
+            contact.nickname = 'Plumber2';
+
+            // populate some fields
+            var name = new ContactName();
+            name.givenName = 'John 2'; // Roepnaam
+            name.familyName = 'Doe'; // Achternaam
+            name.middleName = 'Van'; // Tussenvoegsel
+            contact.name = name;
+
+            var phoneNumbers = [];
+            phoneNumbers[0] = new ContactField('work', '768-555-1234', false);
+            phoneNumbers[1] = new ContactField('mobile', '999-555-5432', true); // preferred number
+            phoneNumbers[2] = new ContactField('home', '203-555-7890', false);
+
+            contact.phoneNumbers = phoneNumbers;
+
+            console.log( 'Created' );
+            contact.save(
               function (success) {
                 console.log('Success: ', success);
               },
               function (error) {
-                console.log('Success: ', error);
+                console.log('Error: ', error);
               }
             );
 
           }
           else {
-            alert('Kan niet omdat je jezelf in de browser bevind!');
+            console.log('Kan niet omdat je jezelf in de browser bevind!');
           }
         };
 
