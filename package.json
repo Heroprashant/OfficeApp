@@ -81,6 +81,6 @@
     "cordova-plugin-contacts"
   ],
   "cordovaPlatforms": [
-    "android"
+    "ios"
   ]
 }
