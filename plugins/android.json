@@ -27,7 +27,14 @@
         },
         "ionic-plugin-keyboard": {
             "PACKAGE_NAME": "com.ciber.pocapp"
+        },
+        "cordova-plugin-contacts": {
+            "PACKAGE_NAME": "com.ciber.pocapp"
         }
     },
-    "dependent_plugins": {}
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.ciber.pocapp"
+        }
+    }
 }

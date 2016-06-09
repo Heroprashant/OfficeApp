@@ -77,6 +77,10 @@
     "ionic-plugin-keyboard",
     "cordova-plugin-splashscreen",
     "cordova-plugin-statusbar",
-    "cordova-keychain"
+    "cordova-keychain",
+    "cordova-plugin-contacts"
+  ],
+  "cordovaPlatforms": [
+    "android"
   ]
 }

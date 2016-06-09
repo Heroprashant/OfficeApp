@@ -9161,12 +9161,18 @@ a.button {
  * Define variables here
  */
 /**
+ * IONIC VARIABLES
+ */
+/**
+ * CUSTOM VARIABLES
+ */
+/**
  * Import fonts either via @import url (e.g. from Googlee Fonts)
  * or via @font-face when font files are stored locally in /app/fonts
  */
 @import url(http://fonts.googleapis.com/css?family=Roboto:700,400,300);
 .active-subject {
-  background: orange; }
+  background: blue; }
   .active-subject span {
     color: red; }
 
@@ -9193,3 +9199,17 @@ a.button {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center, center; }
+
+.bar-positive {
+  background-color: transparent !important;
+  border-bottom: 0px !important;
+  border: none !important; }
+
+.background-contacts {
+  background-color: #34184C; }
+
+.background-projects {
+  background-color: #393939; }
+
+.background-news {
+  background-color: #3A3A68; }

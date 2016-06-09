@@ -1,4 +1,4 @@
-<ion-view view-title="Dashboard">
+<ion-view view-title="Dashboard" ng-class="{'background-contacts' : dashboard.subject == 'contacts', 'background-projects' : dashboard.subject == 'projects', 'background-news' : dashboard.subject == 'news'}">
 	<ion-content>
 		<div class="list list-inset">
 			<label class="item item-input">

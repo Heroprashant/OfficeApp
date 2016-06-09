@@ -1,4 +1,6 @@
 /* global angular */
+/* global device */
+/* global navigator.contacts */
 (function () {
   'use strict';
   /**
@@ -17,26 +19,56 @@
     .controller('UserprofileCtrl', UserprofileCtrl);
 
   // Inject dependencies
-  UserprofileCtrl.$inject = ['dataservice', '$stateParams'];
+  UserprofileCtrl.$inject = ['$ionicPlatform', '$window', 'dataservice', '$stateParams', '$ionicPopup'];
 
   // Start the DashboardCtrl
-  function UserprofileCtrl(dataservice, $stateParams) {
+  function UserprofileCtrl($ionicPlatform, $window, dataservice, $stateParams, $ionicPopup) {
     var userprofile = this;
+    userprofile.deviceinfo = 'Browser';
 
     // Activate all methods
     activateUserprofile();
 
     function activateUserprofile() {
 
-      dataservice.getByEmployeeId($stateParams.empId).then(
-        function(response){
-          userprofile.data = response.data[0];
-          console.log(response);
-        },
-        function(error){
-          console.log(error);
+      $ionicPlatform.ready(function () {
+        if ($window.cordova) {
+          userprofile.deviceinfo = device.platform;
         }
-      )
+
+        dataservice.getByEmployeeId($stateParams.empId).then(
+          function (response) {
+            userprofile.data = response.data[0];
+            console.log(response);
+          },
+          function (error) {
+            console.log(error);
+          }
+        );
+
+        userprofile.storeContact = function () {
+          if ($window.cordova) {
+
+            var contact = { 'displayName': 'Murat Aydin' };
+
+            navigator.contacts.create(contact);
+
+            navigator.contacts.save(
+              function (success) {
+                console.log('Success: ', success);
+              },
+              function (error) {
+                console.log('Success: ', error);
+              }
+            );
+
+          }
+          else {
+            alert('Kan niet omdat je jezelf in de browser bevind!');
+          }
+        };
+
+      });
 
       return userprofile;
     }
