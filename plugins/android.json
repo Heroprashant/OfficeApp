@@ -13,6 +13,9 @@
         "cordova-plugin-console": {
             "PACKAGE_NAME": "com.ciber.pocapp"
         },
+        "cordova-plugin-contacts": {
+            "PACKAGE_NAME": "com.ciber.pocapp"
+        },
         "cordova-plugin-device": {
             "PACKAGE_NAME": "com.ciber.pocapp"
         },
@@ -26,9 +29,6 @@
             "PACKAGE_NAME": "com.ciber.pocapp"
         },
         "ionic-plugin-keyboard": {
-            "PACKAGE_NAME": "com.ciber.pocapp"
-        },
-        "cordova-plugin-contacts": {
             "PACKAGE_NAME": "com.ciber.pocapp"
         }
     },
