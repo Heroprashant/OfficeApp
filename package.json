@@ -78,7 +78,8 @@
     "cordova-plugin-splashscreen",
     "cordova-plugin-statusbar",
     "cordova-keychain",
-    "cordova-plugin-contacts"
+    "cordova-plugin-contacts",
+    "cordova-plugin-file"
   ],
   "cordovaPlatforms": [
     "ios",

@@ -30,6 +30,9 @@
         },
         "ionic-plugin-keyboard": {
             "PACKAGE_NAME": "com.ciber.pocapp"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.ciber.pocapp"
         }
     },
     "dependent_plugins": {

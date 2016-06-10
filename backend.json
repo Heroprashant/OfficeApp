@@ -16,7 +16,7 @@
             "email": "marieke.de.rooy@ciber.com",
             "phoneNumber": "0402850000",
             "mobileNumber": "0612345678",
-            "profilephoto": "images/no-avatar-female.png"
+            "profilephoto": "http://upload.wikimedia.org/wikipedia/commons/4/4a/Logo_2013_Google.png"
         },
         {
             "id": 1,
@@ -34,7 +34,7 @@
             "email": "oktay.curebal@ciber.com",
             "phoneNumber": "0402850000",
             "mobileNumber": "0612345678",
-            "profilephoto": "images/no-avatar-male.png"
+            "profilephoto": "http://upload.wikimedia.org/wikipedia/commons/4/4a/Logo_2013_Google.png"
         },
         {
             "id": 2,
@@ -52,7 +52,7 @@
             "email": "niek.heezemans@ciber.com",
             "phoneNumber": "0402850000",
             "mobileNumber": "0612345678",
-            "profilephoto": "images/no-avatar-male.png"
+            "profilephoto": "http://upload.wikimedia.org/wikipedia/commons/4/4a/Logo_2013_Google.png"
         },
         {
             "id": 3,
@@ -70,7 +70,7 @@
             "email": "murat.aydin@ciber.com",
             "phoneNumber": "0402850000",
             "mobileNumber": "0612345678",
-            "profilephoto": "images/no-avatar-male.png"
+            "profilephoto": "http://upload.wikimedia.org/wikipedia/commons/4/4a/Logo_2013_Google.png"
         }
     ], 
     

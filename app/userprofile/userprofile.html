@@ -2,10 +2,11 @@
 	<ion-content>
 		<div class="list">
 			<div class="item item-avatar">
-				<img src="{{userprofile.data.profilephoto}}">
+				<img id="profilephoto" src="{{userprofile.data.profilephoto}}">
 				<h2>{{userprofile.data.firstname + " " + userprofile.data.lastname}}</h2>
 				<p>{{userprofile.data.role}}</p>
 			</div>
+			
 			<div class="item item-icon-left">
 				<i class="icon ion-calendar"></i> {{userprofile.data.dateOfBirth}}
 				<span class="item-note">
