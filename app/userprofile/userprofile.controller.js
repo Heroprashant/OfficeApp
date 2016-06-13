@@ -10,6 +10,9 @@
 /* global ContactError */
 /* global ContactFieldType */
 /* global cordova */
+/* global File */
+/* global FileTransfer */
+/* global connection */
 (function () {
   'use strict';
   /**
@@ -40,16 +43,23 @@
 
     function activateUserprofile() {
 
-      userprofile.getBase64Image = function (imgElem) {
-        // imgElem must be on the same server otherwise a cross-origin error will be thrown "SECURITY_ERR: DOM Exception 18"
-        var canvas = document.createElement("canvas");
-        canvas.width = imgElem.clientWidth;
-        canvas.height = imgElem.clientHeight;
-        var ctx = canvas.getContext("2d");
-        ctx.drawImage(imgElem, 0, 0);
-        var dataURL = canvas.toDataURL("image/png");
-        return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
+      userprofile.createFile = function () {
+        var type = window.TEMPORARY;
+        var size = 5 * 1024 * 1024;
+
+        window.requestFileSystem(type, size, successCallback, errorCallback);
+
+        function successCallback(fs) {
+          fs.root.getFile(userprofile.data.profilephoto, { create: true, exclusive: true }, function (fileEntry) {
+            console.log('File creation successfull!');
+          }, errorCallback);
+        }
+
+        function errorCallback(error) {
+          console.log('ERROR: ' + error.code);
+        }
       };
+      userprofile.createFile();
 
       userprofile.convertImgToDataURLviaCanvas = function (url, callback, outputFormat) {
         var img = new Image();
@@ -68,13 +78,6 @@
         img.src = url;
       };
 
-      //var imgData = JSON.stringify(userprofile.getBase64Image(document.getElementById('profilephoto')));
-
-
-      //console.log('Photo from profile ' + imgData);
-
-
-
       $ionicPlatform.ready(function () {
         if ($window.cordova) {
           userprofile.deviceinfo = device.platform;
@@ -89,6 +92,12 @@
             console.log(error);
           }
         );
+
+        var imgData = '';
+        userprofile.convertImgToDataURLviaCanvas(document.getElementById('profilephoto').src, function (base64Img) {
+          imgData = base64Img;
+          console.log(imgData);
+        });
 
         userprofile.storeContact = function () {
 
@@ -176,16 +185,10 @@
             contact.note = 'Ciber contact';
 
             // contact -> photos
-            var imgData = '';
-            userprofile.convertImgToDataURLviaCanvas(document.getElementById('profilephoto').src, function (base64Img) {
-              imgData = base64Img;
-              console.log(imgData);
-            });
             var _photos = [];
             _photos[0] = new ContactField(
-              'url',
-              userprofile.data.profilephoto,
-              false
+              'base64',
+              imgData
             );
             contact.photos = _photos;
 
