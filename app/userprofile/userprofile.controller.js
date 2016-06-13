@@ -37,31 +37,32 @@
   function UserprofileCtrl($ionicPlatform, $window, dataservice, $stateParams, $ionicPopup) {
     var userprofile = this;
     userprofile.deviceinfo = 'Browser';
+    var imgData = '';
 
     // Activate all methods
     activateUserprofile();
 
     function activateUserprofile() {
 
-      userprofile.createFile = function () {
-        var type = window.TEMPORARY;
-        var size = 5 * 1024 * 1024;
-
-        window.requestFileSystem(type, size, successCallback, errorCallback);
-
-        function successCallback(fs) {
-          fs.root.getFile(userprofile.data.profilephoto, { create: true, exclusive: true }, function (fileEntry) {
-            console.log('File creation successfull!');
-          }, errorCallback);
-        }
-
-        function errorCallback(error) {
-          console.log('ERROR: ' + error.code);
-        }
-      };
-      userprofile.createFile();
-
-      userprofile.convertImgToDataURLviaCanvas = function (url, callback, outputFormat) {
+      // userprofile.createFile = function () {
+      //   var type = window.TEMPORARY;
+      //   var size = 5 * 1024 * 1024;
+      //
+      //   window.requestFileSystem(type, size, successCallback, errorCallback);
+      //
+      //   function successCallback(fs) {
+      //     fs.root.getFile(userprofile.data.profilephoto, { create: true, exclusive: true }, function (fileEntry) {
+      //       console.log('File creation successfull!');
+      //     }, errorCallback);
+      //   }
+      //
+      //   function errorCallback(error) {
+      //     console.log('ERROR: ' + error.code);
+      //   }
+      // };
+      // userprofile.createFile();
+      var url, callback, outputFormat;
+      userprofile.convertImgToDataURLviaCanvas = function(url, callback, outputFormat){
         var img = new Image();
         img.crossOrigin = 'Anonymous';
         img.onload = function () {
@@ -79,6 +80,7 @@
       };
 
       $ionicPlatform.ready(function () {
+        console.log( 'Ready?' );
         if ($window.cordova) {
           userprofile.deviceinfo = device.platform;
         }
@@ -86,18 +88,19 @@
         dataservice.getByEmployeeId($stateParams.empId).then(
           function (response) {
             userprofile.data = response.data[0];
-            console.log(response);
+            console.log( userprofile.data.profilephoto );
+
+            userprofile.convertImgToDataURLviaCanvas( userprofile.data.profilephoto, function (base64Img) {
+
+              imgData = base64Img;
+              console.log( 'TEST: ' );
+              console.log(imgData);
+            });
           },
           function (error) {
             console.log(error);
           }
         );
-
-        var imgData = '';
-        userprofile.convertImgToDataURLviaCanvas(document.getElementById('profilephoto').src, function (base64Img) {
-          imgData = base64Img;
-          console.log(imgData);
-        });
 
         userprofile.storeContact = function () {
 
@@ -168,7 +171,7 @@
             );
             contact.ims = _ims;
 
-            // contact -> organization 
+            // contact -> organization
             var organization = [];
             organization[0] = new ContactOrganization(
               '', // adress.pref
@@ -188,7 +191,8 @@
             var _photos = [];
             _photos[0] = new ContactField(
               'base64',
-              imgData
+              imgData,
+              false
             );
             contact.photos = _photos;
 
