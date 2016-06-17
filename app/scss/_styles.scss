@@ -22,17 +22,30 @@
 
     img:first-child {
         left: 20px;
-        border: 0.5px solid white;
     }
 
     h2 {
         color: white;
-        font-size: 20px;
+        font-size: 24px;
+        font-weight: 400;
     }
 
     p {
         color: #8E7F9C;
         font-weight: bold;
+    }
+}
+
+.custom-item-news {
+    
+    h2 {
+        font-size: 24px;
+        font-weight: 400;
+    }
+
+    p {
+        font-size: 16px;
+        font-weight: 300;
     }
 }
 
@@ -48,4 +61,8 @@
         text-align: center; 
         color: #34184C
     }
+}
+
+.custom-item-slider {
+    padding: 0px;
 }

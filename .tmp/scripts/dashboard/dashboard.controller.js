@@ -30,8 +30,8 @@
     function activateDashboard() {
 
       dashboard.getSearchResult = function () {
-        if (dashboard.searchQuery != '') {
-          if (dashboard.subject == 'contacts') {
+        if (dashboard.searchQuery !== '') {
+          if (dashboard.subject === 'contacts') {
             $ionicLoading.show({
               template: 'Loading...'
             });
@@ -51,7 +51,7 @@
         else{
           dashboard.contacts = null;
         }
-      }
+      };
 
       dashboard.changeSubject = function (subject) {
         dashboard.searchQuery = '';
