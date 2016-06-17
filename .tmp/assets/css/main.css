@@ -9200,7 +9200,7 @@ a.button {
 
 .image-list-thumb {
   padding: 2px 2px 2px 2px;
-  height: 150px; }
+  height: 250px; }
 
 .image-modal {
   width: 100% !important;
@@ -9284,14 +9284,22 @@ a.button {
 .custom-item-projects {
   background-color: transparent; }
   .custom-item-projects img:first-child {
-    left: 20px;
-    border: 0.5px solid white; }
+    left: 20px; }
   .custom-item-projects h2 {
     color: white;
-    font-size: 20px; }
+    font-size: 24px;
+    font-weight: 400; }
   .custom-item-projects p {
     color: #8E7F9C;
     font-weight: bold; }
+
+.custom-item-news h2 {
+  font-size: 24px;
+  font-weight: 400; }
+
+.custom-item-news p {
+  font-size: 16px;
+  font-weight: 300; }
 
 .search-bar-contact {
   padding: 10px;
@@ -9303,6 +9311,9 @@ a.button {
   .search-bar-contact h2 {
     text-align: center;
     color: #34184C; }
+
+.custom-item-slider {
+  padding: 0px; }
 
 /* PLACEHOLDER
 ============================================= */

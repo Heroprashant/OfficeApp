@@ -47,17 +47,30 @@
 
     img:first-child {
         left: 20px;
-        border: 0.5px solid white;
     }
 
     h2 {
         color: white;
-        font-size: 20px;
+        font-size: 24px;
+        font-weight: 400;
     }
 
     p {
         color: #8E7F9C;
         font-weight: bold;
+    }
+}
+
+.custom-item-news {
+    
+    h2 {
+        font-size: 24px;
+        font-weight: 400;
+    }
+
+    p {
+        font-size: 16px;
+        font-weight: 300;
     }
 }
 
@@ -74,3 +87,10 @@
         color: #34184C
     }
 }
+<<<<<<< HEAD
+=======
+
+.custom-item-slider {
+    padding: 0px;
+}
+>>>>>>> cbe562cfcd84223aa269436d0cdf92ab5b77608f

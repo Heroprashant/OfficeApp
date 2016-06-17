@@ -1,18 +1,21 @@
-<ion-view view-title="News">
+<ion-view class="mainstyle-news" view-title="News">
+    <ion-nav-title>{{newsdetail.data.title}}</ion-nav-title>
     <ion-content>
-        <!--{{projectdetail.data}}-->
 
-        <div class="list card">
+        <image-zoom-gallery images="newsdetail.allImages"></image-zoom-gallery>
 
-            <div class="item">
-                <img src="{{projectdetail.data.projectMainPhoto}}">
+        <div class="row">
+            <div class="col">
                 <h2>{{newsdetail.data.title}}</h2>
                 <p>{{newsdetail.data.author + ', ' + newsdetail.data.createDate + ', ' + newsdetail.data.year}}</p>
             </div>
-            
         </div>
 
-        <image-zoom-gallery images="newsdetail.allImages"></image-zoom-gallery>
+        <div class="row">
+            <div class="col">
+                <p>{{newsdetail.data.description_long}}</p>
+            </div>
+        </div>
 
     </ion-content>
 </ion-view>
