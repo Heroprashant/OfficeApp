@@ -1,5 +1,7 @@
 <ion-view view-title="Project Detail">
     <ion-content>
+        <ion-refresher pulling-text="Pull to refresh..." on-refresh="projectdetail.projectDetailRefresh()">
+        </ion-refresher>
 
         <div class="list card">
 

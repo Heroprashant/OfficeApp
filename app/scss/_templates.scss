@@ -1,0 +1,72 @@
+/* PLACEHOLDER
+============================================= */
+
+%bg-image {
+    width: 100%;
+}
+
+%bg-image-overlay {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background-position: center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat;
+}
+
+/* MIXIN
+============================================= */
+
+@mixin page-background($btn-background) {
+    @extend %bg-image;
+    background-color: $btn-background;
+}
+
+@mixin page-background-overlay($bg-opacity, $bg-image) {
+    @extend %bg-image-overlay;
+    opacity: $bg-opacity;
+    background: $bg-image;
+}
+
+@mixin rounded-corner-search($arc) {
+    -moz-border-radius: $arc;
+    -webkit-border-radius: $arc;
+    border-radius: $arc;
+}
+
+/* MAINSTYLE PAGES 
+============================================= */
+.mainstyle .search {
+    @include rounded-corner-search($main-search);
+}
+
+/* MAINSTYLE - CONTACTS 
+============================================= */
+.mainstyle-contacts {
+    @include page-background($main-bg-color-contacts);
+}
+
+.mainstyle-contacts:before {
+    @include page-background-overlay($main-bg-opacity-contacts, $main-bg-image-contacts);
+}
+
+/* MAINSTYLE PROJECTS 
+============================================= */
+.mainstyle-projects {
+    @include page-background($main-bg-color-projects);
+}
+
+.mainstyle-projects:before {
+    @include page-background-overlay($main-bg-opacity-projects, $main-bg-image-projects);
+}
+
+/* MAINSTYLE NEWS 
+============================================= */
+.mainstyle-news {
+    @include page-background($main-bg-color-news);
+}
+
+.mainstyle-news:before {
+    @include page-background-overlay($main-bg-opacity-news, $main-bg-image-news);
+}

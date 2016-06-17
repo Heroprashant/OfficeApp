@@ -9157,24 +9157,46 @@ a.button {
  *  Main Styles to compile. Here only @imports!
  *
  ************************************/
-/**
- * Define variables here
- */
-/**
- * IONIC VARIABLES
- */
-/**
- * CUSTOM VARIABLES
- */
+/* Define variables here
+========================================================================== */
+/* IONIC - Default ionic variables
+========================================================================== */
+/* TEMPLATE - Template variables
+========================================================================== */
+/* MAIN */
+/* CONTACTS - */
+/* PROJECTS - */
+/* NEWS - */
 /**
  * Import fonts either via @import url (e.g. from Googlee Fonts)
  * or via @font-face when font files are stored locally in /app/fonts
  */
 @import url(http://fonts.googleapis.com/css?family=Roboto:700,400,300);
+.custom-tab-bar-item span {
+  color: #8E7F9C;
+  font-weight: 100;
+  font-size: 18px; }
+
 .active-subject {
-  background: blue; }
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: white; }
   .active-subject span {
-    color: red; }
+    color: white;
+    font-weight: 100;
+    font-size: 18px; }
+
+.inactive-subject {
+  background-color: transparent; }
+
+.inactive-subject:hover {
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: white; }
+  .inactive-subject:hover span {
+    color: white;
+    font-weight: 100;
+    font-size: 18px; }
 
 .image-list-thumb {
   padding: 2px 2px 2px 2px;
@@ -9205,11 +9227,107 @@ a.button {
   border-bottom: 0px !important;
   border: none !important; }
 
-.background-contacts {
+.bar.bar-positive {
+  background-image: none; }
+
+.img-main-logo {
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+  height: 37px;
+  width: 134px;
+  -webkit-filter: brightness(1000%);
+          filter: brightness(1000%); }
+
+.search-bar {
+  border-radius: 50px;
+  margin: 20px; }
+
+.tab-bar-custom {
+  padding: 0px;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: white; }
+
+.custom-item-contacts {
+  background-color: transparent; }
+  .custom-item-contacts img:first-child {
+    left: 20px; }
+  .custom-item-contacts h2 {
+    color: white; }
+  .custom-item-contacts p {
+    color: #8E7F9C;
+    font-weight: bold; }
+
+.custom-item-projects {
+  background-color: transparent; }
+  .custom-item-projects img:first-child {
+    left: 20px;
+    border: 0.5px solid white; }
+  .custom-item-projects h2 {
+    color: white;
+    font-size: 20px; }
+  .custom-item-projects p {
+    color: #8E7F9C;
+    font-weight: bold; }
+
+.search-bar-contact {
+  padding: 10px;
+  margin: 50px 20px;
+  background-color: white;
+  height: 200px;
+  top: 50px;
+  box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75); }
+  .search-bar-contact h2 {
+    text-align: center;
+    color: #34184C; }
+
+/* PLACEHOLDER
+============================================= */
+.mainstyle-contacts, .mainstyle-projects, .mainstyle-news {
+  width: 100%; }
+
+.mainstyle-contacts:before, .mainstyle-projects:before, .mainstyle-news:before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-position: center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat; }
+
+/* MIXIN
+============================================= */
+/* MAINSTYLE PAGES 
+============================================= */
+.mainstyle .search {
+  border-radius: 10px; }
+
+/* MAINSTYLE - CONTACTS 
+============================================= */
+.mainstyle-contacts {
   background-color: #34184C; }
 
-.background-projects {
+.mainstyle-contacts:before {
+  opacity: 0.05;
+  background: url("../../images/background-contacts.png"); }
+
+/* MAINSTYLE PROJECTS 
+============================================= */
+.mainstyle-projects {
   background-color: #393939; }
 
-.background-news {
+.mainstyle-projects:before {
+  opacity: 0.1;
+  background: url("../../images/background-projects.png"); }
+
+/* MAINSTYLE NEWS 
+============================================= */
+.mainstyle-news {
   background-color: #3A3A68; }
+
+.mainstyle-news:before {
+  opacity: 0.1;
+  background: url("../../images/background-news.png"); }

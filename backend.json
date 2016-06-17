@@ -16,7 +16,7 @@
             "email": "marieke.de.rooy@ciber.com",
             "phoneNumber": "0402850000",
             "mobileNumber": "0612345678",
-            "profilephoto": "images/no-avatar-female.png"
+            "profilephoto": "images/contacts/marieke_de_rooy.png"
         },
         {
             "id": 1,
@@ -52,7 +52,7 @@
             "email": "niek.heezemans@ciber.com",
             "phoneNumber": "0402850000",
             "mobileNumber": "0612345678",
-            "profilephoto": "images/no-avatar-male.png"
+            "profilephoto": "images/contacts/niek_heezemans.png"
         },
         {
             "id": 3,

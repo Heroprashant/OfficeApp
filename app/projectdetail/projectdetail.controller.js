@@ -84,11 +84,25 @@
 
       projectdetail.updateSlideStatus = function (slide) {
         var zoomFactor = $ionicScrollDelegate.$getByHandle('scrollHandle' + slide).getScrollPosition().zoom;
-        if (zoomFactor == projectdetail.zoomMin) {
+        if (zoomFactor === projectdetail.zoomMin) {
           $ionicSlideBoxDelegate.enableSlide(true);
         } else {
           $ionicSlideBoxDelegate.enableSlide(false);
         }
+      };
+
+      projectdetail.projectDetailRefresh = function () {
+        dataservice.getByProjectId($stateParams.pId).then(
+          function (response) {
+            projectdetail.data = response.data[0];
+            console.log(response);
+          },
+          function (error) {
+            console.log(error);
+          }
+        ).finally(function () {
+          $scope.$broadcast('scroll.refreshComplete');
+        });
       };
 
       return projectdetail;

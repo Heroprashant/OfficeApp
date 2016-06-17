@@ -1,21 +1,31 @@
-<ion-view view-title="Dashboard" ng-class="{'background-contacts' : dashboard.subject == 'contacts', 'background-projects' : dashboard.subject == 'projects', 'background-news' : dashboard.subject == 'news'}">
+<ion-view view-title="" ng-class="{'mainstyle-contacts' : dashboard.subject == 'contacts', 'mainstyle-projects' : dashboard.subject == 'projects', 'mainstyle-news' : dashboard.subject == 'news'}">
+	<img class="img-main-logo" src="images/ciber.png">
 	<ion-content>
-		<div class="list list-inset">
+		<div class="list list-inset search-bar">
 			<label class="item item-input">
 				<i class="icon ion-search placeholder-icon"></i>
 				<input type="text" placeholder="Search" ng-model="dashboard.searchQuery" ng-keyup="dashboard.getSearchResult()">
       		</label>
 		</div>
 
-		<div class="row">
-			<div class="col col-33 text-center" ng-class="dashboard.subject == 'contacts' ? 'active-subject' : ''" ng-click="dashboard.changeSubject('contacts')"><span>Contacts</span></div>
-			<div class="col col-33 text-center" ng-class="dashboard.subject == 'projects' ? 'active-subject' : ''" ng-click="dashboard.changeSubject('projects')">Projects</div>
-			<div class="col col-33 text-center" ng-class="dashboard.subject == 'news' ? 'active-subject' : ''" ng-click="dashboard.changeSubject('news')">News</div>
+		<div class="row tab-bar-custom">
+			<div class="col col-33 text-center custom-tab-bar-item" ng-class="dashboard.subject == 'contacts' ? 'active-subject' : 'inactive-subject'" ng-click="dashboard.changeSubject('contacts')"><span>Contacts</span></div>
+			<div class="col col-33 text-center custom-tab-bar-item" ng-class="dashboard.subject == 'projects' ? 'active-subject' : 'inactive-subject'" ng-click="dashboard.changeSubject('projects')"><span>Projects</span></div>
+			<div class="col col-33 text-center custom-tab-bar-item" ng-class="dashboard.subject == 'news' ? 'active-subject' : 'inactive-subject'" ng-click="dashboard.changeSubject('news')"><span>News</span></div>
 		</div>
 
 		<div ng-show="dashboard.subject == 'contacts'">
+			<div ng-hide="dashboard.contacts.length >= '0'">
+				<div class="search-bar-contact">
+					<h2>Find your collegue</h2>
+					<label class="item item-input search-bar">
+						<i class="icon ion-search placeholder-icon"></i>
+						<input type="text" placeholder="Search" ng-model="dashboard.searchQuery" ng-keyup="dashboard.getSearchResult()">
+					</label>
+				</div>
+			</div>
 			<div class="list">
-				<div class="item item-avatar" ng-repeat="contact in dashboard.contacts" ui-sref="Pocapp.userprofile({empId: contact.employeeId})">
+				<div class="item item-avatar custom-item-contacts" ng-repeat="contact in dashboard.contacts" ui-sref="Pocapp.userprofile({empId: contact.employeeId})">
 					<img src="{{contact.profilephoto}}">
 					<h2>{{contact.firstname + " " + contact.lastname}}</h2>
 					<p>{{contact.role}}</p>
@@ -25,7 +35,7 @@
 
 		<div ng-show="dashboard.subject == 'projects'">
 			<div class="list">
-				<div class="item item-thumbnail-left" ng-repeat="project in dashboard.projects | filter: dashboard.searchQuery" ui-sref="Pocapp.projectdetail({pId: project.projectId})">
+				<div class="item item-thumbnail-left custom-item-projects" ng-repeat="project in dashboard.projects | filter: dashboard.searchQuery" ui-sref="Pocapp.projectdetail({pId: project.projectId})">
 					<img src="{{project.projectMainPhoto}}">
 					<h2>{{project.title}}</h2>
 					<p>{{project.year + ', ' + project.unit + ' ' + project.team}}</p>
