@@ -80,7 +80,6 @@
       };
 
       $ionicPlatform.ready(function () {
-        console.log( 'Ready?' );
         if ($window.cordova) {
           userprofile.deviceinfo = device.platform;
         }
@@ -93,8 +92,6 @@
             userprofile.convertImgToDataURLviaCanvas( userprofile.data.profilephoto, function (base64Img) {
 
               imgData = base64Img;
-              console.log( 'TEST: ' );
-              console.log(imgData);
             });
           },
           function (error) {

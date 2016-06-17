@@ -1,4 +1,5 @@
 /* global angular */
+/* global $ */
 (function () {
   'use strict';
   /**
@@ -17,10 +18,10 @@
     .controller('DashboardCtrl', DashboardCtrl);
 
   // Inject dependencies
-  DashboardCtrl.$inject = ['dataservice', '$ionicLoading'];
+  DashboardCtrl.$inject = ['dataservice', '$ionicLoading', '$timeout'];
 
   // Start the DashboardCtrl
-  function DashboardCtrl(dataservice, $ionicLoading) {
+  function DashboardCtrl(dataservice, $ionicLoading, $timeout) {
     var dashboard = this;
     dashboard.subject = 'contacts';
 
@@ -30,8 +31,8 @@
     function activateDashboard() {
 
       dashboard.getSearchResult = function () {
-        if (dashboard.searchQuery != '') {
-          if (dashboard.subject == 'contacts') {
+        if (dashboard.searchQuery !== '') {
+          if (dashboard.subject === 'contacts') {
             $ionicLoading.show({
               template: 'Loading...'
             });
@@ -45,13 +46,13 @@
             ).finally(
               function () {
                 $ionicLoading.hide();
-              })
+              });
           }
         }
         else{
           dashboard.contacts = null;
         }
-      }
+      };
 
       dashboard.changeSubject = function (subject) {
         dashboard.searchQuery = '';
@@ -63,13 +64,21 @@
             dashboard.getAllProjects();
             break;
           case 'news':
-            dashboard.getAllNews();       
+            dashboard.getAllNews();
             break;
           default:
             break;
         }
         dashboard.subject = subject;
-      }
+      };
+
+      dashboard.contactMenuToggle = function( index ){
+
+        dashboard.contactSelected = index;
+        $timeout(function() {
+          dashboard.contactActivate = index;
+        }, 25);
+      };
 
       dashboard.getAllProjects = function () {
         $ionicLoading.show({
@@ -85,9 +94,9 @@
         ).finally(
           function () {
             $ionicLoading.hide();
-          })
-      }
-      
+          });
+      };
+
       dashboard.getAllNews = function () {
         $ionicLoading.show({
           template: 'Loading...'
@@ -102,8 +111,8 @@
         ).finally(
           function () {
             $ionicLoading.hide();
-          })
-      }
+          });
+      };
 
       return dashboard;
     }

@@ -9251,6 +9251,26 @@ a.button {
   border-bottom-width: 1px;
   border-bottom-color: white; }
 
+/**** Contact Animation *****/
+.expanded {
+  width: 100% !important; }
+
+.toggleMenu {
+  width: 100%;
+  left: 0px;
+  position: absolute;
+  z-index: 1;
+  padding: 0 20px; }
+  .toggleMenu .contactQuickMenu {
+    background: red;
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    transition: width .8s ease; }
+  .toggleMenu .contactQuickMenuActive {
+    width: 100% !important; }
+
+/**** Contact Animation *****/
 .custom-item-contacts {
   background-color: transparent; }
   .custom-item-contacts img:first-child {

@@ -1,4 +1,29 @@
 @import "_pocapp-theme-styles.scss";
+/**** Contact Animation *****/
+
+.expanded{
+  width:100% !important;
+}
+
+.toggleMenu{
+  width: 100%;
+  left: 0px;
+  position: absolute;
+  z-index: 1;
+  padding: 0 20px;
+  .contactQuickMenu{
+    background: red;
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    transition:width .8s ease;
+  }
+  .contactQuickMenuActive{
+    width: 100% !important;
+
+  }
+}
+/**** Contact Animation *****/
 
 .custom-item-contacts {
     background-color: transparent;
@@ -41,11 +66,11 @@
     margin: 50px 20px;
     background-color: white;
     height: 200px;
-    top: 50px; 
+    top: 50px;
     box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
 
     h2 {
-        text-align: center; 
+        text-align: center;
         color: #34184C
     }
 }

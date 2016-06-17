@@ -25,10 +25,18 @@
 				</div>
 			</div>
 			<div class="list">
-				<div class="item item-avatar custom-item-contacts" ng-repeat="contact in dashboard.contacts" ui-sref="Pocapp.userprofile({empId: contact.employeeId})">
-					<img src="{{contact.profilephoto}}">
-					<h2>{{contact.firstname + " " + contact.lastname}}</h2>
-					<p>{{contact.role}}</p>
+				<div class="item item-avatar custom-item-contacts" ng-repeat="contact in dashboard.contacts">
+
+					<img src="{{contact.profilephoto}}" ng-click="dashboard.contactMenuToggle( $index )" style="position: absolute; z-index: 2;">
+					<span ng-class="{toggleMenu: $index == dashboard.contactSelected}">
+						<div ng-class="{contactQuickMenu: $index == dashboard.contactSelected, contactQuickMenuActive: $index == dashboard.contactActivate}"></div>
+					</span>
+					<div ui-sref="Pocapp.userprofile({empId: contact.employeeId})">
+						<h2>{{contact.firstname + " " + contact.lastname}}</h2>
+						<p>{{contact.role}}</p>
+
+					</div>
+
 				</div>
 			</div>
 		</div>
