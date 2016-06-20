@@ -17,63 +17,65 @@
 				ng-click="dashboard.changeSubject('news')"><span>News</span></div>
 		</div>
 
-		<div ng-show="dashboard.subject == 'contacts'">
-			<div ng-hide="dashboard.contacts.length >= '0'">
-				<div class="search-bar-contact">
-					<h2>Find your collegue</h2>
-					<label class="item item-input search-bar">
+		<ion-scroll zooming="false" direction="y" style="width: 100%; height: 100%">
+			<div ng-show="dashboard.subject == 'contacts'">
+				<div ng-hide="dashboard.contacts.length >= '0'">
+					<div class="search-bar-contact">
+						<h2>Find your collegue</h2>
+						<label class="item item-input search-bar">
 						<i class="icon ion-search placeholder-icon"></i>
 						<input type="text" placeholder="Search" ng-model="dashboard.searchQuery" ng-keyup="dashboard.getSearchResult()">
 					</label>
+					</div>
 				</div>
-			</div>
-			<div class="list">
-				<div class="item item-avatar custom-item-contacts" ng-repeat="contact in dashboard.contacts">
+				<div class="list">
+					<div class="item item-avatar custom-item-contacts" ng-repeat="contact in dashboard.contacts">
 
-					<img src="{{contact.profilephoto}}" ng-click="dashboard.contactMenuToggle( $index )" style="position: absolute; z-index: 2;">
-					<span ng-class="{toggleMenu: $index == dashboard.contactSelected}">
+						<img src="{{contact.profilephoto}}" ng-click="dashboard.contactMenuToggle( $index )" style="position: absolute; z-index: 2;">
+						<span ng-class="{toggleMenu: $index == dashboard.contactSelected}">
 						<div ng-class="{contactQuickMenu: $index == dashboard.contactSelected, contactQuickMenuActive: $index == dashboard.contactActivate}"></div>
 					</span>
-					<div ui-sref="Pocapp.userprofile({empId: contact.employeeId})">
-						<h2>{{contact.firstname + " " + contact.lastname}}</h2>
-						<p>{{contact.role}}</p>
+						<div ui-sref="Pocapp.userprofile({empId: contact.employeeId})">
+							<h2>{{contact.firstname + " " + contact.lastname}}</h2>
+							<p>{{contact.role}}</p>
+
+						</div>
 
 					</div>
-
 				</div>
 			</div>
-		</div>
 
-		<div ng-show="dashboard.subject == 'projects'">
-			<div class="list">
-				<div class="item item-thumbnail-left custom-item-projects" ng-repeat="project in dashboard.projects | filter: dashboard.searchQuery"
-					ui-sref="Pocapp.projectdetail({pId: project.projectId})">
-					<img src="{{project.projectMainPhoto}}">
-					<h2>{{project.title}}</h2>
-					<p>{{project.year + ', ' + project.unit + ' ' + project.team}}</p>
+			<div ng-show="dashboard.subject == 'projects'">
+				<div class="list">
+					<div class="item item-thumbnail-left custom-item-projects" ng-repeat="project in dashboard.projects | filter: dashboard.searchQuery"
+						ui-sref="Pocapp.projectdetail({pId: project.projectId})">
+						<img src="{{project.projectMainPhoto}}">
+						<h2>{{project.title}}</h2>
+						<p>{{project.year + ', ' + project.unit + ' ' + project.team}}</p>
+					</div>
 				</div>
 			</div>
-		</div>
 
-		<div ng-show="dashboard.subject == 'news'">
-			<!--<div class="list">
+			<div ng-show="dashboard.subject == 'news'">
+				<!--<div class="list">
 				<div class="item item-thumbnail-left custom-item-news" ng-repeat="news in dashboard.news | filter: dashboard.searchQuery" ui-sref="Pocapp.newsdetail({nId: news.newsId})">
 					<img src="{{news.newsMainPhoto}}">
 					<h2>{{news.title}}</h2>
 					<p>{{news.author + ', ' + news.createDate + ', ' + news.year}}</p>
 				</div>
 			</div>-->
-			<div ng-repeat="news in dashboard.news | filter: dashboard.searchQuery" ui-sref="Pocapp.newsdetail({nId: news.newsId})">
-				<div class="card">
-					<div class="item item-text-wrap custom-item-news">
-						<h2>{{news.title}}</h2>
-						<p>{{news.author + ', ' + news.createDate + ', ' + news.year}}</p>
-						<br/>
-						<p>{{news.description_short}}</p>
+				<div ng-repeat="news in dashboard.news | filter: dashboard.searchQuery" ui-sref="Pocapp.newsdetail({nId: news.newsId})">
+					<div class="card">
+						<div class="item item-text-wrap custom-item-news">
+							<h2>{{news.title}}</h2>
+							<p>{{news.author + ', ' + news.createDate + ', ' + news.year}}</p>
+							<br/>
+							<p>{{news.description_short}}</p>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
+		</ion-scroll>
 
 	</ion-content>
 </ion-view>

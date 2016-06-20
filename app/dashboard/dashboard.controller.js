@@ -49,7 +49,7 @@
               });
           }
         }
-        else{
+        else {
           dashboard.contacts = null;
         }
       };
@@ -72,12 +72,18 @@
         dashboard.subject = subject;
       };
 
-      dashboard.contactMenuToggle = function( index ){
+      dashboard.contactMenuToggle = function (index) {
 
         dashboard.contactSelected = index;
-        $timeout(function() {
-          dashboard.contactActivate = index;
-        }, 25);
+        if (dashboard.contactActivate !== index) {
+          $timeout(function () {
+            dashboard.contactActivate = index;
+          }, 25);
+        }
+        else {
+          dashboard.contactActivate = -1;
+        }
+
       };
 
       dashboard.getAllProjects = function () {
