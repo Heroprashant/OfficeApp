@@ -39,6 +39,19 @@
             dataservice.getSearchResult(dashboard.subject, dashboard.searchQuery).then(
               function (result) {
                 dashboard.contacts = result.data;
+                dashboard.channels = [
+                  {
+                    'type' : 'linkedin',
+                    'value' : 'http://www.linkedin.com'
+                  },
+                  {
+                    'type' : 'skype',
+                    'value' : 'skypename'
+                  }
+
+                ];
+
+                console.log( dashboard.channels );
               },
               function (error) {
                 console.log(error);
@@ -72,12 +85,18 @@
         dashboard.subject = subject;
       };
 
-      dashboard.contactMenuToggle = function (index) {
+      dashboard.contactMenuToggle = function (contactIndex) {
 
-        dashboard.contactSelected = index;
-        if (dashboard.contactActivate !== index) {
+        dashboard.contactSelected = contactIndex;
+        if (dashboard.contactActivate !== contactIndex) {
           $timeout(function () {
-            dashboard.contactActivate = index;
+            dashboard.contactActivate = contactIndex;
+
+            // Add CSS Class to elements by ID
+
+            // Loop threw dashboard.channels
+            console.log( angular.element( document.querySelector( '#animation_'+contactIndex+'_0' ) ) );
+
           }, 25);
         }
         else {

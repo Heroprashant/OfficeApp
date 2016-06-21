@@ -30,13 +30,16 @@
 					</div>
 				</div>
 				<div class="list">
-					<div class="item item-avatar custom-item-contacts" ng-repeat="contact in dashboard.contacts">
+					<div class="item item-avatar custom-item-contacts" ng-repeat="(contactIndex, contact) in dashboard.contacts">
 
-						<img class="img-profile-photo" src="{{contact.profilephoto}}" ng-click="dashboard.contactMenuToggle( $index )">
+						<img class="img-profile-photo" src="{{contact.profilephoto}}" ng-click="dashboard.contactMenuToggle( contactIndex )">
 						<span ng-class="{toggleMenu: $index == dashboard.contactSelected}">
 							<div ng-class="{contactQuickMenu: $index == dashboard.contactSelected, contactQuickMenuActive: $index == dashboard.contactActivate}">
-								<div class="slide-icon">
+								<!-- <div class="slide-icon">
 
+								</div> -->
+								<div ng-repeat="(channelIndex, channel) in dashboard.channels" id="animation_{{ contactIndex }}_{{channelIndex}}">
+									{{ channel }}
 								</div>
 							</div>
 						</span>

@@ -37,7 +37,7 @@
     height: 40px;
     width: 40px;
     border-radius: 20px;
-    transition:width .8s ease;
+    transition:width 1s ease;
   }
   .contactQuickMenuActive {
     width: 100% !important;
@@ -119,5 +119,5 @@
 
 .img-profile-photo {
    position: absolute;
-   z-index: 2; 
+   z-index: 2;
 }
