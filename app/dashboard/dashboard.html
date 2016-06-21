@@ -17,7 +17,8 @@
 				ng-click="dashboard.changeSubject('news')"><span>News</span></div>
 		</div>
 
-		<ion-scroll zooming="false" direction="y" style="width: 100%; height: 100%">
+		<ion-scroll class="scroll-style" zooming="false" direction="y">
+			<!-- Contacts -->
 			<div ng-show="dashboard.subject == 'contacts'">
 				<div ng-hide="dashboard.contacts.length >= '0'">
 					<div class="search-bar-contact">
@@ -31,20 +32,24 @@
 				<div class="list">
 					<div class="item item-avatar custom-item-contacts" ng-repeat="contact in dashboard.contacts">
 
-						<img src="{{contact.profilephoto}}" ng-click="dashboard.contactMenuToggle( $index )" style="position: absolute; z-index: 2;">
+						<img class="img-profile-photo" src="{{contact.profilephoto}}" ng-click="dashboard.contactMenuToggle( $index )">
 						<span ng-class="{toggleMenu: $index == dashboard.contactSelected}">
-						<div ng-class="{contactQuickMenu: $index == dashboard.contactSelected, contactQuickMenuActive: $index == dashboard.contactActivate}"></div>
-					</span>
+							<div ng-class="{contactQuickMenu: $index == dashboard.contactSelected, contactQuickMenuActive: $index == dashboard.contactActivate}">
+								<div class="slide-icon">
+
+								</div>
+							</div>
+						</span>
 						<div ui-sref="Pocapp.userprofile({empId: contact.employeeId})">
 							<h2>{{contact.firstname + " " + contact.lastname}}</h2>
 							<p>{{contact.role}}</p>
-
 						</div>
 
 					</div>
 				</div>
 			</div>
 
+			<!-- Projects -->
 			<div ng-show="dashboard.subject == 'projects'">
 				<div class="list">
 					<div class="item item-thumbnail-left custom-item-projects" ng-repeat="project in dashboard.projects | filter: dashboard.searchQuery"
@@ -56,6 +61,7 @@
 				</div>
 			</div>
 
+			<!-- News -->
 			<div ng-show="dashboard.subject == 'news'">
 				<!--<div class="list">
 				<div class="item item-thumbnail-left custom-item-news" ng-repeat="news in dashboard.news | filter: dashboard.searchQuery" ui-sref="Pocapp.newsdetail({nId: news.newsId})">
