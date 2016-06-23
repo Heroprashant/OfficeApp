@@ -9282,7 +9282,7 @@ a.button {
     height: 40px;
     width: 40px;
     border-radius: 20px;
-    transition: width .8s ease; }
+    transition: width 1s ease; }
   .toggleMenu .contactQuickMenuActive {
     width: 100% !important; }
 
@@ -9338,6 +9338,20 @@ a.button {
 .img-profile-photo {
   position: absolute;
   z-index: 2; }
+
+.contact-icons {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  float: left;
+  display: block;
+  border-radius: 15px;
+  background-color: blue;
+  margin-right: 10px; }
+
+.contact-icon-transition {
+  background-color: red;
+  transition: background-color 1s ease; }
 
 /* PLACEHOLDER
 ============================================= */

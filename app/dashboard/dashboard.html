@@ -35,11 +35,10 @@
 						<img class="img-profile-photo" src="{{contact.profilephoto}}" ng-click="dashboard.contactMenuToggle( contactIndex )">
 						<span ng-class="{toggleMenu: $index == dashboard.contactSelected}">
 							<div ng-class="{contactQuickMenu: $index == dashboard.contactSelected, contactQuickMenuActive: $index == dashboard.contactActivate}">
-								<!-- <div class="slide-icon">
-
-								</div> -->
-								<div ng-repeat="(channelIndex, channel) in dashboard.channels" id="animation_{{ contactIndex }}_{{channelIndex}}">
-									{{ channel }}
+								<div style="position: absolute;">
+									<div ng-repeat="(channelIndex, channel) in contact.channels" id="animation_{{ contactIndex }}_{{channelIndex}}" class="contact-icons">
+											
+									</div>
 								</div>
 							</div>
 						</span>

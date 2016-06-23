@@ -39,6 +39,30 @@
             dataservice.getSearchResult(dashboard.subject, dashboard.searchQuery).then(
               function (result) {
                 dashboard.contacts = result.data;
+                var count = 0;
+                angular.forEach(result.data, function () {
+
+                  var channel = [
+                    {
+                      'mail': result.data[count].email
+                    },
+                    {
+                      'linkedin': result.data[count].linkedin
+                    },
+                    {
+                      'skype': result.data[count].skype
+                    },
+                    {
+                      'tel': result.data[count].phoneNumber
+                    },
+                    {
+                      'more': result.data[count].employeeId
+                    }];
+
+                  dashboard.contacts[count].channels = channel;
+
+                  count++;
+                });
               },
               function (error) {
                 console.log(error);
@@ -72,12 +96,26 @@
         dashboard.subject = subject;
       };
 
-      dashboard.contactMenuToggle = function (index) {
+      dashboard.contactMenuToggle = function (contactIndex) {
 
-        dashboard.contactSelected = index;
-        if (dashboard.contactActivate !== index) {
+        dashboard.contactSelected = contactIndex;
+        if (dashboard.contactActivate !== contactIndex) {
           $timeout(function () {
-            dashboard.contactActivate = index;
+            dashboard.contactActivate = contactIndex;
+
+            var interVal = 0;
+
+            // Loop threw dashboard.channels
+            angular.forEach(dashboard.contacts[contactIndex].channels, function (data, key) {
+              interVal += 2000;
+              $timeout(function () {
+                angular.element(document.querySelector('#animation_' + contactIndex + '_' + key))
+                .addClass('contact-icon-transition contact-icon-' + data);
+                console.log(data);
+              }, interVal);
+            });
+            
+            //console.log(angular.element(document.querySelector('#animation_' + contactIndex + '_0')));
           }, 25);
         }
         else {
