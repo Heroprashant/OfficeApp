@@ -9341,17 +9341,24 @@ a.button {
 
 .contact-icons {
   position: relative;
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   float: left;
   display: block;
-  border-radius: 15px;
-  background-color: blue;
-  margin-right: 10px; }
+  border-radius: 20px;
+  margin-right: 10px;
+  opacity: 0;
+  margin-left: 43px; }
 
 .contact-icon-transition {
-  background-color: red;
-  transition: background-color 1s ease; }
+  opacity: 1;
+  transition: opacity 0.10s ease; }
+
+.contact-icon-bg-linkedIn {
+  background-image: url("../../images/icons/linkedin.png");
+  background-size: 60% auto;
+  background-position: center;
+  background-repeat: no-repeat; }
 
 /* PLACEHOLDER
 ============================================= */

@@ -24,6 +24,7 @@
   function DashboardCtrl(dataservice, $ionicLoading, $timeout) {
     var dashboard = this;
     dashboard.subject = 'contacts';
+    var channel = [];
 
     // Activate all methods
     activateDashboard();
@@ -42,27 +43,44 @@
                 var count = 0;
                 angular.forEach(result.data, function () {
 
-                  var channel = [
-                    {
-                      'mail': result.data[count].email
-                    },
-                    {
-                      'linkedin': result.data[count].linkedin
-                    },
-                    {
-                      'skype': result.data[count].skype
-                    },
-                    {
-                      'tel': result.data[count].phoneNumber
-                    },
-                    {
-                      'more': result.data[count].employeeId
-                    }];
+                  channel = [];
+
+                  if (result.data[count].Email && result.data[count].Email !== '') {
+                    channel.push({
+                      'type': 'email',
+                      'value': result.data[count].email
+                    });
+                  }
+                  if (result.data[count].linkedIn && result.data[count].linkedIn !== '') {
+                    channel.push({
+                      'type': 'linkedIn',
+                      'value': result.data[count].linkedIn
+                    });
+                  }
+                  if (result.data[count].skype && result.data[count].skype !== '') {
+                    channel.push({
+                      'type': 'skype',
+                      'value': result.data[count].skype
+                    });
+                  }
+                  if (result.data[count].mobileNumber && result.data[count].mobileNumber !== '') {
+                    channel.push({
+                      'type': 'mobileNumber',
+                      'value': result.data[count].mobileNumber
+                    });
+                  }
+                  channel.push({
+                    'type': 'more',
+                    'value': result.data[count].employeeId
+                  });
 
                   dashboard.contacts[count].channels = channel;
 
                   count++;
+
                 });
+
+                console.log(channel);
               },
               function (error) {
                 console.log(error);
@@ -102,24 +120,29 @@
         if (dashboard.contactActivate !== contactIndex) {
           $timeout(function () {
             dashboard.contactActivate = contactIndex;
-
             var interVal = 0;
 
             // Loop threw dashboard.channels
             angular.forEach(dashboard.contacts[contactIndex].channels, function (data, key) {
-              interVal += 2000;
+              interVal += 100;
               $timeout(function () {
-                angular.element(document.querySelector('#animation_' + contactIndex + '_' + key))
-                .addClass('contact-icon-transition contact-icon-' + data);
-                console.log(data);
+
+                //var cssClass = angular.element(document.querySelector('#animation_' + contactIndex + '_' + key));
+  	            var cssClass = angular.element(document.querySelector('#animation_' + contactIndex));
+
+                if(!angular.element(document.querySelector('.contact-icons'))) {
+                  cssClass.addClass('contact-icons');
+                }
+                cssClass.addClass('contact-icon-transition');
               }, interVal);
             });
-            
-            //console.log(angular.element(document.querySelector('#animation_' + contactIndex + '_0')));
           }, 25);
         }
         else {
           dashboard.contactActivate = -1;
+          angular.element(document.querySelector('.contact-icons'))
+          .removeClass('contact-icon-transition');
+          
         }
 
       };
