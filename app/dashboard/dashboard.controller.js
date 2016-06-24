@@ -18,10 +18,10 @@
     .controller('DashboardCtrl', DashboardCtrl);
 
   // Inject dependencies
-  DashboardCtrl.$inject = ['dataservice', '$ionicLoading', '$timeout', '$interval'];
+  DashboardCtrl.$inject = ['dataservice', '$window', '$ionicLoading', '$timeout', '$interval'];
 
   // Start the DashboardCtrl
-  function DashboardCtrl(dataservice, $ionicLoading, $timeout) {
+  function DashboardCtrl(dataservice, $window, $ionicLoading, $timeout) {
     var dashboard = this, contactActive = false, interVal = 0, interValReverse = 0;
     dashboard.subject = 'contacts';
     dashboard.opening = false;
@@ -206,6 +206,16 @@
           function () {
             $ionicLoading.hide();
           });
+      };
+
+      dashboard.sendMail = function( email ){
+        $window.open('mailto:'+ email + '?subject=subject&body=test','_self');
+      };
+      dashboard.callPerson = function( number ){
+        $window.open('tel:'+ number,'_self');
+      };
+      dashboard.linkedIn = function( url ){
+        $window.open(url,'_blank');
       };
 
       return dashboard;

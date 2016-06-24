@@ -14,8 +14,8 @@
             "team": "Mobility",
             "manager": "Raymond van Turnhout",
             "email": "marieke.de.rooy@ciber.com",
-            "phoneNumber": "0402850000",
-            "mobileNumber": "0612345678",
+            "phoneNumber": "+31402850000",
+            "mobileNumber": "+31612345678",
             "profilephoto": "images/contacts/marieke_de_rooy.png",
             "linkedIn": "http://www.linkedin.com",
             "skype": "MdeRooy"
@@ -34,8 +34,8 @@
             "team": "Mobility",
             "manager": "Raymond van Turnhout",
             "email": "oktay.curebal@ciber.com",
-            "phoneNumber": "0402850000",
-            "mobileNumber": "0612345678",
+            "phoneNumber": "+31402850000",
+            "mobileNumber": "+31612345678",
             "profilephoto": "images/no-avatar-male.png",
             "linkedIn": "http://www.linkedin.com",
             "skype": ""
@@ -54,10 +54,10 @@
             "team": "Mobility",
             "manager": "Raymond van Turnhout",
             "email": "niek.heezemans@ciber.com",
-            "phoneNumber": "0402850000",
-            "mobileNumber": "0612345678",
+            "phoneNumber": "+31402850000",
+            "mobileNumber": "+31647374428",
             "profilephoto": "images/contacts/niek_heezemans.png",
-            "linkedIn": "http://www.linkedin.com",
+            "linkedIn": "https://nl.linkedin.com/in/niek-heezemans-2767297",
             "skype": "NHeezemans"
         },
         {
@@ -74,14 +74,14 @@
             "team": "Mobility",
             "manager": "Raymond van Turnhout",
             "email": "murat.aydin@ciber.com",
-            "phoneNumber": "0402850000",
-            "mobileNumber": "0612345678",
+            "phoneNumber": "+31402850000",
+            "mobileNumber": "+31612345678",
             "profilephoto": "images/no-avatar-male.png",
             "linkedIn": "",
             "skype": ""
         }
-    ], 
-    
+    ],
+
     "projects": [
         {
             "id": 0,
@@ -160,7 +160,7 @@
             "projectImages": []
         }
     ],
-    
+
     "news": [
         {
             "id": 0,
@@ -169,7 +169,7 @@
             "author": "John Doe",
             "description_short": "Lorem ipsum",
             "description_long": "Lorem ipsum",
-            "createDate": "Januari 8", 
+            "createDate": "Januari 8",
             "year": "2016",
             "newsMainPhoto": "",
             "newsImages": []
@@ -181,7 +181,7 @@
             "author": "John Doe",
             "description_short": "Lorem ipsum",
             "description_long": "Lorem ipsum",
-            "createDate": "Januari 8", 
+            "createDate": "Januari 8",
             "year": "2016",
             "newsMainPhoto": "",
             "newsImages": []
@@ -193,7 +193,7 @@
             "author": "John Doe",
             "description_short": "Lorem ipsum",
             "description_long": "Lorem ipsum",
-            "createDate": "Januari 8", 
+            "createDate": "Januari 8",
             "year": "2016",
             "newsMainPhoto": "",
             "newsImages": []
@@ -205,7 +205,7 @@
             "author": "John Doe",
             "description_short": "Lorem ipsum",
             "description_long": "Lorem ipsum",
-            "createDate": "Januari 8", 
+            "createDate": "Januari 8",
             "year": "2016",
             "newsMainPhoto": "",
             "newsImages": []
