@@ -22,8 +22,10 @@
 
   // Start the DashboardCtrl
   function DashboardCtrl(dataservice, $ionicLoading, $timeout) {
-    var dashboard = this, contactActive = false, contactToggleMenu, interVal = 0, interValReverse = 0;
+    var dashboard = this, contactActive = false, interVal = 0, interValReverse = 0;
     dashboard.subject = 'contacts';
+    dashboard.opening = false;
+    dashboard.closing = false;
     var channel = [];
 
     // Activate all methods
@@ -115,47 +117,50 @@
       };
 
       dashboard.contactMenuToggle = function (contactIndex) {
+        var opening = false;
+        dashboard.disabeld = true;
+        $timeout( function(){
+          dashboard.disabeld = false;
+        }, 500)
 
         // Fucntion to add the transition classes
         function addClasses( id ){
-          interVal = 0;
-          angular.element(document.querySelector('#contact_togglemenu_'+id)).addClass('toggleMenu');
-          angular.element(document.querySelector('#contact_'+id)).addClass('contactQuickMenu');
-          angular.element(document.querySelector('#contact-icon-container_'+id)).css({ 'z-index': '9998'});
-          $timeout( function(){
-            // Open the contactQuickMenu
-            angular.element(document.querySelector('#contact_'+id)).addClass('contactQuickMenuActive');
-          }, 25);
-          angular.forEach(dashboard.contacts[id].channels, function (data, key) {
-            interVal += 100;
-            $timeout( function(){
-              angular.element(document.querySelector('#animation_' + id + '_'+ key)).addClass('contact-icon-transition');
-            }, interVal);
-          });
-
-          $timeout( function(){
-            console.log( 'Set ID: ' + id );
+            interVal = 0;
             contactActive = id;
-          }, interVal);
+            angular.element(document.querySelector('#contact_togglemenu_'+id)).addClass('toggleMenu');
+            angular.element(document.querySelector('#contact_'+id)).addClass('contactQuickMenu');
+            angular.element(document.querySelector('#contact-icon-container_'+id)).css({ 'z-index': '9998'});
+            $timeout( function(){
+              // Open the contactQuickMenu
+              angular.element(document.querySelector('#contact_'+id)).addClass('contactQuickMenuActive');
+            }, 25);
+            angular.forEach(dashboard.contacts[id].channels, function (data, key) {
+              interVal += 100;
+              $timeout( function(){
+                angular.element(document.querySelector('#animation_' + id + '_'+ key)).addClass('contact-icon-transition');
+              }, interVal);
+            });
         }
 
         function removeClasses( id ){
+          contactActive = false;
           interValReverse = 0;
           // Remove the contactQuickMenu transition
-          angular.element(document.querySelector('#contact_'+id)).removeClass('contactQuickMenuActive');
+
           // Loop threw the contacts and see on which #contact_togglemenu id's a class needs to be added or removed
           angular.forEach(dashboard.contacts[id].channels, function (data, channelKey) {
+            angular.element(document.querySelector('#contact_'+id)).removeClass('contactQuickMenuActive');
             var test = (dashboard.contacts[id].channels.length -1) - channelKey;
             interValReverse += 80;
             $timeout( function(){
               angular.element(document.querySelector('#animation_' + id + '_' + test)).removeClass('contact-icon-transition');
             }, interValReverse);
           });
+
           $timeout( function(){
             angular.element(document.querySelector('#contact_'+id)).removeClass('contactQuickMenu');
             angular.element(document.querySelector('#contact_togglemenu_'+id)).removeClass('toggleMenu');
             angular.element(document.querySelector('#contact-icon-container_'+id)).css({ 'z-index': '-9998'});
-            contactIndex = id;
           }, interValReverse + 200);
         }
 
@@ -163,7 +168,6 @@
           addClasses( contactIndex );
         } else if( contactActive === contactIndex ){
           removeClasses( contactIndex );
-          contactActive = false;
         } else if( contactActive !== contactIndex ){
           removeClasses( contactActive );
           addClasses( contactIndex );
