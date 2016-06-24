@@ -31,11 +31,10 @@
 				</div>
 				<div class="list">
 					<div class="item item-avatar custom-item-contacts" ng-repeat="(contactIndex, contact) in dashboard.contacts">
-
 						<img class="img-profile-photo" src="{{contact.profilephoto}}" ng-click="dashboard.contactMenuToggle( contactIndex )">
-						<div ng-class="{toggleMenu: $index == dashboard.contactSelected}">
-							<div ng-class="{contactQuickMenu: $index == dashboard.contactSelected, contactQuickMenuActive: $index == dashboard.contactActivate}">
-								<div class="contact-icon-container">
+						<div id="contact_togglemenu_{{contactIndex}}">
+							<div id="contact_{{contactIndex}}">
+								<div id="contact-icon-container_{{contactIndex}}" class="contact-icon-container">
 									<div ng-repeat="(channelIndex, channel) in contact.channels" id="animation_{{contactIndex}}_{{$index}}" class="contact-icons contact-icon-bg-{{channel.type}}"></div>
 								</div>
 							</div>

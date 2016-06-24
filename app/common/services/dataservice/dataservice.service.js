@@ -45,12 +45,12 @@
         }, function errorCallback(response) {
             defer.reject(response);
         });
-        
+
         return defer.promise;
     }
-    
+
     function getSearchResult(subject, searchQuery) {
-        
+
         defer = $q.defer();
         // Simple GET request example:
         $http({
@@ -58,15 +58,15 @@
             url: DATASERVICECONSTANTS.BASE_URL + '/' + subject + '?q=' + searchQuery,
             timeout: 5000
         }).then(function successCallback(response) {
-            console.log(response);
+            // console.log(response);
             defer.resolve(response);
         }, function errorCallback(response) {
             defer.reject(response);
         });
-        
+
         return defer.promise;
     }
-    
+
     function getByEmployeeId(employeeId) {
         defer = $q.defer();
         // Simple GET request example:
@@ -80,10 +80,10 @@
         }, function errorCallback(response) {
             defer.reject(response);
         });
-        
+
         return defer.promise;
     }
-    
+
     function getAllProjects() {
         defer = $q.defer();
         // Simple GET request example:
@@ -96,10 +96,10 @@
         }, function errorCallback(response) {
             defer.reject(response);
         });
-        
+
         return defer.promise;
     }
-    
+
     function getByProjectId(projectId) {
         defer = $q.defer();
         // Simple GET request example:
@@ -113,10 +113,10 @@
         }, function errorCallback(response) {
             defer.reject(response);
         });
-        
+
         return defer.promise;
     }
-    
+
     function getAllNews() {
         defer = $q.defer();
         // Simple GET request example:
@@ -129,10 +129,10 @@
         }, function errorCallback(response) {
             defer.reject(response);
         });
-        
+
         return defer.promise;
     }
-    
+
     function getByNewsId(newsId) {
         defer = $q.defer();
         // Simple GET request example:
@@ -146,7 +146,7 @@
         }, function errorCallback(response) {
             defer.reject(response);
         });
-        
+
         return defer.promise;
     }
   }

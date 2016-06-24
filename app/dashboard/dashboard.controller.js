@@ -18,11 +18,11 @@
     .controller('DashboardCtrl', DashboardCtrl);
 
   // Inject dependencies
-  DashboardCtrl.$inject = ['dataservice', '$ionicLoading', '$timeout'];
+  DashboardCtrl.$inject = ['dataservice', '$ionicLoading', '$timeout', '$interval'];
 
   // Start the DashboardCtrl
   function DashboardCtrl(dataservice, $ionicLoading, $timeout) {
-    var dashboard = this;
+    var dashboard = this, contactActive = false, contactToggleMenu, interVal = 0, interValReverse = 0;
     dashboard.subject = 'contacts';
     var channel = [];
 
@@ -80,7 +80,7 @@
 
                 });
 
-                console.log(dashboard.contacts);
+                // console.log(dashboard.contacts);
               },
               function (error) {
                 console.log(error);
@@ -115,47 +115,59 @@
       };
 
       dashboard.contactMenuToggle = function (contactIndex) {
-        // Loop threw dashboard.contacts and remove any animation classes
-        angular.forEach(dashboard.contacts, function (data, contactKey) {
-          angular.forEach(dashboard.contacts[contactKey].channels, function (data, key) {
-            var cssClass = angular.element(document.querySelector('#animation_' + contactKey + '_' + key));
-            cssClass.removeClass('contact-icon-transition');
+
+        // Fucntion to add the transition classes
+        function addClasses( id ){
+          interVal = 0;
+          angular.element(document.querySelector('#contact_togglemenu_'+id)).addClass('toggleMenu');
+          angular.element(document.querySelector('#contact_'+id)).addClass('contactQuickMenu');
+          angular.element(document.querySelector('#contact-icon-container_'+id)).css({ 'z-index': '9998'});
+          $timeout( function(){
+            // Open the contactQuickMenu
+            angular.element(document.querySelector('#contact_'+id)).addClass('contactQuickMenuActive');
+          }, 25);
+          angular.forEach(dashboard.contacts[id].channels, function (data, key) {
+            interVal += 100;
+            $timeout( function(){
+              angular.element(document.querySelector('#animation_' + id + '_'+ key)).addClass('contact-icon-transition');
+            }, interVal);
           });
 
-        });
-
-        dashboard.contactSelected = contactIndex;
-        if (dashboard.contactActivate !== contactIndex) {
-          $timeout(function () {
-            dashboard.contactActivate = contactIndex;
-            var interVal = 0;
-
-            var cssClass = false;
-            // Loop threw dashboard.channels
-            angular.forEach(dashboard.contacts[contactIndex].channels, function (data, key) {
-              interVal += 100;
-              $timeout(function () {
-
-                console.log(data);
-
-                //var cssClass = angular.element(document.querySelector('#animation_' + contactIndex + '_' + key));
-  	            var cssClass = angular.element(document.querySelector('#animation_' + contactIndex + '_'+ key));
-
-                cssClass.addClass('contact-icon-transition');
-
-                if(!angular.element(document.querySelector('.contact-icons'))) {
-                  cssClass.addClass('contact-icons');
-                }
-
-              }, interVal);
-            });
-
-          }, 25);
-        }
-        else {
-          dashboard.contactActivate = -1;
+          $timeout( function(){
+            console.log( 'Set ID: ' + id );
+            contactActive = id;
+          }, interVal);
         }
 
+        function removeClasses( id ){
+          interValReverse = 0;
+          // Remove the contactQuickMenu transition
+          angular.element(document.querySelector('#contact_'+id)).removeClass('contactQuickMenuActive');
+          // Loop threw the contacts and see on which #contact_togglemenu id's a class needs to be added or removed
+          angular.forEach(dashboard.contacts[id].channels, function (data, channelKey) {
+            var test = (dashboard.contacts[id].channels.length -1) - channelKey;
+            interValReverse += 80;
+            $timeout( function(){
+              angular.element(document.querySelector('#animation_' + id + '_' + test)).removeClass('contact-icon-transition');
+            }, interValReverse);
+          });
+          $timeout( function(){
+            angular.element(document.querySelector('#contact_'+id)).removeClass('contactQuickMenu');
+            angular.element(document.querySelector('#contact_togglemenu_'+id)).removeClass('toggleMenu');
+            angular.element(document.querySelector('#contact-icon-container_'+id)).css({ 'z-index': '-9998'});
+            contactIndex = id;
+          }, interValReverse + 200);
+        }
+
+        if( contactActive === false ){
+          addClasses( contactIndex );
+        } else if( contactActive === contactIndex ){
+          removeClasses( contactIndex );
+          contactActive = false;
+        } else if( contactActive !== contactIndex ){
+          removeClasses( contactActive );
+          addClasses( contactIndex );
+        }
       };
 
       dashboard.getAllProjects = function () {
