@@ -33,15 +33,13 @@
 					<div class="item item-avatar custom-item-contacts" ng-repeat="(contactIndex, contact) in dashboard.contacts">
 
 						<img class="img-profile-photo" src="{{contact.profilephoto}}" ng-click="dashboard.contactMenuToggle( contactIndex )">
-						<span ng-class="{toggleMenu: $index == dashboard.contactSelected}">
+						<div ng-class="{toggleMenu: $index == dashboard.contactSelected}">
 							<div ng-class="{contactQuickMenu: $index == dashboard.contactSelected, contactQuickMenuActive: $index == dashboard.contactActivate}">
-								<div style="position: absolute;">
-									<div ng-repeat="(channelIndex, channel) in contact.channels" id="animation_{{contactIndex}}" class="contact-icons contact-icon-bg-{{channel.type}}">
-										
-									</div>
+								<div class="contact-icon-container">
+									<div ng-repeat="(channelIndex, channel) in contact.channels" id="animation_{{contactIndex}}_{{$index}}" class="contact-icons contact-icon-bg-{{channel.type}}"></div>
 								</div>
 							</div>
-						</span>
+						</div>
 						<div ui-sref="Pocapp.userprofile({empId: contact.employeeId})">
 							<h2>{{contact.firstname + " " + contact.lastname}}</h2>
 							<p>{{contact.role}}</p>

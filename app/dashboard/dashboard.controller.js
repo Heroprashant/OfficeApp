@@ -116,10 +116,12 @@
 
       dashboard.contactMenuToggle = function (contactIndex) {
         // Loop threw dashboard.contacts and remove any animation classes
-        angular.forEach(dashboard.contacts, function (data, key) {
-          //console.log( key );
-          var cssClass = angular.element(document.querySelector('#animation_' + key));
-          cssClass.removeClass('contact-icon-transition');
+        angular.forEach(dashboard.contacts, function (data, contactKey) {
+          angular.forEach(dashboard.contacts[contactKey].channels, function (data, key) {
+            var cssClass = angular.element(document.querySelector('#animation_' + contactKey + '_' + key));
+            cssClass.removeClass('contact-icon-transition');
+          });
+
         });
 
         dashboard.contactSelected = contactIndex;
@@ -137,15 +139,15 @@
                 console.log(data);
 
                 //var cssClass = angular.element(document.querySelector('#animation_' + contactIndex + '_' + key));
-  	            var cssClass = angular.element(document.querySelector('#animation_' + contactIndex));
-                
+  	            var cssClass = angular.element(document.querySelector('#animation_' + contactIndex + '_'+ key));
+
                 cssClass.addClass('contact-icon-transition');
-                
+
                 if(!angular.element(document.querySelector('.contact-icons'))) {
                   cssClass.addClass('contact-icons');
                 }
-                
-              }, interVal);        
+
+              }, interVal);
             });
 
           }, 25);

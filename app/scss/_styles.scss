@@ -37,7 +37,7 @@
     height: 40px;
     width: 40px;
     border-radius: 20px;
-    transition:width 1s ease;
+    transition:width 0.65s ease;
   }
   .contactQuickMenuActive {
     width: 100% !important;
@@ -122,16 +122,22 @@
    z-index: 2;
 }
 
+.contact-icon-container{
+  width: auto;
+  position: absolute;
+  left: 0px;
+  margin-left: 75px;
+}
+
 .contact-icons {
     position: relative;
-    width: 40px;
+    width: 35px;
     height: 40px;
     float: left;
     display: block;
     border-radius: 20px;
     margin-right: 10px;
     opacity: 0;
-    margin-left: 43px;
 }
 
 .contact-icon-transition {
@@ -173,5 +179,3 @@
     background-position: center;
     background-repeat: no-repeat;
 }
-
-
