@@ -40,7 +40,7 @@
             $scope.modal = modal;
             $scope.modal.show();
           });
-        }
+        };
 
         $scope.closeModal = function () {
           $scope.modal.hide();
@@ -49,7 +49,7 @@
 
         $scope.updateSlideStatus = function (slide) {
           var zoomFactor = $ionicScrollDelegate.$getByHandle('scrollHandle' + slide).getScrollPosition().zoom;
-          if (zoomFactor == $scope.zoomMin) {
+          if (zoomFactor === $scope.zoomMin) {
             $ionicSlideBoxDelegate.enableSlide(true);
           } else {
             $ionicSlideBoxDelegate.enableSlide(false);

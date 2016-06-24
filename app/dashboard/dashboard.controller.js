@@ -45,7 +45,7 @@
 
                   channel = [];
 
-                  if (result.data[count].Email && result.data[count].Email !== '') {
+                  if (result.data[count].email && result.data[count].email !== '') {
                     channel.push({
                       'type': 'email',
                       'value': result.data[count].email
@@ -80,7 +80,7 @@
 
                 });
 
-                console.log(channel);
+                console.log(dashboard.contacts);
               },
               function (error) {
                 console.log(error);
@@ -117,7 +117,7 @@
       dashboard.contactMenuToggle = function (contactIndex) {
         // Loop threw dashboard.contacts and remove any animation classes
         angular.forEach(dashboard.contacts, function (data, key) {
-          console.log( key );
+          //console.log( key );
           var cssClass = angular.element(document.querySelector('#animation_' + key));
           cssClass.removeClass('contact-icon-transition');
         });
@@ -128,20 +128,26 @@
             dashboard.contactActivate = contactIndex;
             var interVal = 0;
 
+            var cssClass = false;
             // Loop threw dashboard.channels
             angular.forEach(dashboard.contacts[contactIndex].channels, function (data, key) {
               interVal += 100;
               $timeout(function () {
 
+                console.log(data);
+
                 //var cssClass = angular.element(document.querySelector('#animation_' + contactIndex + '_' + key));
   	            var cssClass = angular.element(document.querySelector('#animation_' + contactIndex));
-
+                
+                cssClass.addClass('contact-icon-transition');
+                
                 if(!angular.element(document.querySelector('.contact-icons'))) {
                   cssClass.addClass('contact-icons');
                 }
-                cssClass.addClass('contact-icon-transition');
-              }, interVal);
+                
+              }, interVal);        
             });
+
           }, 25);
         }
         else {

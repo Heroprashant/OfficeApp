@@ -33,7 +33,7 @@
   z-index: 1;
   padding: 0 20px;
   .contactQuickMenu {
-    background: red;
+    background: #988AA4;
     height: 40px;
     width: 40px;
     border-radius: 20px;
@@ -141,6 +141,34 @@
 
 .contact-icon-bg-linkedIn {
     background-image: url('../../images/icons/linkedin.png');
+    background-size: 60% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.contact-icon-bg-skype {
+    background-image: url('../../images/icons/skype.png');
+    background-size: 60% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.contact-icon-bg-email {
+    background-image: url('../../images/icons/mail.png');
+    background-size: 60% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.contact-icon-bg-mobileNumber {
+    background-image: url('../../images/icons/mobile.png');
+    background-size: 60% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.contact-icon-bg-more {
+    background-image: url('../../images/icons/more.png');
     background-size: 60% auto;
     background-position: center;
     background-repeat: no-repeat;
