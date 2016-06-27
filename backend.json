@@ -18,7 +18,10 @@
             "mobileNumber": "+31612345678",
             "profilephoto": "images/contacts/marieke_de_rooy.png",
             "linkedIn": "http://www.linkedin.com",
-            "skype": "MdeRooy"
+            "skype": [
+              { "type" : "skype", "name" : "nheezemans" },
+              { "type" : "skype4business", "name" : "niek.heezemans@ciber.com" }
+            ]
         },
         {
             "id": 1,
@@ -58,7 +61,10 @@
             "mobileNumber": "+31647374428",
             "profilephoto": "images/contacts/niek_heezemans.png",
             "linkedIn": "https://nl.linkedin.com/in/niek-heezemans-2767297",
-            "skype": "NHeezemans"
+            "skype": [
+              { "type" : "skype", "name" : "nheezemans" },
+              { "type" : "skype4business", "name" : "niek.heezemans@ciber.com" }
+            ]
         },
         {
             "id": 3,
@@ -78,7 +84,10 @@
             "mobileNumber": "+31612345678",
             "profilephoto": "images/no-avatar-male.png",
             "linkedIn": "",
-            "skype": ""
+            "skype": [
+              { "type" : "skype", "name" : "nheezemans" },
+              { "type" : "skype4business", "name" : "niek.heezemans@ciber.com" }
+            ]
         }
     ],
 

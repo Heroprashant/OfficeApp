@@ -72,7 +72,7 @@
                     });
                   }
                   channel.push({
-                    'type': 'more',
+                    'type': 'storeContact',
                     'value': result.data[count].employeeId
                   });
 
@@ -216,6 +216,13 @@
       };
       dashboard.linkedIn = function( url ){
         $window.open(url,'_blank');
+      };
+      dashboard.skype = function( type, name ){
+        alert( 'Skype: ', type );
+        console.log( name );
+      };
+      dashboard.storeContact = function( id ){
+        alert( 'Store Contact: ' + id );
       };
 
       return dashboard;

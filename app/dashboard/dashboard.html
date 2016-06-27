@@ -1,6 +1,6 @@
 <ion-view view-title="" ng-class="{'mainstyle-contacts' : dashboard.subject == 'contacts', 'mainstyle-projects' : dashboard.subject == 'projects', 'mainstyle-news' : dashboard.subject == 'news'}">
 	<img class="img-main-logo" src="images/ciber.png">
-	<ion-content>
+	<ion-content scroll="false">
 		<div class="list list-inset search-bar">
 			<label class="item item-input">
 				<i class="icon ion-search placeholder-icon"></i>
@@ -42,6 +42,11 @@
 										<div ng-show="channel.type == 'mobileNumber'" ng-click="dashboard.callPerson( '{{channel.value}}' )" style="width: 100%; height: 100%;"></div>
 										<!-- LinkedIn -->
 										<div ng-show="channel.type == 'linkedIn'" ng-click="dashboard.linkedIn( '{{channel.value}}' )" style="width: 100%; height: 100%;"></div>
+										<!-- Skype -->
+										<div ng-show="channel.type == 'skype'" ng-click="dashboard.skype( '{{channel.value}}' )" style="width: 100%; height: 100%;"></div>
+										<!-- storeContact -->
+										<div ng-show="channel.type == 'storeContact'" ng-click="dashboard.storeContact( '{{channel.value}}' )" style="width: 100%; height: 100%;"></div>
+
 									</div>
 								</div>
 							</div>
