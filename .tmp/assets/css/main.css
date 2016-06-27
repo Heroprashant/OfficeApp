@@ -9390,8 +9390,8 @@ a.button {
   background-position: center;
   background-repeat: no-repeat; }
 
-.custom-popover {
-  height: 165px !important; }
+.custom-popover .list {
+  margin-bottom: 0px !important; }
 
 /* PLACEHOLDER
 ============================================= */

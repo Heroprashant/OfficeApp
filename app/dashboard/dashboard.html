@@ -35,7 +35,7 @@
 						<div id="contact_togglemenu_{{contactIndex}}">
 							<div id="contact_{{contactIndex}}">
 								<div id="contact-icon-container_{{contactIndex}}" class="contact-icon-container">
-									<div ng-repeat="(channelIndex, channel) in contact.channels" id="animation_{{contactIndex}}_{{$index}}" class="contact-icons contact-icon-bg-{{channel.type}}">
+									<div ng-show="channel.value.length > '0' || channel.value.length != ''" ng-repeat="(channelIndex, channel) in contact.channels" id="animation_{{contactIndex}}_{{$index}}" class="contact-icons contact-icon-bg-{{channel.type}}">
 										<!-- Email -->
 										<div ng-show="channel.type == 'email'" ng-click="dashboard.sendMail( '{{channel.value}}' )" style="width: 100%; height: 100%;"></div>
 										<!-- Telephone -->

@@ -63,6 +63,8 @@
             "linkedIn": "https://nl.linkedin.com/in/niek-heezemans-2767297",
             "skype": [
               { "type" : "skype", "name" : "nheezemans" },
+              { "type" : "skype4business", "name" : "niek.heezemans@ciber.com" },
+              { "type" : "skype", "name" : "nheezemans" },
               { "type" : "skype4business", "name" : "niek.heezemans@ciber.com" }
             ]
         },
@@ -85,8 +87,7 @@
             "profilephoto": "images/no-avatar-male.png",
             "linkedIn": "",
             "skype": [
-              { "type" : "skype", "name" : "m.aydin" },
-              { "type" : "skype4business", "name" : "murat.aydin@ciber.com" }
+              { "type" : "skype", "name" : "m.aydin" }
             ]
         }
     ],

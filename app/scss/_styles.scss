@@ -182,5 +182,7 @@
 }
 
 .custom-popover {
-    height: 165px !important;
+    .list{
+      margin-bottom: 0px !important;
+    }
 }
