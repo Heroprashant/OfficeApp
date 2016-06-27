@@ -9390,6 +9390,9 @@ a.button {
   background-position: center;
   background-repeat: no-repeat; }
 
+.custom-popover {
+  height: 165px !important; }
+
 /* PLACEHOLDER
 ============================================= */
 .mainstyle-contacts, .mainstyle-projects, .mainstyle-news {

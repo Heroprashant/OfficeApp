@@ -14,8 +14,8 @@
   *
   */
   angular
-  .module('Pocapp.dashboard')
-  .controller('DashboardCtrl', DashboardCtrl);
+    .module('Pocapp.dashboard')
+    .controller('DashboardCtrl', DashboardCtrl);
 
   // Inject dependencies
   DashboardCtrl.$inject = ['dataservice', '$scope', '$window', '$ionicLoading', '$ionicPopover', '$timeout', '$interval'];
@@ -33,27 +33,29 @@
 
     function activateDashboard() {
 
-      var template = '<ion-popover-view><ion-content> Hello! </ion-content></ion-popover-view>';
-      $scope.popover = $ionicPopover.fromTemplate(template, {
+      $scope.popover = $ionicPopover.fromTemplateUrl('dashboard/skype-contact.html', {
         scope: $scope
+      }).then(function (popover) {
+        $scope.popover = popover;
+        console.log($scope.popover);
       });
 
-      dashboard.openPopover = function($event) {
+      dashboard.openPopover = function ($event) {
         $scope.popover.show($event);
       };
-      dashboard.closePopover = function() {
+      dashboard.closePopover = function () {
         $scope.popover.hide();
       };
       //Cleanup the popover when we're done with it!
-      $scope.$on('$destroy', function() {
+      $scope.$on('$destroy', function () {
         $scope.popover.remove();
       });
       // Execute action on hide popover
-      $scope.$on('popover.hidden', function() {
+      $scope.$on('popover.hidden', function () {
         // Execute action
       });
       // Execute action on remove popover
-      $scope.$on('popover.removed', function() {
+      $scope.$on('popover.removed', function () {
         // Execute action
       });
 
@@ -115,142 +117,145 @@
               function () {
                 $ionicLoading.hide();
               });
-            }
-          }
-          else {
-            dashboard.contacts = null;
-          }
-        };
-
-        dashboard.changeSubject = function (subject) {
-          dashboard.searchQuery = '';
-          switch (subject) {
-            case 'contacts':
-
-            break;
-            case 'projects':
-            dashboard.getAllProjects();
-            break;
-            case 'news':
-            dashboard.getAllNews();
-            break;
-            default:
-            break;
-          }
-          dashboard.subject = subject;
-        };
-
-        dashboard.contactMenuToggle = function (contactIndex) {
-          var opening = false;
-          dashboard.disabeld = true;
-          $timeout( function(){
-            dashboard.disabeld = false;
-          }, 500)
-
-          // Fucntion to add the transition classes
-          function addClasses( id ){
-            interVal = 0;
-            contactActive = id;
-            angular.element(document.querySelector('#contact_togglemenu_'+id)).addClass('toggleMenu');
-            angular.element(document.querySelector('#contact_'+id)).addClass('contactQuickMenu');
-            angular.element(document.querySelector('#contact-icon-container_'+id)).css({ 'z-index': '9998'});
-            $timeout( function(){
-              // Open the contactQuickMenu
-              angular.element(document.querySelector('#contact_'+id)).addClass('contactQuickMenuActive');
-            }, 25);
-            angular.forEach(dashboard.contacts[id].channels, function (data, key) {
-              interVal += 100;
-              $timeout( function(){
-                angular.element(document.querySelector('#animation_' + id + '_'+ key)).addClass('contact-icon-transition');
-              }, interVal);
-            });
-          }
-
-          function removeClasses( id ){
-            contactActive = false;
-            interValReverse = 0;
-            // Remove the contactQuickMenu transition
-
-            // Loop threw the contacts and see on which #contact_togglemenu id's a class needs to be added or removed
-            angular.forEach(dashboard.contacts[id].channels, function (data, channelKey) {
-              angular.element(document.querySelector('#contact_'+id)).removeClass('contactQuickMenuActive');
-              var test = (dashboard.contacts[id].channels.length -1) - channelKey;
-              interValReverse += 80;
-              $timeout( function(){
-                angular.element(document.querySelector('#animation_' + id + '_' + test)).removeClass('contact-icon-transition');
-              }, interValReverse);
-            });
-
-            $timeout( function(){
-              angular.element(document.querySelector('#contact_'+id)).removeClass('contactQuickMenu');
-              angular.element(document.querySelector('#contact_togglemenu_'+id)).removeClass('toggleMenu');
-              angular.element(document.querySelector('#contact-icon-container_'+id)).css({ 'z-index': '-9998'});
-            }, interValReverse + 200);
-          }
-
-          if( contactActive === false ){
-            addClasses( contactIndex );
-          } else if( contactActive === contactIndex ){
-            removeClasses( contactIndex );
-          } else if( contactActive !== contactIndex ){
-            removeClasses( contactActive );
-            addClasses( contactIndex );
-          }
-        };
-
-        dashboard.getAllProjects = function () {
-          $ionicLoading.show({
-            template: 'Loading...'
-          });
-          dataservice.getAllProjects().then(
-            function (result) {
-              dashboard.projects = result.data;
-            },
-            function (error) {
-              console.log(error);
-            }
-          ).finally(
-            function () {
-              $ionicLoading.hide();
-            });
-          };
-
-          dashboard.getAllNews = function () {
-            $ionicLoading.show({
-              template: 'Loading...'
-            });
-            dataservice.getAllNews().then(
-              function (result) {
-                dashboard.news = result.data;
-              },
-              function (error) {
-                console.log(error);
-              }
-            ).finally(
-              function () {
-                $ionicLoading.hide();
-              });
-            };
-
-            dashboard.sendMail = function( email ){
-              $window.open('mailto:'+ email + '?subject=subject&body=test','_self');
-            };
-            dashboard.callPerson = function( number ){
-              $window.open('tel:'+ number,'_self');
-            };
-            dashboard.linkedIn = function( url ){
-              $window.open(url,'_blank');
-            };
-            dashboard.skype = function( type, name, $event ){
-              console.log( name );
-
-              dashboard.openPopover( $event );
-            };
-            dashboard.storeContact = function( id ){
-              alert( 'Store Contact: ' + id );
-            };
-
-            return dashboard;
           }
         }
-      })();
+        else {
+          dashboard.contacts = null;
+        }
+      };
+
+      dashboard.changeSubject = function (subject) {
+        dashboard.searchQuery = '';
+        switch (subject) {
+          case 'contacts':
+
+            break;
+          case 'projects':
+            dashboard.getAllProjects();
+            break;
+          case 'news':
+            dashboard.getAllNews();
+            break;
+          default:
+            break;
+        }
+        dashboard.subject = subject;
+      };
+
+      dashboard.contactMenuToggle = function (contactIndex) {
+        var opening = false;
+        dashboard.disabeld = true;
+        $timeout(function () {
+          dashboard.disabeld = false;
+        }, 500)
+
+        // Fucntion to add the transition classes
+        function addClasses(id) {
+          interVal = 0;
+          contactActive = id;
+          angular.element(document.querySelector('#contact_togglemenu_' + id)).addClass('toggleMenu');
+          angular.element(document.querySelector('#contact_' + id)).addClass('contactQuickMenu');
+          angular.element(document.querySelector('#contact-icon-container_' + id)).css({ 'z-index': '9998' });
+          $timeout(function () {
+            // Open the contactQuickMenu
+            angular.element(document.querySelector('#contact_' + id)).addClass('contactQuickMenuActive');
+          }, 25);
+          angular.forEach(dashboard.contacts[id].channels, function (data, key) {
+            interVal += 100;
+            $timeout(function () {
+              angular.element(document.querySelector('#animation_' + id + '_' + key)).addClass('contact-icon-transition');
+            }, interVal);
+          });
+        }
+
+        function removeClasses(id) {
+          contactActive = false;
+          interValReverse = 0;
+          // Remove the contactQuickMenu transition
+
+          // Loop threw the contacts and see on which #contact_togglemenu id's a class needs to be added or removed
+          angular.forEach(dashboard.contacts[id].channels, function (data, channelKey) {
+            angular.element(document.querySelector('#contact_' + id)).removeClass('contactQuickMenuActive');
+            var test = (dashboard.contacts[id].channels.length - 1) - channelKey;
+            interValReverse += 80;
+            $timeout(function () {
+              angular.element(document.querySelector('#animation_' + id + '_' + test)).removeClass('contact-icon-transition');
+            }, interValReverse);
+          });
+
+          $timeout(function () {
+            angular.element(document.querySelector('#contact_' + id)).removeClass('contactQuickMenu');
+            angular.element(document.querySelector('#contact_togglemenu_' + id)).removeClass('toggleMenu');
+            angular.element(document.querySelector('#contact-icon-container_' + id)).css({ 'z-index': '-9998' });
+          }, interValReverse + 200);
+        }
+
+        if (contactActive === false) {
+          addClasses(contactIndex);
+        } else if (contactActive === contactIndex) {
+          removeClasses(contactIndex);
+        } else if (contactActive !== contactIndex) {
+          removeClasses(contactActive);
+          addClasses(contactIndex);
+        }
+      };
+
+      dashboard.getAllProjects = function () {
+        $ionicLoading.show({
+          template: 'Loading...'
+        });
+        dataservice.getAllProjects().then(
+          function (result) {
+            dashboard.projects = result.data;
+          },
+          function (error) {
+            console.log(error);
+          }
+        ).finally(
+          function () {
+            $ionicLoading.hide();
+          });
+      };
+
+      dashboard.getAllNews = function () {
+        $ionicLoading.show({
+          template: 'Loading...'
+        });
+        dataservice.getAllNews().then(
+          function (result) {
+            dashboard.news = result.data;
+          },
+          function (error) {
+            console.log(error);
+          }
+        ).finally(
+          function () {
+            $ionicLoading.hide();
+          });
+      };
+
+      dashboard.sendMail = function (email) {
+        $window.open('mailto:' + email + '?subject=subject&body=test', '_self');
+      };
+      dashboard.callPerson = function (number) {
+        $window.open('tel:' + number, '_self');
+      };
+      dashboard.linkedIn = function (url) {
+        $window.open(url, '_blank');
+      };
+      dashboard.skype = function (type, name, $event) {
+        var skypeChannels = JSON.parse(type);
+        dashboard.skypeChannels = skypeChannels;
+        dashboard.openPopover($event);
+      };
+      dashboard.storeContact = function (id) {
+        alert('Store Contact: ' + id);
+      };
+      dashboard.openSkype = function(skypeName) {
+        alert('Open:' + skypeName);
+      };
+
+      return dashboard;
+    }
+  }
+})();

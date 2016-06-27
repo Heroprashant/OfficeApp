@@ -19,8 +19,8 @@
             "profilephoto": "images/contacts/marieke_de_rooy.png",
             "linkedIn": "http://www.linkedin.com",
             "skype": [
-              { "type" : "skype", "name" : "nheezemans" },
-              { "type" : "skype4business", "name" : "niek.heezemans@ciber.com" }
+              { "type" : "skype", "name" : "mderooy" },
+              { "type" : "skype4business", "name" : "marieke.de.rooy@ciber.com" }
             ]
         },
         {
@@ -41,7 +41,7 @@
             "mobileNumber": "+31612345678",
             "profilephoto": "images/no-avatar-male.png",
             "linkedIn": "http://www.linkedin.com",
-            "skype": ""
+            "skype": []
         },
         {
             "id": 2,
@@ -85,8 +85,8 @@
             "profilephoto": "images/no-avatar-male.png",
             "linkedIn": "",
             "skype": [
-              { "type" : "skype", "name" : "nheezemans" },
-              { "type" : "skype4business", "name" : "niek.heezemans@ciber.com" }
+              { "type" : "skype", "name" : "m.aydin" },
+              { "type" : "skype4business", "name" : "murat.aydin@ciber.com" }
             ]
         }
     ],
