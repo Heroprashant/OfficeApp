@@ -43,7 +43,7 @@
 										<!-- LinkedIn -->
 										<div ng-show="channel.type == 'linkedIn'" ng-click="dashboard.linkedIn( '{{channel.value}}' )" style="width: 100%; height: 100%;"></div>
 										<!-- Skype -->
-										<div ng-show="channel.type == 'skype'" ng-click="dashboard.skype( '{{channel.value}}' )" style="width: 100%; height: 100%;"></div>
+										<div ng-show="channel.type == 'skype'" ng-click="dashboard.skype( '{{channel.value}}', '', $event )" style="width: 100%; height: 100%;"></div>
 										<!-- storeContact -->
 										<div ng-show="channel.type == 'storeContact'" ng-click="dashboard.storeContact( '{{channel.value}}' )" style="width: 100%; height: 100%;"></div>
 
