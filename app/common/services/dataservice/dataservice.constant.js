@@ -10,6 +10,6 @@
   angular
     .module('service.dataservice')
     .constant('DATASERVICECONSTANTS', {
-      BASE_URL: 'http://localhost:3000'
+      BASE_URL: 'http://10.31.16.185:3000'
     });
 })();

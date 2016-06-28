@@ -22,4 +22,6 @@
 		<allow-intent href="itms:*"/>
 		<allow-intent href="itms-apps:*"/>
 	</platform>
+	<allow-navigation href="sip:*" />
+	<allow-navigation href="skype:*" />
 </widget>

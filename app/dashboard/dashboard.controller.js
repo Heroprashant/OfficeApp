@@ -254,15 +254,15 @@
       dashboard.openSkype = function(skypeName) {
         if(skypeName.includes('@ciber.com')) {
           //alert('Open Skype: ' + skypeName);
-          $window.open('sip:<niek.heezemans@ciber.com>', '_self');
+          $window.open('sip:kenneth.timmermans@ciber.com', '_self');
           //$window.open('conf:sip:https://meet.contoso.com/kazuto/7322994', '_self');
           //$window.open('skype:oktay.curebal@ciber.com?call&video=true', '_self');
           //$window.open('conf:sip:https://meet.contoso.com/kazuto/7322994', '_self');
         }
         else {
           //alert('Open S4B: ' + skypeName);
-          $window.open('skype:echo123?call', '_self');
-        }        
+          $window.open('skype:echo123?call&video=true', '_self');
+        }
       };
 
       return dashboard;
