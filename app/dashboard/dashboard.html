@@ -4,7 +4,7 @@
 		<div class="list list-inset search-bar">
 			<label class="item item-input">
 				<i class="icon ion-search placeholder-icon"></i>
-				<input type="text" placeholder="Search" ng-model="dashboard.searchQuery" ng-keyup="dashboard.getSearchResult()">
+				<input id="searchbar" type="text" placeholder="Search" ng-model="dashboard.searchQuery" ng-keyup="dashboard.getSearchResult()">
       		</label>
 		</div>
 
@@ -25,7 +25,7 @@
 						<h2>Find your collegue</h2>
 						<label class="item item-input search-bar">
 						<i class="icon ion-search placeholder-icon"></i>
-						<input type="text" placeholder="Search" ng-model="dashboard.searchQuery" ng-keyup="dashboard.getSearchResult()">
+						<input type="text" placeholder="Search" ng-model="dashboard.searchQuery" ng-keyup="dashboard.getSearchResult()" ng-keydown="dashboard.changeFocus()">
 					</label>
 					</div>
 				</div>
