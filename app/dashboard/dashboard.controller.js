@@ -256,6 +256,8 @@
           //alert('Open Skype: ' + skypeName);
           $window.open('sip:<niek.heezemans@ciber.com>', '_self');
           //$window.open('conf:sip:https://meet.contoso.com/kazuto/7322994', '_self');
+          //$window.open('skype:oktay.curebal@ciber.com?call&video=true', '_self');
+          //$window.open('conf:sip:https://meet.contoso.com/kazuto/7322994', '_self');
         }
         else {
           //alert('Open S4B: ' + skypeName);
