@@ -1,5 +1,16 @@
 /* PLACEHOLDER
 ============================================= */
+%bg-image-main-logo {
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  filter: brightness(1000%);
+  background-position: center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat;
+}
 
 %bg-image {
     width: 100%;
@@ -35,13 +46,24 @@
     border-radius: $arc;
 }
 
-/* MAINSTYLE PAGES 
-============================================= */
-.mainstyle .search {
-    @include rounded-corner-search($main-search);
+@mixin page-main-logo($height, $width, $src) {
+    @extend %bg-image-main-logo;
+    height: $height; //37px;
+    width: $width; //134px;
+    background: $src;
 }
 
-/* MAINSTYLE - CONTACTS 
+/* MAINSTYLE PAGES
+============================================= */
+.mainstyle .search {
+    @include rounded-corner-search($main-search-border-radius);
+}
+
+.mainstyle .main-logo {
+    @include page-main-logo($main-logo-height, $main-logo-width, $main-logo-src);
+}
+
+/* MAINSTYLE - CONTACTS
 ============================================= */
 .mainstyle-contacts {
     @include page-background($main-bg-color-contacts);
@@ -51,7 +73,7 @@
     @include page-background-overlay($main-bg-opacity-contacts, $main-bg-image-contacts);
 }
 
-/* MAINSTYLE PROJECTS 
+/* MAINSTYLE PROJECTS
 ============================================= */
 .mainstyle-projects {
     @include page-background($main-bg-color-projects);
@@ -61,7 +83,7 @@
     @include page-background-overlay($main-bg-opacity-projects, $main-bg-image-projects);
 }
 
-/* MAINSTYLE NEWS 
+/* MAINSTYLE NEWS
 ============================================= */
 .mainstyle-news {
     @include page-background($main-bg-color-news);

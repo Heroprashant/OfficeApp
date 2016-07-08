@@ -26,6 +26,7 @@
     dashboard.subject = 'contacts';
     dashboard.opening = false;
     dashboard.closing = false;
+    dashboard.showMainSearch = false;
     var channel = [];
 
     // Activate all methods
@@ -120,8 +121,10 @@
           }
         }
         else {
+          changeFocus(false);
           dashboard.contacts = null;
         }
+        changeFocus(true);
       };
 
       dashboard.changeSubject = function (subject) {
@@ -261,9 +264,16 @@
             break;
         }
       };
-      dashboard.changeFocus = function() {
-        angular.element(document.querySelector('#searchbar')).focus();
-        angular.element(document.querySelector('#searchbar')).attr('autofocus', '');
+
+      function changeFocus(show) {
+        if(show){
+          dashboard.showMainSearch = show;
+          angular.element(document.querySelector('#searchbar')).attr('autofocus', '');
+        }
+        else{
+          dashboard.showMainSearch = show;
+          angular.element(document.querySelector('#searchbar-contact')).attr('autofocus', '');
+        }
       };
 
       return dashboard;

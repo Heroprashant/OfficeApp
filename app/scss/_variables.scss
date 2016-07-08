@@ -9,7 +9,13 @@ $textColor: #ccc;
 ========================================================================== */
 
 /* MAIN */
-$main-search: 10px;
+/* '' - Searchbar */
+$main-search-border-radius: 10px;
+
+/* '' - Logo */
+$main-logo-src: url("../../images/ciber.png");
+$main-logo-height: 30px;
+$main-logo-width: 109px;
 
 /* CONTACTS - */
 $main-bg-color-contacts: #34184C;

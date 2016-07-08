@@ -9164,6 +9164,8 @@ a.button {
 /* TEMPLATE - Template variables
 ========================================================================== */
 /* MAIN */
+/* '' - Searchbar */
+/* '' - Logo */
 /* CONTACTS - */
 /* PROJECTS - */
 /* NEWS - */
@@ -9230,23 +9232,13 @@ a.button {
 .bar.bar-positive {
   background-image: none; }
 
-.img-main-logo {
-  display: block;
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 15px;
-  height: 37px;
-  width: 134px;
-  -webkit-filter: brightness(1000%);
-          filter: brightness(1000%); }
-
 .search-bar {
   border-radius: 50px;
   margin: 20px; }
 
 .tab-bar-custom {
   padding: 0px;
+  margin-top: 20px;
   border-bottom-style: solid;
   border-bottom-width: 1px;
   border-bottom-color: white; }
@@ -9318,15 +9310,14 @@ a.button {
   font-weight: 300; }
 
 .search-bar-contact {
+  position: relative;
   padding: 10px;
-  margin: 50px 20px;
-  background-color: white;
-  height: 200px;
-  top: 50px;
-  box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75); }
+  margin: 50% 20px;
+  background-color: transparent;
+  height: 200px; }
   .search-bar-contact h2 {
     text-align: center;
-    color: #34184C; }
+    color: #ffffff; }
 
 .custom-item-slider {
   padding: 0px; }
@@ -9395,6 +9386,18 @@ a.button {
 
 /* PLACEHOLDER
 ============================================= */
+.mainstyle .main-logo {
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  -webkit-filter: brightness(1000%);
+          filter: brightness(1000%);
+  background-position: center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat; }
+
 .mainstyle-contacts, .mainstyle-projects, .mainstyle-news {
   width: 100%; }
 
@@ -9409,12 +9412,17 @@ a.button {
 
 /* MIXIN
 ============================================= */
-/* MAINSTYLE PAGES 
+/* MAINSTYLE PAGES
 ============================================= */
 .mainstyle .search {
   border-radius: 10px; }
 
-/* MAINSTYLE - CONTACTS 
+.mainstyle .main-logo {
+  height: 30px;
+  width: 109px;
+  background: url("../../images/ciber.png"); }
+
+/* MAINSTYLE - CONTACTS
 ============================================= */
 .mainstyle-contacts {
   background-color: #34184C; }
@@ -9423,7 +9431,7 @@ a.button {
   opacity: 0.05;
   background: url("../../images/background-contacts.png"); }
 
-/* MAINSTYLE PROJECTS 
+/* MAINSTYLE PROJECTS
 ============================================= */
 .mainstyle-projects {
   background-color: #393939; }
@@ -9432,7 +9440,7 @@ a.button {
   opacity: 0.1;
   background: url("../../images/background-projects.png"); }
 
-/* MAINSTYLE NEWS 
+/* MAINSTYLE NEWS
 ============================================= */
 .mainstyle-news {
   background-color: #3A3A68; }

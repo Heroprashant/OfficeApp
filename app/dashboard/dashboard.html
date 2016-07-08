@@ -1,12 +1,6 @@
 <ion-view view-title="" ng-class="{'mainstyle-contacts' : dashboard.subject == 'contacts', 'mainstyle-projects' : dashboard.subject == 'projects', 'mainstyle-news' : dashboard.subject == 'news'}">
-	<img class="img-main-logo" src="images/ciber.png">
+	<div class="main-logo"></div>
 	<ion-content scroll="false">
-		<div class="list list-inset search-bar">
-			<label class="item item-input">
-				<i class="icon ion-search placeholder-icon"></i>
-				<input id="searchbar" type="text" placeholder="Search" ng-model="dashboard.searchQuery" ng-keyup="dashboard.getSearchResult()">
-      		</label>
-		</div>
 
 		<div class="row tab-bar-custom">
 			<div class="col col-33 text-center custom-tab-bar-item" ng-class="dashboard.subject == 'contacts' ? 'active-subject' : 'inactive-subject'"
@@ -17,6 +11,15 @@
 				ng-click="dashboard.changeSubject('news')"><span>News</span></div>
 		</div>
 
+		<div ng-show="dashboard.contacts.length >= '0'" style="margin-bottom: 20px;">
+			<div class="list list-inset search-bar">
+				<label class="item item-input">
+					<i class="icon ion-search placeholder-icon"></i>
+					<input id="searchbar" type="text" placeholder="Search" ng-model="dashboard.searchQuery" ng-keyup="dashboard.getSearchResult()">
+	      </label>
+			</div>
+		</div>
+
 		<ion-scroll class="scroll-style" zooming="false" direction="y">
 			<!-- Contacts -->
 			<div ng-show="dashboard.subject == 'contacts'">
@@ -25,7 +28,7 @@
 						<h2>Find your collegue</h2>
 						<label class="item item-input search-bar">
 						<i class="icon ion-search placeholder-icon"></i>
-						<input type="text" placeholder="Search" ng-model="dashboard.searchQuery" ng-keyup="dashboard.getSearchResult()" ng-keydown="dashboard.changeFocus()">
+						<input id="searchbar-contact" type="text" placeholder="Search" ng-model="dashboard.searchQuery" ng-keyup="dashboard.getSearchResult()">
 					</label>
 					</div>
 				</div>

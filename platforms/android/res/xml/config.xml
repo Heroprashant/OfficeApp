@@ -46,4 +46,6 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
+    <allow-navigation href="sip:*" />
+    <allow-navigation href="skype:*" />
 </widget>
