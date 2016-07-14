@@ -1,10 +1,9 @@
 @import "_pocapp-theme-styles.scss";
 /**** Contact Animation *****/
-
 .slide-icon {
     position: absolute;
     top: 10px;
-    left: 0px;
+    left: 0;
     width: 20px;
     height: 20px;
     background: blue;
@@ -13,122 +12,108 @@
     animation: slide 0.5s forwards;
     animation-delay: 2s;
 }
-
 @-webkit-keyframes slide {
-    100% { left: 100px; }
+    100% {
+        left: 100px;
+    }
 }
-
 @keyframes slide {
-    100% { left: 100px; }
+    100% {
+        left: 100px;
+    }
 }
-
-.expanded{
-  width:100% !important;
-}
-
-.toggleMenu{
-  width: 100%;
-  left: 0px;
-  position: absolute;
-  z-index: 1;
-  padding: 0 20px;
-  .contactQuickMenu {
-    background: #988AA4;
-    height: 40px;
-    width: 40px;
-    border-radius: 20px;
-    transition:width 0.65s ease;
-  }
-  .contactQuickMenuActive {
+.expanded {
     width: 100% !important;
-  }
+}
+.toggleMenu {
+    width: 100%;
+    left: 0;
+    position: absolute;
+    z-index: 1;
+    padding: 0 20px;
+    .contactQuickMenu {
+        background: #988AA4;
+        height: 40px;
+        width: 40px;
+        border-radius: 20px;
+        transition: width 0.65s ease;
+    }
+    .contactQuickMenuActive {
+        width: 100% !important;
+    }
 }
 /**** Contact Animation *****/
-
 .custom-item-contacts {
     background-color: transparent;
-
     img:first-child {
         left: 20px;
     }
-
     h2 {
         color: white;
     }
-
     p {
         color: #8E7F9C;
         font-weight: bold;
     }
 }
-
 .custom-item-projects {
     background-color: transparent;
-
     img:first-child {
         left: 20px;
     }
-
     h2 {
         color: white;
         font-size: 24px;
         font-weight: 400;
     }
-
     p {
         color: #8E7F9C;
         font-weight: bold;
     }
 }
-
 .custom-item-news {
-
     h2 {
         font-size: 24px;
         font-weight: 400;
     }
-
     p {
         font-size: 16px;
         font-weight: 300;
     }
 }
-
 .search-bar-contact {
     position: relative;
     padding: 10px;
-    margin: 50% 20px;
-    background-color: transparent;;
+    margin: 50% 20px 20px;
+    background-color: transparent;
     height: 200px;
-
     h2 {
         text-align: center;
-        color: #ffffff
+        color: #ffffff;
     }
 }
-
-.custom-item-slider {
-    padding: 0px;
+.search-bar {
+    border-radius: 50px;
+    margin: 20px;
 }
-
+.custom-item-slider {
+    padding: 0;
+}
 .scroll-style {
     width: 100%;
-    height: 100%
+    height: 100%;
 }
-
 .img-profile-photo {
-   position: absolute;
-   z-index: 2;
+    position: absolute;
+    z-index: 2;
 }
-
-.contact-icon-container{
-  width: auto;
-  position: absolute;
-  left: 0px;
-  margin-left: 75px;
-  z-index: -9999;
+.contact-icon-container {
+    width: auto;
+    position: absolute;
+    left: 0;
+    margin-left: 75px;
+    z-index: -9999;
 }
-
 .contact-icons {
     position: relative;
     width: 35px;
@@ -139,49 +124,42 @@
     margin-right: 10px;
     opacity: 0;
 }
-
 .contact-icon-transition {
     opacity: 1;
-    transition:opacity 0.10s ease;
+    transition: opacity 0.10s ease;
 }
-
 .contact-icon-bg-linkedIn {
     background-image: url('../../images/icons/linkedin.png');
     background-size: 60% auto;
     background-position: center;
     background-repeat: no-repeat;
 }
-
 .contact-icon-bg-skype {
     background-image: url('../../images/icons/skype.png');
     background-size: 60% auto;
     background-position: center;
     background-repeat: no-repeat;
 }
-
 .contact-icon-bg-email {
     background-image: url('../../images/icons/mail.png');
     background-size: 60% auto;
     background-position: center;
     background-repeat: no-repeat;
 }
-
 .contact-icon-bg-mobileNumber {
     background-image: url('../../images/icons/mobile.png');
     background-size: 60% auto;
     background-position: center;
     background-repeat: no-repeat;
 }
-
 .contact-icon-bg-storeContact {
     background-image: url('../../images/icons/more.png');
     background-size: 60% auto;
     background-position: center;
     background-repeat: no-repeat;
 }
-
 .custom-popover {
-    .list{
-      margin-bottom: 0px !important;
+    .list {
+        margin-bottom: 0 !important;
     }
 }

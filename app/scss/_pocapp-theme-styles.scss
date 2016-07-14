@@ -63,6 +63,14 @@
     background-position: center, center;
 }
 
+.bar {
+    background-image: none;
+}
+
+.bar-header {
+    background-color: #F2F2F2 !important;
+}
+
 .bar-positive {
     background-color: transparent !important;
     border-bottom: 0px !important;
@@ -71,11 +79,6 @@
 
 .bar.bar-positive {
     background-image: none;
-}
-
-.search-bar {
-    border-radius: 50px;
-    margin: 20px;
 }
 
 .tab-bar-custom {

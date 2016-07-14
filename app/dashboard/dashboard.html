@@ -1,99 +1,100 @@
 <ion-view view-title="" ng-class="{'mainstyle-contacts' : dashboard.subject == 'contacts', 'mainstyle-projects' : dashboard.subject == 'projects', 'mainstyle-news' : dashboard.subject == 'news'}">
-	<div class="main-logo"></div>
-	<ion-content scroll="false">
+    <div class="main-logo"></div>
+    <ion-content scroll="false">
 
-		<div class="row tab-bar-custom">
-			<div class="col col-33 text-center custom-tab-bar-item" ng-class="dashboard.subject == 'contacts' ? 'active-subject' : 'inactive-subject'"
-				ng-click="dashboard.changeSubject('contacts')"><span>Contacts</span></div>
-			<div class="col col-33 text-center custom-tab-bar-item" ng-class="dashboard.subject == 'projects' ? 'active-subject' : 'inactive-subject'"
-				ng-click="dashboard.changeSubject('projects')"><span>Projects</span></div>
-			<div class="col col-33 text-center custom-tab-bar-item" ng-class="dashboard.subject == 'news' ? 'active-subject' : 'inactive-subject'"
-				ng-click="dashboard.changeSubject('news')"><span>News</span></div>
+        <div class="row tab-bar-custom">
+            <div class="col col-33 text-center custom-tab-bar-item" ng-class="dashboard.subject == 'contacts' ? 'active-subject' : 'inactive-subject'" ng-click="dashboard.changeSubject('contacts')">
+                <span>Contacts</span>
+            </div>
+            <div class="col col-33 text-center custom-tab-bar-item" ng-class="dashboard.subject == 'projects' ? 'active-subject' : 'inactive-subject'" ng-click="dashboard.changeSubject('projects')">
+                <span>Projects</span>
+            </div>
+            <div class="col col-33 text-center custom-tab-bar-item" ng-class="dashboard.subject == 'news' ? 'active-subject' : 'inactive-subject'" ng-click="dashboard.changeSubject('news')">
+                <span>News</span>
+            </div>
+        </div>
+
+        <!--<div class="list list-inset search-bar">
+            <label class="item item-input">
+                <i class="icon ion-search placeholder-icon"></i>
+                <input id="searchbar" type="text" placeholder="Search" ng-model="dashboard.searchQuery" ng-keyup="dashboard.getSearchResult()">
+            </label>
+        </div>-->
+
+				<!-- -->
+
+        <div id="searchbar" class="search-bar-contact">
+            <h2 id="searchbar-h2">Find your collegue</h2>
+            <label id="searchbar-label" class="item item-input search-bar">
+                <i class="icon ion-search placeholder-icon"></i>
+                <input id="searchbar-contact" type="text" placeholder="Search" ng-model="dashboard.searchQuery" ng-keyup="dashboard.getSearchResult()">
+            </label>
+        </div>
+
+        <ion-scroll class="scroll-style" zooming="false" direction="y">
+            <!-- Contacts -->
+            <div ng-show="dashboard.subject == 'contacts'">
+                <div class="list">
+                    <div class="item item-avatar custom-item-contacts" ng-repeat="(contactIndex, contact) in dashboard.contacts">
+                        <img class="img-profile-photo" src="{{contact.profilephoto}}" ng-click="!dashboard.disabeld && dashboard.contactMenuToggle( contactIndex )">
+                        <div id="contact_togglemenu_{{contactIndex}}">
+                            <div id="contact_{{contactIndex}}">
+                                <div id="contact-icon-container_{{contactIndex}}" class="contact-icon-container">
+                                    <div ng-show="channel.value.length > '0' || channel.value.length != ''" ng-repeat="(channelIndex, channel) in contact.channels" id="animation_{{contactIndex}}_{{$index}}" class="contact-icons contact-icon-bg-{{channel.type}}">
+                                        <!-- Email -->
+                                        <div ng-show="channel.type == 'email'" ng-click="dashboard.sendMail( '{{channel.value}}' )" style="width: 100%; height: 100%;"></div>
+                                        <!-- Telephone -->
+                                        <div ng-show="channel.type == 'mobileNumber'" ng-click="dashboard.callPerson( '{{channel.value}}' )" style="width: 100%; height: 100%;"></div>
+                                        <!-- LinkedIn -->
+                                        <div ng-show="channel.type == 'linkedIn'" ng-click="dashboard.linkedIn( '{{channel.value}}' )" style="width: 100%; height: 100%;"></div>
+                                        <!-- Skype -->
+                                        <div ng-show="channel.type == 'skype'" ng-click="dashboard.skype( '{{channel.value}}', '', $event )" style="width: 100%; height: 100%;"></div>
+                                        <!-- storeContact -->
+                                        <div ng-show="channel.type == 'storeContact'" ng-click="dashboard.storeContact( '{{channel.value}}' )" style="width: 100%; height: 100%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div ui-sref="Pocapp.userprofile({empId: contact.employeeId})">
+                            <h2>{{contact.firstname + " " + contact.lastname}}</h2>
+                            <p>{{contact.role}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projects -->
+            <div ng-show="dashboard.subject == 'projects'">
+                <div class="list">
+                    <div class="item item-thumbnail-left custom-item-projects" ng-repeat="project in dashboard.projects | filter: dashboard.searchQuery" ui-sref="Pocapp.projectdetail({pId: project.projectId})">
+                        <img src="{{project.projectMainPhoto}}">
+                        <h2>{{project.title}}</h2>
+                        <p>{{project.year + ', ' + project.unit + ' ' + project.team}}</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- News -->
+            <div ng-show="dashboard.subject == 'news'">
+                <!--<div class="list">
+			<div class="item item-thumbnail-left custom-item-news" ng-repeat="news in dashboard.news | filter: dashboard.searchQuery" ui-sref="Pocapp.newsdetail({nId: news.newsId})">
+			<img src="{{news.newsMainPhoto}}">
+			<h2>{{news.title}}</h2>
+			<p>{{news.author + ', ' + news.createDate + ', ' + news.year}}</p>
 		</div>
+	</div>-->
+                <div ng-repeat="news in dashboard.news | filter: dashboard.searchQuery" ui-sref="Pocapp.newsdetail({nId: news.newsId})">
+                    <div class="card">
+                        <div class="item item-text-wrap custom-item-news">
+                            <h2>{{news.title}}</h2>
+                            <p>{{news.author + ', ' + news.createDate + ', ' + news.year}}</p>
+                            <br/>
+                            <p>{{news.description_short}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ion-scroll>
 
-		<div ng-show="dashboard.contacts.length >= '0'" style="margin-bottom: 20px;">
-			<div class="list list-inset search-bar">
-				<label class="item item-input">
-					<i class="icon ion-search placeholder-icon"></i>
-					<input id="searchbar" type="text" placeholder="Search" ng-model="dashboard.searchQuery" ng-keyup="dashboard.getSearchResult()">
-	      </label>
-			</div>
-		</div>
-
-		<ion-scroll class="scroll-style" zooming="false" direction="y">
-			<!-- Contacts -->
-			<div ng-show="dashboard.subject == 'contacts'">
-				<div ng-hide="dashboard.contacts.length >= '0'">
-					<div class="search-bar-contact">
-						<h2>Find your collegue</h2>
-						<label class="item item-input search-bar">
-						<i class="icon ion-search placeholder-icon"></i>
-						<input id="searchbar-contact" type="text" placeholder="Search" ng-model="dashboard.searchQuery" ng-keyup="dashboard.getSearchResult()">
-					</label>
-					</div>
-				</div>
-				<div class="list">
-					<div class="item item-avatar custom-item-contacts" ng-repeat="(contactIndex, contact) in dashboard.contacts">
-						<img class="img-profile-photo" src="{{contact.profilephoto}}" ng-click="!dashboard.disabeld && dashboard.contactMenuToggle( contactIndex )">
-						<div id="contact_togglemenu_{{contactIndex}}">
-							<div id="contact_{{contactIndex}}">
-								<div id="contact-icon-container_{{contactIndex}}" class="contact-icon-container">
-									<div ng-show="channel.value.length > '0' || channel.value.length != ''" ng-repeat="(channelIndex, channel) in contact.channels" id="animation_{{contactIndex}}_{{$index}}" class="contact-icons contact-icon-bg-{{channel.type}}">
-										<!-- Email -->
-										<div ng-show="channel.type == 'email'" ng-click="dashboard.sendMail( '{{channel.value}}' )" style="width: 100%; height: 100%;"></div>
-										<!-- Telephone -->
-										<div ng-show="channel.type == 'mobileNumber'" ng-click="dashboard.callPerson( '{{channel.value}}' )" style="width: 100%; height: 100%;"></div>
-										<!-- LinkedIn -->
-										<div ng-show="channel.type == 'linkedIn'" ng-click="dashboard.linkedIn( '{{channel.value}}' )" style="width: 100%; height: 100%;"></div>
-										<!-- Skype -->
-										<div ng-show="channel.type == 'skype'" ng-click="dashboard.skype( '{{channel.value}}', '', $event )" style="width: 100%; height: 100%;"></div>
-										<!-- storeContact -->
-										<div ng-show="channel.type == 'storeContact'" ng-click="dashboard.storeContact( '{{channel.value}}' )" style="width: 100%; height: 100%;"></div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div ui-sref="Pocapp.userprofile({empId: contact.employeeId})">
-							<h2>{{contact.firstname + " " + contact.lastname}}</h2>
-							<p>{{contact.role}}</p>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<!-- Projects -->
-			<div ng-show="dashboard.subject == 'projects'">
-				<div class="list">
-					<div class="item item-thumbnail-left custom-item-projects" ng-repeat="project in dashboard.projects | filter: dashboard.searchQuery"
-						ui-sref="Pocapp.projectdetail({pId: project.projectId})">
-						<img src="{{project.projectMainPhoto}}">
-						<h2>{{project.title}}</h2>
-						<p>{{project.year + ', ' + project.unit + ' ' + project.team}}</p>
-					</div>
-				</div>
-			</div>
-
-			<!-- News -->
-			<div ng-show="dashboard.subject == 'news'">
-				<!--<div class="list">
-				<div class="item item-thumbnail-left custom-item-news" ng-repeat="news in dashboard.news | filter: dashboard.searchQuery" ui-sref="Pocapp.newsdetail({nId: news.newsId})">
-					<img src="{{news.newsMainPhoto}}">
-					<h2>{{news.title}}</h2>
-					<p>{{news.author + ', ' + news.createDate + ', ' + news.year}}</p>
-				</div>
-			</div>-->
-				<div ng-repeat="news in dashboard.news | filter: dashboard.searchQuery" ui-sref="Pocapp.newsdetail({nId: news.newsId})">
-					<div class="card">
-						<div class="item item-text-wrap custom-item-news">
-							<h2>{{news.title}}</h2>
-							<p>{{news.author + ', ' + news.createDate + ', ' + news.year}}</p>
-							<br/>
-							<p>{{news.description_short}}</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</ion-scroll>
-
-	</ion-content>
+    </ion-content>
 </ion-view>

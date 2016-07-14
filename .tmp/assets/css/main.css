@@ -9224,6 +9224,12 @@ a.button {
   background-repeat: no-repeat;
   background-position: center, center; }
 
+.bar {
+  background-image: none; }
+
+.bar-header {
+  background-color: #F2F2F2 !important; }
+
 .bar-positive {
   background-color: transparent !important;
   border-bottom: 0px !important;
@@ -9231,10 +9237,6 @@ a.button {
 
 .bar.bar-positive {
   background-image: none; }
-
-.search-bar {
-  border-radius: 50px;
-  margin: 20px; }
 
 .tab-bar-custom {
   padding: 0px;
@@ -9247,7 +9249,7 @@ a.button {
 .slide-icon {
   position: absolute;
   top: 10px;
-  left: 0px;
+  left: 0;
   width: 20px;
   height: 20px;
   background: blue;
@@ -9265,7 +9267,7 @@ a.button {
 
 .toggleMenu {
   width: 100%;
-  left: 0px;
+  left: 0;
   position: absolute;
   z-index: 1;
   padding: 0 20px; }
@@ -9312,15 +9314,19 @@ a.button {
 .search-bar-contact {
   position: relative;
   padding: 10px;
-  margin: 50% 20px;
+  margin: 50% 20px 20px;
   background-color: transparent;
   height: 200px; }
   .search-bar-contact h2 {
     text-align: center;
     color: #ffffff; }
 
+.search-bar {
+  border-radius: 50px;
+  margin: 20px; }
+
 .custom-item-slider {
-  padding: 0px; }
+  padding: 0; }
 
 .scroll-style {
   width: 100%;
@@ -9333,7 +9339,7 @@ a.button {
 .contact-icon-container {
   width: auto;
   position: absolute;
-  left: 0px;
+  left: 0;
   margin-left: 75px;
   z-index: -9999; }
 
@@ -9382,7 +9388,7 @@ a.button {
   background-repeat: no-repeat; }
 
 .custom-popover .list {
-  margin-bottom: 0px !important; }
+  margin-bottom: 0 !important; }
 
 /* PLACEHOLDER
 ============================================= */

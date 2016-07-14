@@ -1,0 +1,78 @@
+<ion-view view-title="User Profile" class="background-contacts-details" hide-back-button="true" style="background-color: red;">
+	<ion-content>
+		<div class="list">
+			<div class="item item-avatar">
+				<img id="profilephoto" src="{{userprofile.data.profilephoto}}">
+				<h2>{{userprofile.data.firstname + " " + userprofile.data.lastname}}</h2>
+				<p>{{userprofile.data.role}}</p>
+			</div>
+			<div class="item item-icon-left">
+				<i class="icon ion-calendar"></i> {{userprofile.data.dateOfBirth}}
+				<span class="item-note">
+					Birthdate
+				</span>
+			</div>
+			<div class="item item-icon-left">
+				<i class="icon ion-flag"></i> {{userprofile.data.nationality}}
+				<span class="item-note">
+					Nationality
+				</span>
+			</div>
+			<div class="item item-icon-left">
+				<i class="icon ion-iphone"></i> {{userprofile.data.mobileNumber}}
+				<span class="item-note">
+					Mobile number
+				</span>
+			</div>
+			<div class="item item-icon-left">
+				<i class="icon ion-android-call"></i> {{userprofile.data.phoneNumber}}
+				<span class="item-note">
+					Phone number
+				</span>
+			</div>
+			<div class="item item-icon-left">
+				<i class="icon ion-email"></i> {{userprofile.data.email}}
+				<span class="item-note">
+					Email
+				</span>
+			</div>
+			<div class="item item-icon-left">
+				<i class="icon ion-location"></i> {{userprofile.data.company}}
+				<span class="item-note">
+					Company
+				</span>
+			</div>
+			<div class="item item-icon-left">
+				<i class="icon ion-home"></i> {{userprofile.data.department}}
+				<span class="item-note">
+					Department
+				</span>
+			</div>
+			<div class="item item-icon-left">
+				<i class="icon ion-android-expand"></i> {{userprofile.data.unit}}
+				<span class="item-note">
+					Unit
+				</span>
+			</div>
+			<div class="item item-icon-left">
+				<i class="icon ion-ios-people"></i> {{userprofile.data.team}}
+				<span class="item-note">
+					Team
+				</span>
+			</div>
+			<div class="item item-icon-left">
+				<i class="icon ion-person"></i> {{userprofile.data.manager}}
+				<span class="item-note">
+					Manager
+				</span>
+			</div>
+			<div class="item item-icon-left">
+				<i class="icon ion-person"></i> {{userprofile.deviceinfo}}
+				<span class="item-note">
+					Device platform
+				</span>
+			</div>
+			<button ng-click="userprofile.storeContact()">Voeg contact toe</button>
+		</div>
+	</ion-content>
+</ion-view>
