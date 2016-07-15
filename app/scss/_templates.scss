@@ -92,3 +92,13 @@
 .mainstyle-news:before {
     @include page-background-overlay($main-bg-opacity-news, $main-bg-image-news);
 }
+
+/* MAINSTYLE INFORMATION
+============================================= */
+.mainstyle-information {
+    @include page-background($main-bg-color-information);
+}
+
+.mainstyle-information:before {
+    @include page-background-overlay($main-bg-opacity-information, $main-bg-image-information);
+}

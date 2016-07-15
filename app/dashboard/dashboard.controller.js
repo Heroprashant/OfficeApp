@@ -264,7 +264,7 @@
                 dashboard.openPopover($event);
             };
             dashboard.storeContact = function(id) {
-                alert('Store Contact: ' + id);
+                window.alert('Store Contact: ' + id);
             };
             dashboard.openSkype = function(skypeName, skypeType) {
                 switch (skypeType) {

@@ -9169,6 +9169,7 @@ a.button {
 /* CONTACTS - */
 /* PROJECTS - */
 /* NEWS - */
+/* INFORMATION - */
 /**
  * Import fonts either via @import url (e.g. from Googlee Fonts)
  * or via @font-face when font files are stored locally in /app/fonts
@@ -9390,6 +9391,23 @@ a.button {
 .custom-popover .list {
   margin-bottom: 0 !important; }
 
+.title.title-center.header-item {
+  margin-top: 10px;
+  color: #8D878D; }
+
+.information-page-layout {
+  background: transparent;
+  box-shadow: none; }
+
+.information-page-layout .transparent {
+  background-color: transparent; }
+  .information-page-layout .transparent img {
+    -webkit-filter: brightness(1000%);
+            filter: brightness(1000%); }
+
+.item p {
+  white-space: normal; }
+
 /* PLACEHOLDER
 ============================================= */
 .mainstyle .main-logo {
@@ -9404,10 +9422,10 @@ a.button {
   background-size: cover !important;
   background-repeat: no-repeat; }
 
-.mainstyle-contacts, .mainstyle-projects, .mainstyle-news {
+.mainstyle-contacts, .mainstyle-projects, .mainstyle-news, .mainstyle-information {
   width: 100%; }
 
-.mainstyle-contacts:before, .mainstyle-projects:before, .mainstyle-news:before {
+.mainstyle-contacts:before, .mainstyle-projects:before, .mainstyle-news:before, .mainstyle-information:before {
   content: "";
   height: 100%;
   width: 100%;
@@ -9454,3 +9472,12 @@ a.button {
 .mainstyle-news:before {
   opacity: 0.1;
   background: url("../../images/background-news.png"); }
+
+/* MAINSTYLE INFORMATION
+============================================= */
+.mainstyle-information {
+  background-color: #34184C; }
+
+.mainstyle-information:before {
+  opacity: 0.1;
+  background: none; }

@@ -14,21 +14,14 @@
             </div>
         </div>
 
-        <!--<div class="list list-inset search-bar">
-            <label class="item item-input">
-                <i class="icon ion-search placeholder-icon"></i>
-                <input id="searchbar" type="text" placeholder="Search" ng-model="dashboard.searchQuery" ng-keyup="dashboard.getSearchResult()">
-            </label>
-        </div>-->
-
-				<!-- -->
-
-        <div id="searchbar" class="search-bar-contact">
-            <h2 id="searchbar-h2">Find your collegue</h2>
-            <label id="searchbar-label" class="item item-input search-bar">
-                <i class="icon ion-search placeholder-icon"></i>
-                <input id="searchbar-contact" type="text" placeholder="Search" ng-model="dashboard.searchQuery" ng-keyup="dashboard.getSearchResult()">
-            </label>
+        <div ng-show="dashboard.subject == 'contacts'">
+            <div id="searchbar" class="search-bar-contact">
+                <h2 id="searchbar-h2">Find your collegue</h2>
+                <label id="searchbar-label" class="item item-input search-bar">
+                    <i class="icon ion-search placeholder-icon"></i>
+                    <input id="searchbar-contact" type="text" placeholder="Search" ng-model="dashboard.searchQuery" ng-keyup="dashboard.getSearchResult()">
+                </label>
+            </div>
         </div>
 
         <ion-scroll class="scroll-style" zooming="false" direction="y">
@@ -76,13 +69,6 @@
 
             <!-- News -->
             <div ng-show="dashboard.subject == 'news'">
-                <!--<div class="list">
-			<div class="item item-thumbnail-left custom-item-news" ng-repeat="news in dashboard.news | filter: dashboard.searchQuery" ui-sref="Pocapp.newsdetail({nId: news.newsId})">
-			<img src="{{news.newsMainPhoto}}">
-			<h2>{{news.title}}</h2>
-			<p>{{news.author + ', ' + news.createDate + ', ' + news.year}}</p>
-		</div>
-	</div>-->
                 <div ng-repeat="news in dashboard.news | filter: dashboard.searchQuery" ui-sref="Pocapp.newsdetail({nId: news.newsId})">
                     <div class="card">
                         <div class="item item-text-wrap custom-item-news">

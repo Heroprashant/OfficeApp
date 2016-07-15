@@ -163,3 +163,21 @@
         margin-bottom: 0 !important;
     }
 }
+.title.title-center.header-item {
+  margin-top: 10px;
+  color: #8D878D;
+}
+.information-page-layout {
+  background: transparent;
+  box-shadow: none;
+}
+.information-page-layout .transparent {
+  background-color: transparent;
+
+  img {
+    filter: brightness(1000%);
+  }
+}
+.item p {
+  white-space: normal;
+}
