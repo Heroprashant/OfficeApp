@@ -248,3 +248,14 @@
 .custom-item {
   padding: 10px;
 }
+.custom-bar-header {
+  background-color: transparent !important;
+
+  h1 {
+    margin-top: 0px !important;
+    color: #ffffff !important;
+  }
+  button {
+    background-color: transparent !important;
+  }
+}
