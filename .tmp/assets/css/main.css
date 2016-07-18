@@ -9202,7 +9202,7 @@ a.button {
     font-size: 18px; }
 
 .image-list-thumb {
-  padding: 2px 2px 2px 2px;
+  padding: 2px;
   height: 250px; }
 
 .image-modal {
@@ -9233,18 +9233,29 @@ a.button {
 
 .bar-positive {
   background-color: transparent !important;
-  border-bottom: 0px !important;
+  border-bottom: 0 !important;
   border: none !important; }
 
 .bar.bar-positive {
   background-image: none; }
 
 .tab-bar-custom {
-  padding: 0px;
+  padding: 0;
   margin-top: 20px;
   border-bottom-style: solid;
   border-bottom-width: 1px;
   border-bottom-color: white; }
+
+.bar-balanced {
+  background-color: #FFB71D !important;
+  border-bottom: 0 !important;
+  border: none !important; }
+
+.bar.bar-balanced.bar-footer {
+  background-image: none; }
+
+.bar .button {
+  background-color: #FFB71D; }
 
 /**** Contact Animation *****/
 .slide-icon {
@@ -9405,8 +9416,72 @@ a.button {
     -webkit-filter: brightness(1000%);
             filter: brightness(1000%); }
 
+.item h2 {
+  color: white; }
+
 .item p {
   white-space: normal; }
+
+.bar .button.back-button,
+.bar button.back-button {
+  margin-top: 10px; }
+
+.bar {
+  padding: 0; }
+
+.bar .title {
+  margin-top: 20px; }
+
+.bar .title .title-footer {
+  margin-top: -10px; }
+
+.bar-positive .button.button-clear {
+  margin-top: 15px; }
+
+.scroll-content {
+  position: absolute; }
+
+.button.button-full {
+  margin-top: 0;
+  margin-bottom: 0; }
+
+.item-divider {
+  background-color: #FFB71D;
+  color: #ffffff; }
+
+.custom-profile-area {
+  position: relative;
+  height: 150px;
+  width: 100%;
+  background: transparent; }
+  .custom-profile-area img:first-child {
+    position: relative;
+    top: 30%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+    max-width: 100px;
+    max-height: 100px;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%; }
+  .custom-profile-area h2 {
+    position: absolute;
+    font-size: 20px;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff; }
+  .custom-profile-area p {
+    position: absolute;
+    font-size: 10px;
+    top: 89%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff; }
+
+.custom-item {
+  padding: 10px; }
 
 /* PLACEHOLDER
 ============================================= */

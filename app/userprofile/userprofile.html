@@ -1,79 +1,107 @@
-<ion-view view-title="User Profile" class="background-contacts-details">
-	<ion-content>
-		<div class="list">
-			<div class="item item-avatar">
-				<img id="profilephoto" src="{{userprofile.data.profilephoto}}">
-				<h2>{{userprofile.data.firstname + " " + userprofile.data.lastname}}</h2>
-				<p>{{userprofile.data.role}}</p>
-			</div>
+<ion-view view-title="Contact details" class="mainstyle-contacts">
 
-			<div class="item item-icon-left">
-				<i class="icon ion-calendar"></i> {{userprofile.data.dateOfBirth}}
-				<span class="item-note">
-					Birthdate
-				</span>
-			</div>
-			<div class="item item-icon-left">
-				<i class="icon ion-flag"></i> {{userprofile.data.nationality}}
-				<span class="item-note">
-					Nationality
-				</span>
-			</div>
-			<div class="item item-icon-left">
-				<i class="icon ion-iphone"></i> {{userprofile.data.mobileNumber}}
-				<span class="item-note">
-					Mobile number
-				</span>
-			</div>
-			<div class="item item-icon-left">
-				<i class="icon ion-android-call"></i> {{userprofile.data.phoneNumber}}
-				<span class="item-note">
-					Phone number
-				</span>
-			</div>
-			<div class="item item-icon-left">
-				<i class="icon ion-email"></i> {{userprofile.data.email}}
-				<span class="item-note">
-					Email
-				</span>
-			</div>
-			<div class="item item-icon-left">
-				<i class="icon ion-location"></i> {{userprofile.data.company}}
-				<span class="item-note">
-					Company
-				</span>
-			</div>
-			<div class="item item-icon-left">
-				<i class="icon ion-home"></i> {{userprofile.data.department}}
-				<span class="item-note">
-					Department
-				</span>
-			</div>
-			<div class="item item-icon-left">
-				<i class="icon ion-android-expand"></i> {{userprofile.data.unit}}
-				<span class="item-note">
-					Unit
-				</span>
-			</div>
-			<div class="item item-icon-left">
-				<i class="icon ion-ios-people"></i> {{userprofile.data.team}}
-				<span class="item-note">
-					Team
-				</span>
-			</div>
-			<div class="item item-icon-left">
-				<i class="icon ion-person"></i> {{userprofile.data.manager}}
-				<span class="item-note">
-					Manager
-				</span>
-			</div>
-			<div class="item item-icon-left">
-				<i class="icon ion-person"></i> {{userprofile.deviceinfo}}
-				<span class="item-note">
-					Device platform
-				</span>
-			</div>
-			<button ng-click="userprofile.storeContact()">Voeg contact toe</button>
-		</div>
-	</ion-content>
+    <div></div>
+
+    <ion-content scroll="false">
+
+        <div class="list" style="margin-bottom: 0px;">
+            <br/>
+            <div class="custom-profile-area">
+                <img id="profilephoto" src="{{userprofile.data.profilephoto}}">
+                <h2>{{userprofile.data.firstname + " " + userprofile.data.lastname}}</h2>
+                <p>{{userprofile.data.role}}</p>
+            </div>
+        </div>
+
+        <div class="row tab-bar-custom">
+            <div class="col col-50 text-center custom-tab-bar-item" ng-class="userprofile.subject == 'personal' ? 'active-subject' : 'inactive-subject'" ng-click="userprofile.changeSubject('personal')">
+                <span>Personal</span>
+            </div>
+            <div class="col col-50 text-center custom-tab-bar-item" ng-class="userprofile.subject == 'company' ? 'active-subject' : 'inactive-subject'" ng-click="userprofile.changeSubject('company')">
+                <span>Company</span>
+            </div>
+        </div>
+
+        <ion-scroll class="scroll-style" zooming="false" direction="y">
+
+            <div ng-show="userprofile.subject == 'personal'">
+                <div class="list">
+                    <a class="item item-icon-right custom-item" href="#">
+                        <i class="icon ion-android-phone-portrait"></i>
+                        {{userprofile.data.mobileNumber}}
+                    </a>
+                    <a class="item item-icon-right custom-item" href="#">
+                        <i class="icon ion-ios-telephone"></i>
+                        {{userprofile.data.phoneNumber}}
+                    </a>
+                    <a class="item item-icon-right custom-item" href="#">
+                        <i class="icon ion-android-mail"></i>
+                        {{userprofile.data.email}}
+                    </a>
+                    <a class="item item-icon-right custom-item" href="#">
+                        <i class="icon ion-social-skype"></i>
+                        skype
+                    </a>
+                    <a class="item item-icon-right custom-item" href="#">
+                        <i class="icon ion-social-skype-outline"></i>
+                        skype4business
+                    </a>
+                    <a class="item item-icon-right custom-item" href="#">
+                        <i class="icon ion-social-linkedin"></i>
+                        {{userprofile.data.linkedIn}}
+                    </a>
+                    <div>
+                        <ion-slide-box show-pager="false">
+                            <ion-slide>
+                                <div class="list">
+                                    <a class="item item-thumbnail-left" href="#">
+                                        <img src="cover.jpg">
+                                        <h2>Pretty Hate Machine</h2>
+                                        <p>Nine Inch Nails</p>
+                                    </a>
+                                </div>
+                            </ion-slide>
+                            <ion-slide>
+                                <div class="list">
+                                    <a class="item item-thumbnail-left" href="#">
+                                        <img src="cover.jpg">
+                                        <h2>Pretty Hate Machine</h2>
+                                        <p>Nine Inch Nails</p>
+                                    </a>
+                                </div>
+                            </ion-slide>
+                        </ion-slide-box>
+                    </div>
+                    <div class="row" style="position: relative; height: 44px !important;"></div>
+                </div>
+            </div>
+
+            <div ng-show="userprofile.subject == 'company'">
+                <div class="list">
+                    <a class="item custom-item">
+                        {{userprofile.data.company}}
+                    </a>
+                    <a class="item custom-item">
+                        {{userprofile.data.department}}
+                        {{userprofile.data.unit}}
+                        {{userprofile.data.team}}
+                    </a>
+                    <a class="item custom-item">
+                        {{userprofile.data.manager}}
+                    </a>
+                </div>
+            </div>
+
+        </ion-scroll>
+
+    </ion-content>
+
+    <div>
+        <div class="bar bar-footer" ng-click="userprofile.storeContact()" style="margin: auto; background: transparent;">
+            <button class="button button icon ion-ios-plus-outline" style="width: 90%; text-align: center; margin: auto;">
+                Add to Contacts
+            </button>
+        </div>
+    </div>
+
 </ion-view>
