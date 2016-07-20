@@ -1,13 +1,20 @@
-<ion-view class="mainstyle-news" view-title="News">
-    <ion-nav-title>{{newsdetail.data.title}}</ion-nav-title>
-    <ion-content>
+<ion-view class="mainstyle-news">
 
-        <image-zoom-gallery images="newsdetail.allImages"></image-zoom-gallery>
+    <ion-nav-title>{{newsdetail.data.title}}</ion-nav-title>
+
+    <ion-content scroll="true" style="margin-top: -44px; background-color: #ffffff">
+
+        <ion-refresher pulling-text="Pull to refresh..." on-refresh="newsdetail.newsDetailRefresh()"></ion-refresher>
+
+        <img src="../images/slider/slider_one.jpeg" height="40%" width="100%" style="margin-top: -10px;"/>
 
         <div class="row">
             <div class="col">
-                <h2>{{newsdetail.data.title}}</h2>
-                <p>{{newsdetail.data.author + ', ' + newsdetail.data.createDate + ', ' + newsdetail.data.year}}</p>
+                <h3>{{newsdetail.data.title}}</h3>
+                <p>
+                    <i class="icon ion-android-time"></i>
+                    {{newsdetail.data.createDate + ', ' + newsdetail.data.year + ' - ' + newsdetail.data.author}}
+                </p>
             </div>
         </div>
 
@@ -16,6 +23,8 @@
                 <p>{{newsdetail.data.description_long}}</p>
             </div>
         </div>
+
+        <image-zoom-gallery images="newsdetail.allImages"></image-zoom-gallery>
 
     </ion-content>
 </ion-view>

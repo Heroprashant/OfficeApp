@@ -17,10 +17,12 @@
     .controller('ProjectdetailCtrl', ProjectdetailCtrl);
 
   // Inject dependencies
-  ProjectdetailCtrl.$inject = ['dataservice', '$scope', '$stateParams', '$ionicBackdrop', '$ionicModal', '$ionicSlideBoxDelegate', '$ionicScrollDelegate'];
+  ProjectdetailCtrl.$inject = ['dataservice', '$scope', '$stateParams', '$ionicBackdrop', '$ionicModal',
+  '$ionicSlideBoxDelegate', '$ionicScrollDelegate'];
 
   // Start the DashboardCtrl
-  function ProjectdetailCtrl(dataservice, $scope, $stateParams, $ionicBackdrop, $ionicModal, $ionicSlideBoxDelegate, $ionicScrollDelegate) {
+  function ProjectdetailCtrl(dataservice, $scope, $stateParams, $ionicBackdrop, $ionicModal,
+    $ionicSlideBoxDelegate, $ionicScrollDelegate) {
     var projectdetail = this;
     projectdetail.subject = 'project';
 
@@ -47,7 +49,7 @@
         function (error) {
           console.log(error);
         }
-      )
+      );
 
       projectdetail.changeSubject = function (subject) {
         switch (subject) {
@@ -61,7 +63,7 @@
             break;
         }
         projectdetail.subject = subject;
-      }
+      };
 
       projectdetail.showImages = function (index) {
         projectdetail.activeSlide = index;
@@ -75,7 +77,7 @@
           projectdetail.modal = modal;
           projectdetail.modal.show();
         });
-      }
+      };
 
       projectdetail.closeModal = function () {
         projectdetail.modal.hide();

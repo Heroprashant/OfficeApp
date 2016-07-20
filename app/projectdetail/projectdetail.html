@@ -1,20 +1,31 @@
 <ion-view class="mainstyle-projects" data-cache="false">
+
     <ion-nav-title>{{projectdetail.data.title}}</ion-nav-title>
-    <ion-content>
-        <ion-refresher pulling-text="Pull to refresh..." on-refresh="projectdetail.projectDetailRefresh()">
-        </ion-refresher>
+
+    <ion-content scroll="true" style="margin-top: -44px; background-color: #ffffff">
+
+        <ion-refresher pulling-text="Pull to refresh..." on-refresh="projectdetail.projectDetailRefresh()"></ion-refresher>
+
+        <img src="../images/slider/slider_one.jpeg" height="40%" width="100%" style="margin-top: -10px;"/>
+
+        <div class="row">
+            <div class="col">
+                <h3>{{projectdetail.data.title}}</h3>
+                <p>
+                    <i class="icon ion-android-time"></i>
+                    {{projectdetail.data.createDate + ', ' + projectdetail.data.year + ' - ' + projectdetail.data.unit}}
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <p>{{projectdetail.data.description_long}}</p>
+            </div>
+        </div>
 
         <div>
             <image-zoom-gallery galleryId="projectDetail" images="projectdetail.allImages"></image-zoom-gallery>
-        </div>
-
-        <div class="row tab-bar-custom">
-            <div class="col col-33 text-center custom-tab-bar-item" ng-class="projectdetail.subject == 'project' ? 'active-subject' : 'inactive-subject'"
-                ng-click="projectdetail.changeSubject('project')"><span>Project<span></div>
-            <div class="col col-33 text-center custom-tab-bar-item" ng-class="projectdetail.subject == 'team' ? 'active-subject' : 'inactive-subject'"
-                ng-click="projectdetail.changeSubject('team')"><span>Team</span></div>
-            <div class="col col-33 text-center custom-tab-bar-item" ng-class="projectdetail.subject == 'links' ? 'active-subject' : 'inactive-subject'"
-                ng-click="projectdetail.changeSubject('links')"><span>Links</span></div>
         </div>
 
     </ion-content>

@@ -15,8 +15,9 @@
       /* Angular Modules */
 
       /* Cross App Modules */
-      'feature.imagezoomgallery'
-
+      'feature.imagezoomgallery',
+      'feature.fakestatusbar'
+      
       /* 3rd-party Modules */
     ]);
 })(); // End Strict

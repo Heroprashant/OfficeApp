@@ -33,10 +33,12 @@
     .controller('NewsdetailCtrl', NewsdetailCtrl);
 
   // Inject dependencies
-  NewsdetailCtrl.$inject = ['dataservice', '$scope', '$stateParams', '$ionicBackdrop', '$ionicModal', '$ionicSlideBoxDelegate', '$ionicScrollDelegate'];
+  NewsdetailCtrl.$inject = ['dataservice', '$scope', '$stateParams', '$ionicBackdrop',
+  '$ionicModal', '$ionicSlideBoxDelegate', '$ionicScrollDelegate'];
 
   // Start the DashboardCtrl
-  function NewsdetailCtrl(dataservice, $scope, $stateParams, $ionicBackdrop, $ionicModal, $ionicSlideBoxDelegate, $ionicScrollDelegate) {
+  function NewsdetailCtrl(dataservice, $scope, $stateParams, $ionicBackdrop, $ionicModal,
+    $ionicSlideBoxDelegate, $ionicScrollDelegate) {
     var newsdetail = this;
 
     newsdetail.allImages = [{
@@ -60,8 +62,22 @@
         function (error) {
           console.log(error);
         }
-      )
-      
+      );
+
+      newsdetail.newsDetailRefresh = function () {
+        dataservice.getByProjectId($stateParams.nId).then(
+          function (response) {
+            newsdetail.data = response.data[0];
+            console.log(response);
+          },
+          function (error) {
+            console.log(error);
+          }
+        ).finally(function () {
+          $scope.$broadcast('scroll.refreshComplete');
+        });
+      };
+
       return newsdetail;
     }
   }

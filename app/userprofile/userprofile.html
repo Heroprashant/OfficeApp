@@ -7,7 +7,7 @@
         <div class="list" style="margin-bottom: 0px;">
             <br/>
             <div class="custom-profile-area">
-                <img id="profilephoto" src="{{userprofile.data.profilephoto}}">
+                <img id="profilephoto" src="{{userprofile.data.profilephoto}}" style="border: 5px solid white;">
                 <h2>{{userprofile.data.firstname + " " + userprofile.data.lastname}}</h2>
                 <p>{{userprofile.data.role}}</p>
             </div>
@@ -38,18 +38,23 @@
                         <i class="icon ion-android-mail"></i>
                         {{userprofile.data.email}}
                     </a>
-                    <a class="item item-icon-right custom-item" href="#">
+                    <a ng-repeat="skypeAccount in userprofile.data.skype" class="item item-icon-right custom-item" href="#">
+                      <i ng-class="{'icon ion-social-skype' : skypeAccount.type == 'skype', 'icon ion-social-skype-outline' : skypeAccount.type == 'skype4business'}"></i>
+                      {{skypeAccount.name}}
+                    </a>
+                    <!-- <a class="item item-icon-right custom-item" href="#">
                         <i class="icon ion-social-skype"></i>
                         skype
                     </a>
-                    <a class="item item-icon-right custom-item" href="#">
+                    <a  class="item item-icon-right custom-item" href="#">
                         <i class="icon ion-social-skype-outline"></i>
                         skype4business
-                    </a>
-                    <a class="item item-icon-right custom-item" href="#">
+                    </a> -->
+                    <a ng-show="userprofile.data.linkedIn != ''" class="item item-icon-right custom-item" href="#">
                         <i class="icon ion-social-linkedin"></i>
                         {{userprofile.data.linkedIn}}
                     </a>
+                    <br />
                     <div>
                         <ion-slide-box show-pager="false">
                             <ion-slide>
@@ -98,7 +103,7 @@
 
     <div>
         <div class="bar bar-footer" ng-click="userprofile.storeContact()" style="margin: auto; background: transparent;">
-            <button class="button button icon ion-ios-plus-outline" style="width: 90%; text-align: center; margin: auto;">
+            <button class="button button-balanced icon ion-ios-plus-outline" style="width: 90%; text-align: center; margin: auto;">
                 Add to Contacts
             </button>
         </div>
