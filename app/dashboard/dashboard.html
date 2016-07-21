@@ -1,6 +1,6 @@
 <ion-view view-title="" ng-class="{'mainstyle-contacts' : dashboard.subject == 'contacts', 'mainstyle-projects' : dashboard.subject == 'projects', 'mainstyle-news' : dashboard.subject == 'news'}">
     <div class="main-logo"></div>
-    <ion-content scroll="false">
+    <ion-content scroll="true" shrinking-header>
 
         <div class="row tab-bar-custom">
             <div class="col col-33 text-center custom-tab-bar-item" ng-class="dashboard.subject == 'contacts' ? 'active-subject' : 'inactive-subject'" ng-click="dashboard.changeSubject('contacts')">

@@ -16,8 +16,9 @@
 
       /* Cross App Modules */
       'feature.imagezoomgallery',
-      'feature.fakestatusbar'
-      
+      'feature.fakestatusbar',
+      'feature.shrinkingheader'
+
       /* 3rd-party Modules */
     ]);
 })(); // End Strict
