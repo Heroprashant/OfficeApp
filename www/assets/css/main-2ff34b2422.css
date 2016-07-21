@@ -1,9 +1,5 @@
 @charset "UTF-8";
-/**
- * Override Ionic variables here
- *
- * e.g. $positive:  #387ef5 !default;
- */
+
 /*!
   Ionicons, v2.0.1
   Created by Ben Sperry for the Ionic Framework, http://ionicons.com/
@@ -2967,19 +2963,7 @@
 .ion-xbox:before {
   content: ""; }
 
-/**
- * Resets
- * --------------------------------------------------
- * Adapted from normalize.css and some reset.css. We don't care even one
- * bit about old IE, so we don't need any hacks for that in here.
- *
- * There are probably other things we could remove here, as well.
- *
- * normalize.css v2.1.2 | MIT License | git.io/normalize
 
- * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
- * http://cssreset.com
- */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -3011,17 +2995,12 @@ q:before, q:after {
   content: '';
   content: none; }
 
-/**
- * Prevent modern browsers from displaying `audio` without controls.
- * Remove excess height in iOS 5 devices.
- */
+
 audio:not([controls]) {
   display: none;
   height: 0; }
 
-/**
- * Hide the `template` element in IE, Safari, and Firefox < 22.
- */
+
 [hidden],
 template {
   display: none; }
@@ -3029,35 +3008,25 @@ template {
 script {
   display: none !important; }
 
-/* ==========================================================================
-   Base
-   ========================================================================== */
-/**
- * 1. Set default font family to sans-serif.
- * 2. Prevent iOS text size adjust after orientation change, without disabling
- *  user zoom.
- */
+
+
 html {
   -webkit-user-select: none;
   user-select: none;
   font-family: sans-serif;
-  /* 1 */
+  
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
-  /* 2 */
+  
   -webkit-text-size-adjust: 100%;
-  /* 2 */ }
+   }
 
-/**
- * Remove default margin.
- */
+
 body {
   margin: 0;
   line-height: 1; }
 
-/**
- * Remove default outlines.
- */
+
 a,
 button,
 :focus,
@@ -3067,9 +3036,7 @@ a:active,
 a:hover {
   outline: 0; }
 
-/* *
- * Remove tap highlight color
- */
+
 a {
   -webkit-user-drag: none;
   -webkit-tap-highlight-color: transparent;
@@ -3077,32 +3044,22 @@ a {
   a[href]:hover {
     cursor: pointer; }
 
-/* ==========================================================================
-   Typography
-   ========================================================================== */
-/**
- * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
- */
+
+
 b,
 strong {
   font-weight: bold; }
 
-/**
- * Address styling not present in Safari 5 and Chrome.
- */
+
 dfn {
   font-style: italic; }
 
-/**
- * Address differences between Firefox and other browsers.
- */
+
 hr {
   box-sizing: content-box;
   height: 0; }
 
-/**
- * Correct font family set oddly in Safari 5 and Chrome.
- */
+
 code,
 kbd,
 pre,
@@ -3110,27 +3067,19 @@ samp {
   font-size: 1em;
   font-family: monospace, serif; }
 
-/**
- * Improve readability of pre-formatted text in all browsers.
- */
+
 pre {
   white-space: pre-wrap; }
 
-/**
- * Set consistent quote types.
- */
+
 q {
   quotes: "\201C" "\201D" "\2018" "\2019"; }
 
-/**
- * Address inconsistent and variable font size in all browsers.
- */
+
 small {
   font-size: 80%; }
 
-/**
- * Prevent `sub` and `sup` affecting `line-height` in all browsers.
- */
+
 sub,
 sup {
   position: relative;
@@ -3144,148 +3093,101 @@ sup {
 sub {
   bottom: -0.25em; }
 
-/**
- * Define consistent border, margin, and padding.
- */
+
 fieldset {
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em;
   border: 1px solid #c0c0c0; }
 
-/**
- * 1. Correct `color` not being inherited in IE 8/9.
- * 2. Remove padding so people aren't caught out if they zero out fieldsets.
- */
+
 legend {
   padding: 0;
-  /* 2 */
+  
   border: 0;
-  /* 1 */ }
+   }
 
-/**
- * 1. Correct font family not being inherited in all browsers.
- * 2. Correct font size not being inherited in all browsers.
- * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
- * 4. Remove any default :focus styles
- * 5. Make sure webkit font smoothing is being inherited
- * 6. Remove default gradient in Android Firefox / FirefoxOS
- */
+
 button,
 input,
 select,
 textarea {
   margin: 0;
-  /* 3 */
+  
   font-size: 100%;
-  /* 2 */
+  
   font-family: inherit;
-  /* 1 */
+  
   outline-offset: 0;
-  /* 4 */
+  
   outline-style: none;
-  /* 4 */
+  
   outline-width: 0;
-  /* 4 */
+  
   -webkit-font-smoothing: inherit;
-  /* 5 */
+  
   background-image: none;
-  /* 6 */ }
+   }
 
-/**
- * Address Firefox 4+ setting `line-height` on `input` using `importnt` in
- * the UA stylesheet.
- */
+
 button,
 input {
   line-height: normal; }
 
-/**
- * Address inconsistent `text-transform` inheritance for `button` and `select`.
- * All other form control elements do not inherit `text-transform` values.
- * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
- * Correct `select` style inheritance in Firefox 4+ and Opera.
- */
+
 button,
 select {
   text-transform: none; }
 
-/**
- * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
- *  and `video` controls.
- * 2. Correct inability to style clickable `input` types in iOS.
- * 3. Improve usability and consistency of cursor style between image-type
- *  `input` and others.
- */
+
 button,
 html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   cursor: pointer;
-  /* 3 */
+  
   -webkit-appearance: button;
-  /* 2 */ }
+   }
 
-/**
- * Re-set default cursor for disabled elements.
- */
+
 button[disabled],
 html input[disabled] {
   cursor: default; }
 
-/**
- * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
- * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
- *  (include `-moz` to future-proof).
- */
+
 input[type="search"] {
-  /* 2 */
+  
   box-sizing: content-box;
   -webkit-appearance: textfield;
-  /* 1 */ }
+   }
 
-/**
- * Remove inner padding and search cancel button in Safari 5 and Chrome
- * on OS X.
- */
+
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none; }
 
-/**
- * Remove inner padding and border in Firefox 4+.
- */
+
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   padding: 0;
   border: 0; }
 
-/**
- * 1. Remove default vertical scrollbar in IE 8/9.
- * 2. Improve readability and alignment in all browsers.
- */
+
 textarea {
   overflow: auto;
-  /* 1 */
+  
   vertical-align: top;
-  /* 2 */ }
+   }
 
 img {
   -webkit-user-drag: none; }
 
-/* ==========================================================================
-   Tables
-   ========================================================================== */
-/**
- * Remove most spacing between table cells.
- */
+
+
 table {
   border-spacing: 0;
   border-collapse: collapse; }
 
-/**
- * Scaffolding
- * --------------------------------------------------
- */
+
 *,
 *:before,
 *:after {
@@ -3363,10 +3265,7 @@ body.grade-c {
     overflow-x: scroll;
     overflow-y: scroll; }
 
-/**
- * Scroll is the scroll view component available for complex and custom
- * scroll view functionality.
- */
+
 .scroll {
   -webkit-user-select: none;
   user-select: none;
@@ -3374,10 +3273,7 @@ body.grade-c {
   text-size-adjust: none;
   transform-origin: left top; }
 
-/**
- * Set ms-viewport to prevent MS "page squish" and allow fluid scrolling
- * https://msdn.microsoft.com/en-us/library/ie/hh869615(v=vs.85).aspx
- */
+
 
 .scroll-bar {
   position: absolute;
@@ -3461,7 +3357,7 @@ ion-infinite-scroll {
   .overflow-scroll.keyboard-up:not(.keyboard-up-confirm) {
     overflow: hidden; }
 
-/* If you change these, change platform.scss as well */
+
 .has-header {
   top: 44px; }
 
@@ -3523,10 +3419,7 @@ ion-infinite-scroll {
   width: 100%;
   height: 100%; }
 
-/**
- * Typography
- * --------------------------------------------------
- */
+
 p {
   margin: 0 0 10px; }
 
@@ -3672,10 +3565,7 @@ a.subdued {
   a.subdued:last-child {
     padding-right: 0; }
 
-/**
- * Action Sheets
- * --------------------------------------------------
- */
+
 .action-sheet-backdrop {
   transition: background-color 150ms ease-in-out;
   position: fixed;
@@ -3808,10 +3698,7 @@ a.subdued {
   .backdrop.active {
     opacity: 1; }
 
-/**
- * Bar (Headers and Footers)
- * --------------------------------------------------
- */
+
 .bar {
   display: -moz-flex;
   display: flex;
@@ -3831,8 +3718,8 @@ a.subdued {
   border-top: 1px solid transparent;
   border-bottom: 1px solid #ddd;
   background-color: white;
-  /* border-width: 1px will actually create 2 device pixels on retina */
-  /* this nifty trick sets an actual 1px border on hi-res displays */
+  
+  
   background-size: 0; }
   @media (min--moz-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     .bar {
@@ -4255,11 +4142,7 @@ a.subdued {
 .nav-bar-tabs-top .bar {
   background-image: none; }
 
-/**
- * Tabs
- * --------------------------------------------------
- * A navigation bar with any number of tab items supported.
- */
+
 .tabs {
   display: -moz-flex;
   display: flex;
@@ -4293,7 +4176,7 @@ a.subdued {
       background-size: 100% 1px;
       background-repeat: no-repeat; } }
 
-/* Allow parent element of tabs to define color, or just the tab itself */
+
 .tabs-light > .tabs,
 .tabs.tabs-light {
   border-color: #ddd;
@@ -4952,8 +4835,8 @@ ion-tabs.tabs-color-active-dark .tab-item {
     .tabs-top.tabs-striped.tabs-icon-left .tab-item.tab-item-active .tab-title, .tabs-top.tabs-striped.tabs-icon-left .tab-item.tab-item-active i, .tabs-top.tabs-striped.tabs-icon-left .tab-item.active .tab-title, .tabs-top.tabs-striped.tabs-icon-left .tab-item.active i, .tabs-top.tabs-striped.tabs-icon-left .tab-item.activated .tab-title, .tabs-top.tabs-striped.tabs-icon-left .tab-item.activated i {
       margin-top: -0.1em; }
 
-/* Allow parent element to have tabs-top */
-/* If you change this, change platform.scss as well */
+
+
 .tabs-top > .tabs,
 .tabs.tabs-top {
   top: 44px;
@@ -5058,8 +4941,8 @@ ion-tabs.tabs-color-active-dark .tab-item {
   font-size: 12px;
   line-height: 16px; }
 
-/* Navigational tab */
-/* Active state for tab */
+
+
 .tab-item.tab-item-active,
 .tab-item.active,
 .tab-item.activated {
@@ -5120,11 +5003,7 @@ ion-tabs.tabs-color-active-dark .tab-item {
 .pane[hide-nav-bar="true"] .has-tabs-top {
   top: 49px; }
 
-/**
- * Menus
- * --------------------------------------------------
- * Side panel structure
- */
+
 .menu {
   position: absolute;
   top: 0;
@@ -5175,11 +5054,7 @@ ion-tabs.tabs-color-active-dark .tab-item {
 .menu-animated {
   transition: transform 200ms ease; }
 
-/**
- * Modals
- * --------------------------------------------------
- * Modals are independent windows that slide in from off-screen.
- */
+
 .modal-backdrop,
 .modal-backdrop-bg {
   position: fixed;
@@ -5244,11 +5119,7 @@ ion-tabs.tabs-color-active-dark .tab-item {
   .modal-open.loading-active .modal-backdrop {
     pointer-events: none; }
 
-/**
- * Popovers
- * --------------------------------------------------
- * Popovers are independent views which float over content
- */
+
 .popover-backdrop {
   position: fixed;
   top: 0;
@@ -5367,10 +5238,7 @@ ion-tabs.tabs-color-active-dark .tab-item {
     width: 360px;
     margin-left: -180px; } }
 
-/**
- * Popups
- * --------------------------------------------------
- */
+
 .popup-container {
   position: absolute;
   top: 0;
@@ -5457,10 +5325,7 @@ ion-tabs.tabs-color-active-dark .tab-item {
   .popup-open .popup-backdrop, .popup-open .popup {
     pointer-events: auto; }
 
-/**
- * Loading
- * --------------------------------------------------
- */
+
 .loading-container {
   position: absolute;
   left: 0;
@@ -5495,10 +5360,7 @@ ion-tabs.tabs-color-active-dark .tab-item {
     .loading-container .loading h1, .loading-container .loading h2, .loading-container .loading h3, .loading-container .loading h4, .loading-container .loading h5, .loading-container .loading h6 {
       color: #fff; }
 
-/**
- * Items
- * --------------------------------------------------
- */
+
 .item {
   border-color: #ddd;
   background-color: #fff;
@@ -5778,15 +5640,7 @@ a.item {
   a.item:hover, a.item:focus {
     text-decoration: none; }
 
-/**
- * Complex Items
- * --------------------------------------------------
- * Adding .item-complex allows the .item to be slidable and
- * have options underneath the button, but also requires an
- * additional .item-content element inside .item.
- * Basically .item-complex removes any default settings which
- * .item added, so that .item-content looks them as just .item.
- */
+
 .item-complex,
 a.item.item-complex,
 button.item.item-complex {
@@ -5936,10 +5790,7 @@ a.item-content {
       border-color: #000;
       background-color: #262626; }
 
-/**
- * Item Icons
- * --------------------------------------------------
- */
+
 .item-icon-left .icon,
 .item-icon-right .icon {
   display: -moz-flex;
@@ -5999,11 +5850,7 @@ a.item-content {
 .item-icon-right .icon-accessory {
   right: 3px; }
 
-/**
- * Item Button
- * --------------------------------------------------
- * An item button is a child button inside an .item (not the entire .item)
- */
+
 .item-button-left {
   padding-left: 72px; }
 
@@ -6315,10 +6162,7 @@ button.item.item-button-right {
 .item-placeholder {
   opacity: 0.7; }
 
-/**
- * The hidden right-side buttons that can be exposed under a list item
- * with dragging.
- */
+
 .item-options {
   position: absolute;
   top: 0;
@@ -6336,10 +6180,7 @@ button.item.item-button-right {
     .item-options .button:before {
       margin: 0 auto; }
 
-/**
- * Lists
- * --------------------------------------------------
- */
+
 .list {
   position: relative;
   padding-top: 1px;
@@ -6352,10 +6193,7 @@ button.item.item-button-right {
   .list:last-child.card {
     margin-bottom: 40px; }
 
-/**
- * List Header
- * --------------------------------------------------
- */
+
 .list-header {
   margin-top: 20px;
   padding: 5px 15px;
@@ -6367,11 +6205,7 @@ button.item.item-button-right {
   padding-right: 1px;
   padding-left: 1px; }
 
-/**
- * Cards and Inset Lists
- * --------------------------------------------------
- * A card and list-inset are close to the same thing, except a card as a box shadow.
- */
+
 .card,
 .list-inset {
   overflow: hidden;
@@ -6439,10 +6273,7 @@ button.item.item-button-right {
 .padding-right > .list .item {
   margin-right: 0; }
 
-/**
- * Badges
- * --------------------------------------------------
- */
+
 .badge {
   background-color: transparent;
   color: #AAAAAA;
@@ -6509,10 +6340,7 @@ button.item.item-button-right {
   position: relative;
   top: -1px; }
 
-/**
- * Slide Box
- * --------------------------------------------------
- */
+
 .slider {
   position: relative;
   visibility: hidden;
@@ -6561,25 +6389,12 @@ button.item.item-button-right {
 .slider-pager-page.ng-animate {
   animation: none 0s; }
 
-/**
- * Swiper 3.2.7
- * Most modern mobile touch slider and framework with hardware accelerated transitions
- *
- * http://www.idangero.us/swiper/
- *
- * Copyright 2015, Vladimir Kharlampidi
- * The iDangero.us
- * http://www.idangero.us/
- *
- * Licensed under MIT
- *
- * Released on: December 7, 2015
- */
+
 .swiper-container {
   margin: 0 auto;
   position: relative;
   overflow: hidden;
-  /* Fix of Webkit flickering */
+  
   z-index: 1; }
 
 .swiper-container-no-flexbox .swiper-slide {
@@ -6619,7 +6434,7 @@ button.item.item-button-right {
   height: 100%;
   position: relative; }
 
-/* Auto Height */
+
 .swiper-container-autoheight,
 .swiper-container-autoheight .swiper-slide {
   height: auto; }
@@ -6628,7 +6443,7 @@ button.item.item-button-right {
   align-items: flex-start;
   transition-property: transform, height; }
 
-/* a11y */
+
 .swiper-container .swiper-notification {
   position: absolute;
   left: 0;
@@ -6637,14 +6452,14 @@ button.item.item-button-right {
   opacity: 0;
   z-index: -1000; }
 
-/* IE10 Windows Phone 8 Fixes */
+
 .swiper-wp8-horizontal {
   touch-action: pan-y; }
 
 .swiper-wp8-vertical {
   touch-action: pan-x; }
 
-/* Arrows */
+
 .swiper-button-prev,
 .swiper-button-next {
   position: absolute;
@@ -6692,7 +6507,7 @@ button.item.item-button-right {
 .swiper-container-rtl .swiper-button-prev.swiper-button-white {
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E"); }
 
-/* Pagination Styles */
+
 .swiper-pagination {
   position: absolute;
   text-align: center;
@@ -6752,7 +6567,7 @@ button.swiper-pagination-bullet {
 .swiper-container-horizontal > .swiper-pagination .swiper-pagination-bullet {
   margin: 0 5px; }
 
-/* 3D Container */
+
 .swiper-container-3d {
   -o-perspective: 1200px;
   perspective: 1200px; }
@@ -6779,43 +6594,43 @@ button.swiper-pagination-bullet {
   z-index: 10; }
 
 .swiper-container-3d .swiper-slide-shadow-left {
-  /* Safari 4+, Chrome */
-  /* Chrome 10+, Safari 5.1+, iOS 5+ */
-  /* Firefox 3.6-15 */
-  /* Opera 11.10-12.00 */
+  
+  
+  
+  
   background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), transparent);
-  /* Firefox 16+, IE10, Opera 12.50+ */ }
+   }
 
 .swiper-container-3d .swiper-slide-shadow-right {
-  /* Safari 4+, Chrome */
-  /* Chrome 10+, Safari 5.1+, iOS 5+ */
-  /* Firefox 3.6-15 */
-  /* Opera 11.10-12.00 */
+  
+  
+  
+  
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), transparent);
-  /* Firefox 16+, IE10, Opera 12.50+ */ }
+   }
 
 .swiper-container-3d .swiper-slide-shadow-top {
-  /* Safari 4+, Chrome */
-  /* Chrome 10+, Safari 5.1+, iOS 5+ */
-  /* Firefox 3.6-15 */
-  /* Opera 11.10-12.00 */
+  
+  
+  
+  
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
-  /* Firefox 16+, IE10, Opera 12.50+ */ }
+   }
 
 .swiper-container-3d .swiper-slide-shadow-bottom {
-  /* Safari 4+, Chrome */
-  /* Chrome 10+, Safari 5.1+, iOS 5+ */
-  /* Firefox 3.6-15 */
-  /* Opera 11.10-12.00 */
+  
+  
+  
+  
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent);
-  /* Firefox 16+, IE10, Opera 12.50+ */ }
+   }
 
-/* Coverflow */
+
 .swiper-container-coverflow .swiper-wrapper {
-  /* Windows 8 IE 10 fix */
+  
   -ms-perspective: 1200px; }
 
-/* Fade */
+
 .swiper-container-fade.swiper-container-free-mode .swiper-slide {
   transition-timing-function: ease-out; }
 
@@ -6829,7 +6644,7 @@ button.swiper-pagination-bullet {
 .swiper-container-fade .swiper-slide-active .swiper-slide-active {
   pointer-events: auto; }
 
-/* Cube */
+
 .swiper-container-cube {
   overflow: visible; }
 
@@ -6871,7 +6686,7 @@ button.swiper-pagination-bullet {
   filter: blur(50px);
   z-index: 0; }
 
-/* Scrollbar */
+
 .swiper-scrollbar {
   border-radius: 10px;
   position: relative;
@@ -6906,7 +6721,7 @@ button.swiper-pagination-bullet {
 .swiper-scrollbar-cursor-drag {
   cursor: move; }
 
-/* Preloader */
+
 .swiper-lazy-preloader {
   width: 42px;
   height: 42px;
@@ -6964,7 +6779,7 @@ ion-slides {
   width: 100%;
   height: 100%;
   box-sizing: border-box;
-  /* Center slide text vertically */ }
+   }
   .swiper-slide img {
     width: auto;
     height: auto;
@@ -7047,10 +6862,7 @@ ion-slides {
   100% {
     transform: translate3d(0, 0, 0) rotate(0); } }
 
-/**
- * Spinners
- * --------------------------------------------------
- */
+
 .spinner {
   stroke: #444;
   fill: #444; }
@@ -7126,10 +6938,7 @@ ion-slides {
 .spinner-spiral.spinner-dark .stop2 {
   stop-color: #444; }
 
-/**
- * Forms
- * --------------------------------------------------
- */
+
 form {
   margin: 0 0 1.42857; }
 
@@ -7408,10 +7217,7 @@ input[type="radio"][readonly],
 input[type="checkbox"][readonly] {
   background-color: transparent; }
 
-/**
- * Checkbox
- * --------------------------------------------------
- */
+
 .checkbox {
   position: relative;
   display: inline-block;
@@ -7619,10 +7425,7 @@ input:checked + .checkbox-icon:after {
 .item-checkbox-right .checkbox-icon {
   float: right; }
 
-/**
- * Toggle
- * --------------------------------------------------
- */
+
 .item-toggle {
   pointer-events: none; }
 
@@ -7677,7 +7480,7 @@ input:checked + .checkbox-icon:after {
 .toggle input {
   display: none; }
 
-/* the track appearance when the toggle is "off" */
+
 .toggle .track {
   transition-timing-function: ease-in-out;
   transition-duration: 0.3s;
@@ -7693,13 +7496,13 @@ input:checked + .checkbox-icon:after {
   cursor: pointer;
   pointer-events: none; }
 
-/* Fix to avoid background color bleeding */
-/* (occured on (at least) Android 4.2, Asus MeMO Pad HD7 ME173X) */
+
+
 .platform-android4_2 .toggle .track {
   -webkit-background-clip: padding-box; }
 
-/* the handle (circle) thats inside the toggle's track area */
-/* also the handle's appearance when it is "off" */
+
+
 .toggle .handle {
   transition: 0.3s cubic-bezier(0, 1.1, 1, 1.1);
   transition-property: background-color, transform;
@@ -7819,21 +7622,18 @@ input:checked + .checkbox-icon:after {
 .toggle-small .toggle-dark input:checked + .track .handle {
   background-color: #444; }
 
-/**
- * Radio Button Inputs
- * --------------------------------------------------
- */
+
 .item-radio {
   padding: 0; }
   .item-radio:hover {
     cursor: pointer; }
 
 .item-radio .item-content {
-  /* give some room to the right for the checkmark icon */
+  
   padding-right: 64px; }
 
 .item-radio .radio-icon {
-  /* checkmark icon will be hidden by default */
+  
   position: absolute;
   top: 0;
   right: 0;
@@ -7844,20 +7644,17 @@ input:checked + .checkbox-icon:after {
   font-size: 24px; }
 
 .item-radio input {
-  /* hide any radio button inputs elements (the ugly circles) */
+  
   position: absolute;
   left: -9999px; }
   .item-radio input:checked + .radio-content .item-content {
-    /* style the item content when its checked */
+    
     background: #f7f7f7; }
   .item-radio input:checked + .radio-content .radio-icon {
-    /* show the checkmark icon when its checked */
+    
     visibility: visible; }
 
-/**
- * Range
- * --------------------------------------------------
- */
+
 .range input {
   display: inline-block;
   overflow: hidden;
@@ -7873,32 +7670,9 @@ input:checked + .checkbox-icon:after {
   background-size: 99% 2px;
   background-repeat: no-repeat;
   -webkit-appearance: none;
-  /*
-   &::-ms-track{
-     background: transparent;
-     border-color: transparent;
-     border-width: 11px 0 16px;
-     color:transparent;
-     margin-top:20px;
    }
-   &::-ms-thumb {
-     width: $range-slider-width;
-     height: $range-slider-height;
-     border-radius: $range-slider-border-radius;
-     background-color: $toggle-handle-off-bg-color;
-     border-color:$toggle-handle-off-bg-color;
-     box-shadow: $range-slider-box-shadow;
-     margin-left:1px;
-     margin-right:1px;
-     outline:none;
-   }
-   &::-ms-fill-upper {
-     height: $range-track-height;
-     background:$range-default-track-bg;
-   }
-   */ }
   .range input::-moz-focus-outer {
-    /* hide the focus outline in Firefox */
+    
     border: 0; }
   .range input::-webkit-slider-thumb {
     position: relative;
@@ -7911,7 +7685,7 @@ input:checked + .checkbox-icon:after {
     -webkit-appearance: none;
     border: 0; }
   .range input::-webkit-slider-thumb:before {
-    /* what creates the colorful line on the left side of the slider */
+    
     position: absolute;
     top: 13px;
     left: -2001px;
@@ -7920,7 +7694,7 @@ input:checked + .checkbox-icon:after {
     background: #444;
     content: ' '; }
   .range input::-webkit-slider-thumb:after {
-    /* create a larger (but hidden) hit area */
+    
     position: absolute;
     top: -15px;
     left: -15px;
@@ -8004,10 +7778,7 @@ input:checked + .checkbox-icon:after {
 .platform-windowsphone .range input {
   height: auto; }
 
-/**
- * Select
- * --------------------------------------------------
- */
+
 .item-select {
   position: relative; }
   .item-select select {
@@ -8092,19 +7863,13 @@ input:checked + .checkbox-icon:after {
 select[multiple], select[size] {
   height: auto; }
 
-/**
- * Progress
- * --------------------------------------------------
- */
+
 progress {
   display: block;
   margin: 15px auto;
   width: 100%; }
 
-/**
- * Buttons
- * --------------------------------------------------
- */
+
 .button {
   border-color: transparent;
   background-color: #f8f8f8;
@@ -8485,10 +8250,7 @@ a.button {
   cursor: default !important;
   pointer-events: none; }
 
-/**
- * Button Bar
- * --------------------------------------------------
- */
+
 .button-bar {
   display: -moz-flex;
   display: flex;
@@ -8537,15 +8299,7 @@ a.button {
 .button-bar > .button-small .icon:before {
   line-height: 28px; }
 
-/**
- * Grid
- * --------------------------------------------------
- * Using flexbox for the grid, inspired by Philip Walton:
- * http://philipwalton.github.io/solved-by-flexbox/demos/grids/
- * By default each .col within a .row will evenly take up
- * available width, and the height of each .col with take
- * up the height of the tallest .col in the same .row.
- */
+
 .row {
   display: -moz-flex;
   display: flex;
@@ -8571,8 +8325,8 @@ a.button {
   padding: 5px;
   width: 100%; }
 
-/* Vertically Align Columns */
-/* .row-* vertically aligns every .col in the .row */
+
+
 .row-top {
   -moz-align-items: flex-start;
   align-items: flex-start; }
@@ -8593,7 +8347,7 @@ a.button {
   -moz-align-items: baseline;
   align-items: baseline; }
 
-/* .col-* vertically aligns an individual .col */
+
 .col-top {
   align-self: flex-start; }
 
@@ -8603,7 +8357,7 @@ a.button {
 .col-center {
   align-self: center; }
 
-/* Column Offsets */
+
 .col-offset-10 {
   margin-left: 10%; }
 
@@ -8631,10 +8385,10 @@ a.button {
 .col-offset-90 {
   margin-left: 90%; }
 
-/* Explicit Column Percent Sizes */
-/* By default each grid column will evenly distribute */
-/* across the grid. However, you can specify individual */
-/* columns to take up a certain size of the available area */
+
+
+
+
 .col-10 {
   -moz-flex: 0 0 10%;
   flex: 0 0 10%;
@@ -8690,11 +8444,11 @@ a.button {
   flex: 0 0 90%;
   max-width: 90%; }
 
-/* Responsive Grid Classes */
-/* Adding a class of responsive-X to a row */
-/* will trigger the flex-direction to */
-/* change to column and add some margin */
-/* to any columns in the row for clearity */
+
+
+
+
+
 @media (max-width: 567px) {
   .responsive-sm {
     flex-direction: column; }
@@ -8728,10 +8482,7 @@ a.button {
       max-width: 100%;
       width: 100%; } }
 
-/**
- * Utility Classes
- * --------------------------------------------------
- */
+
 .hide {
   display: none; }
 
@@ -8817,10 +8568,7 @@ a.button {
   .clearfix:after {
     clear: both; }
 
-/**
- * Content Padding
- * --------------------------------------------------
- */
+
 .padding {
   padding: 10px; }
 
@@ -8840,10 +8588,7 @@ a.button {
 .padding-horizontal {
   padding-left: 10px; }
 
-/**
- * Scrollable iFrames
- * --------------------------------------------------
- */
+
 .iframe-wrapper {
   position: fixed;
   -webkit-overflow-scrolling: touch;
@@ -8852,20 +8597,11 @@ a.button {
     height: 100%;
     width: 100%; }
 
-/**
- * Rounded
- * --------------------------------------------------
- */
+
 .rounded {
   border-radius: 4px; }
 
-/**
- * Utility Colors
- * --------------------------------------------------
- * Utility colors are added to help set a naming convention. You'll
- * notice we purposely do not use words like "red" or "blue", but
- * instead have colors which represent an emotion or generic theme.
- */
+
 .light, a.light {
   color: #fff; }
 
@@ -8948,7 +8684,7 @@ a.button {
   border-color: #111; }
 
 [collection-repeat] {
-  /* Position is set by transforms */
+  
   left: 0 !important;
   top: 0 !important;
   position: absolute !important;
@@ -8961,7 +8697,7 @@ a.button {
 .collection-repeat-after-container {
   z-index: 0;
   display: block;
-  /* when scrolling horizontally, make sure the after container doesn't take up 100% width */ }
+   }
   .collection-repeat-after-container.horizontal {
     display: inline-block; }
 
@@ -8969,11 +8705,7 @@ a.button {
 .x-ng-cloak, .ng-hide:not(.ng-hide-animate) {
   display: none !important; }
 
-/**
- * Platform
- * --------------------------------------------------
- * Platform specific tweaks
- */
+
 .platform-ios.platform-cordova:not(.fullscreen) .bar-header:not(.bar-subheader) {
   height: 64px; }
   .platform-ios.platform-cordova:not(.fullscreen) .bar-header:not(.bar-subheader).item-input-inset .item-input-wrapper {
@@ -9152,28 +8884,15 @@ a.button {
   opacity: 0;
   transition-duration: 0s; }
 
-/************************************
- *
- *  Main Styles to compile. Here only @imports!
- *
- ************************************/
-/* Define variables here
-========================================================================== */
-/* IONIC - Default ionic variables
-========================================================================== */
-/* TEMPLATE - Template variables
-========================================================================== */
-/* MAIN */
-/* '' - Searchbar */
-/* '' - Logo */
-/* CONTACTS - */
-/* PROJECTS - */
-/* NEWS - */
-/* INFORMATION - */
-/**
- * Import fonts either via @import url (e.g. from Googlee Fonts)
- * or via @font-face when font files are stored locally in /app/fonts
- */
+
+
+
+
+
+
+
+
+
 @import url(http://fonts.googleapis.com/css?family=Roboto:700,400,300);
 .custom-tab-bar-item span {
   color: #8E7F9C;
@@ -9202,7 +8921,7 @@ a.button {
     font-size: 18px; }
 
 .image-list-thumb {
-  padding: 2px;
+  padding: 2px 2px 2px 2px;
   height: 250px; }
 
 .image-modal {
@@ -9225,43 +8944,40 @@ a.button {
   background-repeat: no-repeat;
   background-position: center, center; }
 
-.bar {
-  background-image: none; }
-
-.bar-header {
-  background-color: #F2F2F2 !important; }
-
 .bar-positive {
   background-color: transparent !important;
-  border-bottom: 0 !important;
+  border-bottom: 0px !important;
   border: none !important; }
 
 .bar.bar-positive {
   background-image: none; }
 
+.img-main-logo {
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  height: 37px;
+  width: 134px;
+  -webkit-filter: brightness(1000%);
+          filter: brightness(1000%); }
+
+.search-bar {
+  border-radius: 50px;
+  margin: 20px; }
+
 .tab-bar-custom {
-  padding: 0;
-  margin-top: 20px;
+  padding: 0px;
   border-bottom-style: solid;
   border-bottom-width: 1px;
   border-bottom-color: white; }
 
-.bar-balanced {
-  background-color: #FFB71D !important;
-  border-bottom: 0 !important;
-  border: none !important; }
 
-.bar.bar-balanced.bar-footer {
-  background-image: none; }
-
-.bar .button {
-  background-color: #FFB71D; }
-
-/**** Contact Animation *****/
 .slide-icon {
   position: absolute;
   top: 10px;
-  left: 0;
+  left: 0px;
   width: 20px;
   height: 20px;
   background: blue;
@@ -9279,7 +8995,7 @@ a.button {
 
 .toggleMenu {
   width: 100%;
-  left: 0;
+  left: 0px;
   position: absolute;
   z-index: 1;
   padding: 0 20px; }
@@ -9290,11 +9006,9 @@ a.button {
     border-radius: 20px;
     transition: width 0.65s ease; }
   .toggleMenu .contactQuickMenuActive {
-    width: 100% !important;
-    /* IE 9 */
-    /* Chrome, Safari, Opera */ }
+    width: 100% !important; }
 
-/**** Contact Animation *****/
+
 .custom-item-contacts {
   background-color: transparent; }
   .custom-item-contacts img:first-child {
@@ -9326,21 +9040,18 @@ a.button {
   font-weight: 300; }
 
 .search-bar-contact {
-  position: relative;
   padding: 10px;
-  margin: 50% 20px 20px;
-  background-color: transparent;
-  height: 200px; }
+  margin: 50px 20px;
+  background-color: white;
+  height: 200px;
+  top: 50px;
+  box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75); }
   .search-bar-contact h2 {
     text-align: center;
-    color: #ffffff; }
-
-.search-bar {
-  border-radius: 50px;
-  margin: 20px; }
+    color: #34184C; }
 
 .custom-item-slider {
-  padding: 0; }
+  padding: 0px; }
 
 .scroll-style {
   width: 100%;
@@ -9353,7 +9064,7 @@ a.button {
 .contact-icon-container {
   width: auto;
   position: absolute;
-  left: 0;
+  left: 0px;
   margin-left: 75px;
   z-index: -9999; }
 
@@ -9402,140 +9113,13 @@ a.button {
   background-repeat: no-repeat; }
 
 .custom-popover .list {
-  margin-bottom: 0 !important; }
+  margin-bottom: 0px !important; }
 
-.title.title-center.header-item {
-  margin-top: 10px;
-  color: #8D878D; }
 
-.information-page-layout {
-  background: transparent;
-  box-shadow: none; }
-
-.information-page-layout .transparent {
-  background-color: transparent; }
-  .information-page-layout .transparent img {
-    -webkit-filter: brightness(1000%);
-            filter: brightness(1000%); }
-
-.item h2 {
-  color: white; }
-
-.item p {
-  white-space: normal; }
-
-.bar .button.back-button,
-.bar button.back-button {
-  margin-top: 10px; }
-
-.bar {
-  padding: 0; }
-
-.bar .title {
-  margin-top: 20px; }
-
-.bar .title .title-footer {
-  margin-top: -10px; }
-
-.bar-positive .button.button-clear {
-  margin-top: 15px; }
-
-.scroll-content {
-  position: absolute; }
-
-.button.button-full {
-  margin-top: 0;
-  margin-bottom: 0; }
-
-.item-divider {
-  background-color: #FFB71D;
-  color: #ffffff; }
-
-.custom-profile-area {
-  position: relative;
-  height: 150px;
-  width: 100%;
-  background: transparent; }
-  .custom-profile-area img:first-child {
-    position: relative;
-    top: 30%;
-    left: 50%;
-    /* bring your own prefixes */
-    transform: translate(-50%, -50%);
-    max-width: 100px;
-    max-height: 100px;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%; }
-  .custom-profile-area h2 {
-    position: absolute;
-    font-size: 20px;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #ffffff; }
-  .custom-profile-area p {
-    position: absolute;
-    font-size: 10px;
-    top: 89%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #ffffff; }
-
-.custom-item {
-  padding: 10px; }
-
-.custom-bar-header {
-  background-color: transparent !important; }
-  .custom-bar-header h1 {
-    margin-top: 0 !important;
-    color: #ffffff !important; }
-  .custom-bar-header button {
-    background-color: transparent !important; }
-
-.fake-statusbar {
-  height: 20px;
-  max-height: 20px;
-  font-size: 12px;
-  box-sizing: border-box;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 4;
-  color: #fff;
-  padding: 2px 3px 3px; }
-
-.fake-statusbar .time {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  text-align: center; }
-
-.fake-statusbar .pull-left {
-  float: left; }
-
-.fake-statusbar .pull-right {
-  float: right; }
-
-/* PLACEHOLDER
-============================================= */
-.mainstyle .main-logo {
-  display: block;
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 15px;
-  -webkit-filter: brightness(1000%);
-          filter: brightness(1000%);
-  background-position: center !important;
-  background-size: cover !important;
-  background-repeat: no-repeat; }
-
-.mainstyle-contacts, .mainstyle-projects, .mainstyle-news, .mainstyle-information {
+.mainstyle-contacts, .mainstyle-projects, .mainstyle-news {
   width: 100%; }
 
-.mainstyle-contacts:before, .mainstyle-projects:before, .mainstyle-news:before, .mainstyle-information:before {
+.mainstyle-contacts:before, .mainstyle-projects:before, .mainstyle-news:before {
   content: "";
   height: 100%;
   width: 100%;
@@ -9544,20 +9128,12 @@ a.button {
   background-size: cover !important;
   background-repeat: no-repeat; }
 
-/* MIXIN
-============================================= */
-/* MAINSTYLE PAGES
-============================================= */
+
+
 .mainstyle .search {
   border-radius: 10px; }
 
-.mainstyle .main-logo {
-  height: 30px;
-  width: 109px;
-  background: url("../../images/ciber.png"); }
 
-/* MAINSTYLE - CONTACTS
-============================================= */
 .mainstyle-contacts {
   background-color: #34184C; }
 
@@ -9565,8 +9141,7 @@ a.button {
   opacity: 0.05;
   background: url("../../images/background-contacts.png"); }
 
-/* MAINSTYLE PROJECTS
-============================================= */
+
 .mainstyle-projects {
   background-color: #393939; }
 
@@ -9574,20 +9149,10 @@ a.button {
   opacity: 0.1;
   background: url("../../images/background-projects.png"); }
 
-/* MAINSTYLE NEWS
-============================================= */
+
 .mainstyle-news {
   background-color: #3A3A68; }
 
 .mainstyle-news:before {
   opacity: 0.1;
   background: url("../../images/background-news.png"); }
-
-/* MAINSTYLE INFORMATION
-============================================= */
-.mainstyle-information {
-  background-color: #34184C; }
-
-.mainstyle-information:before {
-  opacity: 0.1;
-  background: none; }

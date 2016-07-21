@@ -12,5 +12,6 @@
   angular
   .module('feature.shrinkingheader', [
     // Inject dependencies here
+    'ionic'
   ]);
 })();

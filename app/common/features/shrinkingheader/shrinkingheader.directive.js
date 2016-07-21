@@ -1,4 +1,5 @@
 /* global angular*/
+/* global ionic */
 (function() {
     'use strict';
 
@@ -6,20 +7,19 @@
         .module('feature.shrinkingheader')
         .directive('shrinkingHeader', shrinkingHeader);
 
-    shrinkingHeader.$inject = ['ionic', '$document'];
+    shrinkingHeader.$inject = [];
 
-    function shrinkingHeader(ionic, $document) {
-
-       console.log('het wordt aangeroepen');
+    function shrinkingHeader() {
         var fadeAmt;
 
         var shrink = function(header, content, amt, max) {
             amt = Math.min(44, amt);
             fadeAmt = 1 - amt / 44;
+
             ionic.requestAnimationFrame(function() {
-                header.style[ionic.CSS.TRANSFORM] = 'translate3d(0, -' + amt + 'px, 0)';
-                for (var i = 0, j = header.children.length; i < j; i++) {
-                    header.children[i].style.opacity = fadeAmt;
+                header[0].style[ionic.CSS.TRANSFORM] = 'translate3d(0, -' + amt + 'px, 0)';
+                for (var i = 0, j = header[0].children.length; i < j; i++) {
+                    header[0].children[i].style.opacity = fadeAmt;
                 }
             });
         };
@@ -30,8 +30,11 @@
                 var starty = $scope.$eval($attr.headerShrink) || 0;
                 var shrinkAmt;
 
-                var header = $document[0].body.querySelector('.bar-header');
-                var headerHeight = header.offsetHeight;
+                // var header = $document[0].body.querySelector('.bar-header');
+
+                var header = angular.element(document.querySelector('.bar-header'));
+
+                var headerHeight = header[0].offsetHeight;
 
                 $element.bind('scroll', function(e) {
                     var scrollTop = null;
