@@ -1,0 +1,56 @@
+<div>
+    <button class="button button-icon button-clear ion-ios-information-outline" style="margin-top: 10px;" ng-click="openModal()"></button>
+    <script id="my-modal.html" type="text/ng-template">
+        <ion-modal-view>
+            <ion-view view-title="About" class="mainstyle-information" hide-back-button="true">
+                <ion-header-bar class="custom-bar-header">
+                    <h1 class="title">About</h1>
+                    <button class="button button-clear button-primary" ng-click="closeModal()">Close</button>
+                </ion-header-bar>
+                <ion-content>
+                    <div class="list card information-page-layout">
+
+                        <div class="item item-image transparent">
+                            <img src="../images/ciber.png">
+                            <br/></br/>
+                    </div>
+
+                    <div class="item transparent" style="width:auto; margin:0 auto;">
+                        <h2 style="color: #8D878D; text-align: center">Whitelabel Office App</h2>
+                    </div>
+
+                    <div class="item transparent" style="width:auto; margin:0 auto; white-space:normal;">
+                        <p style="color: #8D878D; text-align: center">
+                            This nameless app has been created by and for ciber employees to quickly search and share contact details, projects and newsitems.
+                        </p>
+                    </div>
+                </div>
+                <div class="list">
+                    <a class="item item-icon-left" href="#">
+                        <i class="icon ion-loop"></i>
+                        Version
+                        <span class="item-note">
+                            0.12
+                        </span>
+                    </a>
+                    <a class="item item-icon-left" href="#">
+                        <i class="icon ion-calendar"></i>
+                        Release date
+                        <span class="item-note">
+                            30-08-2017
+                        </span>
+                    </a>
+                    <a class="item item-icon-left" href="#">
+                        <i class="icon ion-briefcase"></i>
+                        Project
+                        <span class="item-note">
+                            Whitelabel Office App
+                        </span>
+                    </a>
+                </div>
+            </ion-content>
+        </ion-view>
+
+    </ion-modal-view>
+</script>
+</div>
