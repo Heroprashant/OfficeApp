@@ -1,5 +1,4 @@
-<ion-view class="mainstyle-projects" data-cache="false">
-
+<ion-view class="mainstyle-projects" data-cache="false" cache-view="false">
     <ion-nav-title>{{projectdetail.data.title}}</ion-nav-title>
 
     <ion-content scroll="true" style="margin-top: -44px; background-color: #ffffff" shrinking-header>
@@ -15,6 +14,11 @@
                     <i class="icon ion-android-time"></i>
                     {{projectdetail.data.createDate + ', ' + projectdetail.data.year + ' - ' + projectdetail.data.unit}}
                 </p>
+            </div>
+            <div class="col-10">
+              <p>
+                <i class="icon ion-android-mail"></i>
+              </p>
             </div>
         </div>
 

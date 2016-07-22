@@ -26,21 +26,21 @@
 
             <div ng-show="userprofile.subject == 'personal'">
                 <div class="list">
-                    <a class="item item-icon-right custom-item" href="#">
+                    <a class="item item-icon-right custom-item" ng-click="userprofile.callPerson(userprofile.data.mobileNumber)">
                         <i class="icon ion-android-phone-portrait"></i>
                         {{userprofile.data.mobileNumber}}
                     </a>
-                    <a class="item item-icon-right custom-item" href="#">
+                    <a class="item item-icon-right custom-item" ng-click="userprofile.callPerson(userprofile.data.phoneNumber)">
                         <i class="icon ion-ios-telephone"></i>
                         {{userprofile.data.phoneNumber}}
                     </a>
-                    <a class="item item-icon-right custom-item" href="#">
+                    <a class="item item-icon-right custom-item" ng-click="userprofile.sendMail(userprofile.data.email)">
                         <i class="icon ion-android-mail"></i>
                         {{userprofile.data.email}}
                     </a>
-                    <a ng-repeat="skypeAccount in userprofile.data.skype" class="item item-icon-right custom-item" href="#">
-                      <i ng-class="{'icon ion-social-skype' : skypeAccount.type == 'skype', 'icon ion-social-skype-outline' : skypeAccount.type == 'skype4business'}"></i>
-                      {{skypeAccount.name}}
+                    <a ng-repeat="skypeAccount in userprofile.data.skype" class="item item-icon-right custom-item" ng-click="userprofile.openSkype(skypeAccount.name)">
+                        <i ng-class="{'icon ion-social-skype' : skypeAccount.type == 'skype', 'icon ion-social-skype-outline' : skypeAccount.type == 'skype4business'}"></i>
+                        {{skypeAccount.name}}
                     </a>
                     <!-- <a class="item item-icon-right custom-item" href="#">
                         <i class="icon ion-social-skype"></i>
@@ -50,11 +50,11 @@
                         <i class="icon ion-social-skype-outline"></i>
                         skype4business
                     </a> -->
-                    <a ng-show="userprofile.data.linkedIn != ''" class="item item-icon-right custom-item" href="#">
+                    <a ng-show="userprofile.data.linkedIn != ''" class="item item-icon-right custom-item" ng-click="userprofile.linkedIn(userprofile.data.linkedIn)">
                         <i class="icon ion-social-linkedin"></i>
                         {{userprofile.data.linkedIn}}
                     </a>
-                    <br />
+                    <br/>
                     <div>
                         <ion-slide-box show-pager="false">
                             <ion-slide>

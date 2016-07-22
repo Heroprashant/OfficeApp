@@ -34,6 +34,8 @@
 
                 var header = angular.element(document.querySelector('.bar-header'));
 
+                //var header = angular.element(document.querySelector('div.cached > .bar-header'));
+
                 var headerHeight = header[0].offsetHeight;
 
                 $element.bind('scroll', function(e) {

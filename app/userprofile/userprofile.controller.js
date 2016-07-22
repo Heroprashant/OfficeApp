@@ -234,6 +234,31 @@
                 userprofile.subject = subject;
             };
 
+            userprofile.sendMail = function(email) {
+                $window.open('mailto:' + email + '?subject=subject&body=test', '_self');
+            };
+            userprofile.callPerson = function(number) {
+                $window.open('tel:' + number, '_self');
+            };
+            userprofile.linkedIn = function(url) {
+                $window.open(url, '_blank');
+            };
+            userprofile.skype = function(type, name, $event) {
+            };
+            userprofile.storeContact = function(id) {
+                window.alert('Store Contact: ' + id);
+            };
+            userprofile.openSkype = function(skypeName, skypeType) {
+                switch (skypeType) {
+                    case 'skype4business':
+                        $window.open('sip:' + skypeName, '_self');
+                        break;
+                    case 'skype':
+                        $window.open('skype:' + skypeName + '?call&video=true', '_self');
+                        break;
+                }
+            };
+
             return userprofile;
         }
     }

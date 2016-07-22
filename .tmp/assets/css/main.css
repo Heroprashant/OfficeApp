@@ -9152,6 +9152,7 @@ a.button {
   opacity: 0;
   transition-duration: 0s; }
 
+@charset "UTF-8";
 /************************************
  *
  *  Main Styles to compile. Here only @imports!
@@ -9517,6 +9518,10 @@ a.button {
 
 .fake-statusbar .pull-right {
   float: right; }
+
+.ion-android-mail:before {
+  content: "";
+  font-size: 200%; }
 
 /* PLACEHOLDER
 ============================================= */

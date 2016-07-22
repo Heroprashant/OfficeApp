@@ -300,3 +300,14 @@
 // .scroll-content{
 //   top:0 !important
 // }
+// [nav-bar-transition="ios"] [nav-bar="active"] .bar,
+// [nav-bar-transition="ios"] [nav-bar="entering"] .bar {
+//     /* background: transparent; */
+//     background-color: #34184C !important;
+//     padding-bottom: 44px;
+//     opacity: 0.05;
+// }
+.ion-android-mail:before {
+    content: "";
+    font-size: 200%;
+}

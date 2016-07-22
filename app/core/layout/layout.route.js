@@ -23,6 +23,7 @@
     $stateProvider
       .state('Pocapp', {
         url: '/',
+        cache: false,
         abstract: true,
         templateUrl: 'core/layout/layout.html',
         controller: 'LayoutCtrl',
