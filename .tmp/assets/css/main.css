@@ -9227,7 +9227,8 @@ a.button {
   background-position: center, center; }
 
 .bar {
-  background-image: none; }
+  background-image: none;
+  height: 54px; }
 
 .bar-header {
   background-color: #F2F2F2 !important; }
@@ -9242,7 +9243,7 @@ a.button {
 
 .tab-bar-custom {
   padding: 0;
-  margin-top: 20px;
+  margin-top: 65px;
   border-bottom-style: solid;
   border-bottom-width: 1px;
   border-bottom-color: white; }
@@ -9522,6 +9523,10 @@ a.button {
 .ion-android-mail:before {
   content: "";
   font-size: 200%; }
+
+[nav-bar-transition="ios"] [nav-bar="active"] .bar,
+[nav-bar-transition="ios"] [nav-bar="entering"] .bar {
+  background: red !important; }
 
 /* PLACEHOLDER
 ============================================= */

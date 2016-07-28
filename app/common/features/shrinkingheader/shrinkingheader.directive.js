@@ -13,9 +13,9 @@
         var fadeAmt;
 
         var shrink = function(header, content, amt, max) {
-            amt = Math.min(44, amt);
-            fadeAmt = 1 - amt / 44;
-
+            amt = Math.min(54, amt);
+            fadeAmt = 1 - amt / 54;
+            //console.log(amt, fadeAmt);
             ionic.requestAnimationFrame(function() {
                 header[0].style[ionic.CSS.TRANSFORM] = 'translate3d(0, -' + amt + 'px, 0)';
                 for (var i = 0, j = header[0].children.length; i < j; i++) {
@@ -30,13 +30,24 @@
                 var starty = $scope.$eval($attr.headerShrink) || 0;
                 var shrinkAmt;
 
-                // var header = $document[0].body.querySelector('.bar-header');
+                //console.log( $element );
+                $element[0].style.top = '0px';
+                // var content = angular.element(document.querySelector('.has-header'));
+                // console.log( 'WAT:', content );
+                // content.style.offsetTop = 0;
+                //console.log( 'RUN' );
+                //header[0].style.backgroundColor = 'red !important';
 
                 var header = angular.element(document.querySelector('.bar-header'));
-
-                //var header = angular.element(document.querySelector('div.cached > .bar-header'));
-
-                var headerHeight = header[0].offsetHeight;
+                //console.log(header);
+                var headerHeight;
+                if (header[0].offsetHeight === 0) {
+                  	headerHeight = 54;
+                }
+                else {
+                    headerHeight = header[0].offsetHeight;
+                }
+                //console.log(headerHeight);
 
                 $element.bind('scroll', function(e) {
                     var scrollTop = null;

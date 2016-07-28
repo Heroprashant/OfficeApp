@@ -13,7 +13,7 @@
             </div>
         </div>
 
-        <div class="row tab-bar-custom">
+        <div class="row tab-bar-custom" style="margin-top: 20px;">
             <div class="col col-50 text-center custom-tab-bar-item" ng-class="userprofile.subject == 'personal' ? 'active-subject' : 'inactive-subject'" ng-click="userprofile.changeSubject('personal')">
                 <span>Personal</span>
             </div>
@@ -35,7 +35,7 @@
                         {{userprofile.data.phoneNumber}}
                     </a>
                     <a class="item item-icon-right custom-item" ng-click="userprofile.sendMail(userprofile.data.email)">
-                        <i class="icon ion-android-mail"></i>
+                        <i class="icon ion-email"></i>
                         {{userprofile.data.email}}
                     </a>
                     <a ng-repeat="skypeAccount in userprofile.data.skype" class="item item-icon-right custom-item" ng-click="userprofile.openSkype(skypeAccount.name)">
