@@ -41,11 +41,12 @@
                 var header = angular.element(document.querySelector('.bar-header'));
                 //console.log(header);
                 var headerHeight;
-                if (header[0].offsetHeight === 0) {
-                  	headerHeight = 54;
-                }
-                else {
-                    headerHeight = header[0].offsetHeight;
+                if (header[0]) {
+                    if (header[0].offsetHeight === 0) {
+                        headerHeight = 54;
+                    } else {
+                        headerHeight = header[0].offsetHeight;
+                    }
                 }
                 //console.log(headerHeight);
 
