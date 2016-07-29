@@ -27,37 +27,7 @@
         activate();
 
         function activate() {
-
-            layout.showInformation = function() {
-                // $ionicViewSwitcher.nextDirection('back');
-                // $state.go('Pocapp.information');
-                // setInformationIconOnHeaderBar(false);
-                // setGoBackButton(false);
-            };
-
-            // layout.closeInformation = function() {
-            //   $ionicViewSwitcher.nextDirection('forward');
-            //   $ionicHistory.goBack();
-            //   setInformationIconOnHeaderBar(true);
-            //   setGoBackButton(true);
-            // };
-
-            function setInformationIconOnHeaderBar(show) {
-                if (show) {
-                    layout.showInformationIcon = true;
-                } else {
-                    layout.showInformationIcon = false;
-                }
-            }
-
-            function setGoBackButton(show) {
-                if (show) {
-                    layout.showGoBackButton = true;
-                } else {
-                    layout.showGoBackButton = false;
-                }
-            }
-
+          
             return layout;
         }
     }

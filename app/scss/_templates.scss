@@ -1,21 +1,19 @@
 /* PLACEHOLDER
 ============================================= */
 %bg-image-main-logo {
-  display: block;
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 15px;
-  filter: brightness(1000%);
-  background-position: center !important;
-  background-size: cover !important;
-  background-repeat: no-repeat;
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    filter: brightness(1000%);
+    background-position: center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat;
 }
-
 %bg-image {
     width: 100%;
 }
-
 %bg-image-overlay {
     content: "";
     height: 100%;
@@ -25,80 +23,91 @@
     background-size: cover !important;
     background-repeat: no-repeat;
 }
-
+%bg-contact-icon {
+    background-size: 60% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 /* MIXIN
 ============================================= */
-
 @mixin page-background($btn-background) {
-    @extend %bg-image;
+     @extend %bg-image;
     background-color: $btn-background;
 }
-
 @mixin page-background-overlay($bg-opacity, $bg-image) {
-    @extend %bg-image-overlay;
+     @extend %bg-image-overlay;
     opacity: $bg-opacity;
     background: $bg-image;
 }
-
 @mixin rounded-corner-search($arc) {
     -moz-border-radius: $arc;
     -webkit-border-radius: $arc;
     border-radius: $arc;
 }
-
 @mixin page-main-logo($height, $width, $src) {
-    @extend %bg-image-main-logo;
+     @extend %bg-image-main-logo;
     height: $height; //37px;
     width: $width; //134px;
     background: $src;
 }
-
+@mixin background-contact-icon($bg-image-icon) {
+     @extend %bg-contact-icon;
+    background-image: $bg-image-icon;
+}
 /* MAINSTYLE PAGES
 ============================================= */
 .mainstyle .search {
     @include rounded-corner-search($main-search-border-radius);
 }
-
 .mainstyle .main-logo {
     @include page-main-logo($main-logo-height, $main-logo-width, $main-logo-src);
 }
-
 /* MAINSTYLE - CONTACTS
 ============================================= */
 .mainstyle-contacts {
     @include page-background($main-bg-color-contacts);
 }
-
 .mainstyle-contacts:before {
     @include page-background-overlay($main-bg-opacity-contacts, $main-bg-image-contacts);
 }
-
 /* MAINSTYLE PROJECTS
 ============================================= */
 .mainstyle-projects {
     @include page-background($main-bg-color-projects);
 }
-
 .mainstyle-projects:before {
     @include page-background-overlay($main-bg-opacity-projects, $main-bg-image-projects);
 }
-
 /* MAINSTYLE NEWS
 ============================================= */
 .mainstyle-news {
     @include page-background($main-bg-color-news);
 }
-
 .mainstyle-news:before {
     @include page-background-overlay($main-bg-opacity-news, $main-bg-image-news);
 }
-
 /* MAINSTYLE INFORMATION
 ============================================= */
 .mainstyle-information {
     @include page-background($main-bg-color-information);
 }
-
 .mainstyle-information:before {
     @include page-background-overlay($main-bg-opacity-information, $main-bg-image-information);
+}
+/* ICONS
+============================================= */
+.contact-icon-bg-linkedIn {
+    @include background-contact-icon($icon-linkedIn);
+}
+.contact-icon-bg-skype {
+    @include background-contact-icon($icon-skype);
+}
+.contact-icon-bg-email {
+    @include background-contact-icon($icon-email);
+}
+.contact-icon-bg-mobileNumber {
+    @include background-contact-icon($icon-mobileNumber);
+}
+.contact-icon-bg-storeContact {
+    @include background-contact-icon($icon-storeContact);
 }
