@@ -45,24 +45,6 @@
 
         function activateUserprofile() {
 
-            // userprofile.createFile = function () {
-            //   var type = window.TEMPORARY;
-            //   var size = 5 * 1024 * 1024;
-            //
-            //   window.requestFileSystem(type, size, successCallback, errorCallback);
-            //
-            //   function successCallback(fs) {
-            //     fs.root.getFile(userprofile.data.profilephoto, { create: true, exclusive: true },
-            //   function (fileEntry) {
-            //       console.log('File creation successfull!');
-            //     }, errorCallback);
-            //   }
-            //
-            //   function errorCallback(error) {
-            //     console.log('ERROR: ' + error.code);
-            //   }
-            // };
-            // userprofile.createFile();
             var url, callback, outputFormat;
             userprofile.convertImgToDataURLviaCanvas = function(url, callback, outputFormat) {
                 var img = new Image();
@@ -105,15 +87,10 @@
 
                     if ($window.cordova) {
                         console.log('Running!');
-                        //console.log(cordova.file);
-                        //console.log(navigator.contacts);
-
-                        //{"fieldType":{"addresses":"addresses","birthday":"birthday","categories":"categories","country":"country","department":"department","displayName":"displayName","emails":"emails","familyName":"familyName","formatted":"formatted","givenName":"givenName","honorificPrefix":"honorificPrefix","honorificSuffix":"honorificSuffix","id":"id","ims":"ims","locality":"locality","middleName":"middleName","name":"name","nickname":"nickname","note":"note","organizations":"organizations","phoneNumbers":"phoneNumbers","photos":"photos","postalCode":"postalCode","region":"region","streetAddress":"streetAddress","title":"title","urls":"urls"}}
 
                         // create contact object
                         var contact = navigator.contacts.create();
 
-                        //contact.id = '';
                         contact.displayName = userprofile.data.firstname + ' ' + userprofile.data.lastname;
 
                         // contact -> name
@@ -233,7 +210,6 @@
             userprofile.changeSubject = function(subject) {
                 userprofile.subject = subject;
             };
-
             userprofile.sendMail = function(email) {
                 $window.open('mailto:' + email + '?subject=subject&body=test', '_self');
             };
@@ -243,8 +219,7 @@
             userprofile.linkedIn = function(url) {
                 $window.open(url, '_blank');
             };
-            userprofile.skype = function(type, name, $event) {
-            };
+            userprofile.skype = function(type, name, $event) {};
             userprofile.storeContact = function(id) {
                 window.alert('Store Contact: ' + id);
             };

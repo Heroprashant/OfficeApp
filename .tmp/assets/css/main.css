@@ -9299,7 +9299,7 @@ a.button {
   height: 54px; }
 
 .bar-header {
-  background-color: #F2F2F2 !important; }
+  background-color: transparent !important; }
 
 .bar-positive {
   background-color: transparent !important;
@@ -9334,7 +9334,7 @@ a.button {
   margin-top: -10px; }
 
 .bar-positive .button.button-clear {
-  margin-top: 15px; }
+  margin-top: 10px; }
 
 /* IMAGE
 ============================================= */
@@ -9379,7 +9379,7 @@ a.button {
 
 .title.title-center.header-item {
   margin-top: 10px;
-  color: #8D878D; }
+  color: #ffffff; }
 
 /* QUICK MENU (CONTACTPAGE)
 ============================================= */
@@ -9492,7 +9492,7 @@ a.button {
 
 [nav-bar-transition="ios"] [nav-bar="active"] .bar,
 [nav-bar-transition="ios"] [nav-bar="entering"] .bar {
-  background: red !important; }
+  background: #34184C !important; }
 
 /* PLACEHOLDER
 ============================================= */
@@ -9535,7 +9535,7 @@ a.button {
 .mainstyle .main-logo {
   height: 30px;
   width: 109px;
-  background: url("../../images/ciber.png"); }
+  background: url("../../images/logo/ciber.png"); }
 
 /* MAINSTYLE - CONTACTS
 ============================================= */
@@ -9543,8 +9543,8 @@ a.button {
   background-color: #34184C; }
 
 .mainstyle-contacts:before {
-  opacity: 0.05;
-  background: url("../../images/background-contacts.png"); }
+  opacity: 0;
+  background: url("../../images/background/background-contacts.png"); }
 
 /* MAINSTYLE PROJECTS
 ============================================= */
@@ -9553,7 +9553,7 @@ a.button {
 
 .mainstyle-projects:before {
   opacity: 0.1;
-  background: url("../../images/background-projects.png"); }
+  background: url("../../images/background/background-projects.png"); }
 
 /* MAINSTYLE NEWS
 ============================================= */
@@ -9562,7 +9562,7 @@ a.button {
 
 .mainstyle-news:before {
   opacity: 0.1;
-  background: url("../../images/background-news.png"); }
+  background: url("../../images/background/background-news.png"); }
 
 /* MAINSTYLE INFORMATION
 ============================================= */

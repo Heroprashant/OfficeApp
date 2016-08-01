@@ -1,9 +1,6 @@
 <ion-view view-title="Contact details" class="mainstyle-contacts">
-
     <div></div>
-
     <ion-content scroll="false">
-
         <div class="list" style="margin-bottom: 0px;">
             <br/>
             <div class="custom-profile-area">
@@ -12,7 +9,6 @@
                 <p>{{userprofile.data.role}}</p>
             </div>
         </div>
-
         <div class="row tab-bar-custom" style="margin-top: 20px;">
             <div class="col col-50 text-center custom-tab-bar-item" ng-class="userprofile.subject == 'personal' ? 'active-subject' : 'inactive-subject'" ng-click="userprofile.changeSubject('personal')">
                 <span>Personal</span>
@@ -21,9 +17,7 @@
                 <span>Company</span>
             </div>
         </div>
-
         <ion-scroll class="scroll-style" zooming="false" direction="y">
-
             <div ng-show="userprofile.subject == 'personal'">
                 <div class="list">
                     <a class="item item-icon-right custom-item" ng-click="userprofile.callPerson(userprofile.data.mobileNumber)">
@@ -42,14 +36,6 @@
                         <i ng-class="{'icon ion-social-skype' : skypeAccount.type == 'skype', 'icon ion-social-skype-outline' : skypeAccount.type == 'skype4business'}"></i>
                         {{skypeAccount.name}}
                     </a>
-                    <!-- <a class="item item-icon-right custom-item" href="#">
-                        <i class="icon ion-social-skype"></i>
-                        skype
-                    </a>
-                    <a  class="item item-icon-right custom-item" href="#">
-                        <i class="icon ion-social-skype-outline"></i>
-                        skype4business
-                    </a> -->
                     <a ng-show="userprofile.data.linkedIn != ''" class="item item-icon-right custom-item" ng-click="userprofile.linkedIn(userprofile.data.linkedIn)">
                         <i class="icon ion-social-linkedin"></i>
                         {{userprofile.data.linkedIn}}
@@ -80,7 +66,6 @@
                     <div class="row" style="position: relative; height: 44px !important;"></div>
                 </div>
             </div>
-
             <div ng-show="userprofile.subject == 'company'">
                 <div class="list">
                     <a class="item custom-item">
@@ -96,11 +81,8 @@
                     </a>
                 </div>
             </div>
-
         </ion-scroll>
-
     </ion-content>
-
     <div>
         <div class="bar bar-footer" ng-click="userprofile.storeContact()" style="margin: auto; background: transparent;">
             <button class="button button-balanced icon ion-ios-plus-outline" style="width: 90%; text-align: center; margin: auto;">
@@ -108,5 +90,4 @@
             </button>
         </div>
     </div>
-
 </ion-view>

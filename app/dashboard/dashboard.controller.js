@@ -38,32 +38,39 @@
 
         function activateDashboard() {
 
+            //  Popover for the skype contact options which is based on the contact details from user
             $scope.popover = $ionicPopover.fromTemplateUrl('dashboard/skype-contact.html', {
                 scope: $scope
             }).then(function(popover) {
                 $scope.popover = popover;
-                //console.log($scope.popover);
             });
 
+            // Show PopOver
             dashboard.openPopover = function($event) {
                 $scope.popover.show($event);
             };
+
+            // Close PopOver
             dashboard.closePopover = function() {
                 $scope.popover.hide();
             };
+
             //Cleanup the popover when we're done with it!
             $scope.$on('$destroy', function() {
                 $scope.popover.remove();
             });
+
             // Execute action on hide popover
             $scope.$on('popover.hidden', function() {
                 // Execute action
             });
+
             // Execute action on remove popover
             $scope.$on('popover.removed', function() {
                 // Execute action
             });
 
+            // Search in the DB with the value of textbox
             dashboard.getSearchResult = function() {
                 if (dashboard.searchQuery !== '') {
                     if (dashboard.subject === 'contacts') {
@@ -112,8 +119,6 @@
                                     count++;
 
                                 });
-
-                                // console.log(dashboard.contacts);
                             },
                             function(error) {
                                 console.log(error);
@@ -132,6 +137,7 @@
                 }
             };
 
+            // Change subject in the dashboard
             dashboard.changeSubject = function(subject) {
                 dashboard.searchQuery = '';
                 switch (subject) {
@@ -150,6 +156,7 @@
                 dashboard.subject = subject;
             };
 
+            // Toggle (QuickMenu) Menu for quick contact with person
             dashboard.contactMenuToggle = function(contactIndex) {
                 var opening = false;
                 dashboard.disabeld = true;
@@ -179,11 +186,11 @@
                     });
                 }
 
+                // Removes the CSS classes from selected HTML DOM objects
                 function removeClasses(id) {
                     contactActive = false;
                     interValReverse = 0;
                     // Remove the contactQuickMenu transition
-
                     // Loop threw the contacts and see on which #contact_togglemenu id's a class needs
                     // to be added or removed
                     angular.forEach(dashboard.contacts[id].channels, function(data, channelKey) {
@@ -215,6 +222,7 @@
                 }
             };
 
+            // Get All Projects from DB
             dashboard.getAllProjects = function() {
                 $ionicLoading.show({
                     template: 'Loading...'
@@ -232,6 +240,7 @@
                     });
             };
 
+            // Get All News from DB
             dashboard.getAllNews = function() {
                 $ionicLoading.show({
                     template: 'Loading...'
@@ -249,23 +258,34 @@
                     });
             };
 
+            // Send Mail to X Person
             dashboard.sendMail = function(email) {
                 $window.open('mailto:' + email + '?subject=subject&body=test', '_self');
             };
+
+            // Call X Person
             dashboard.callPerson = function(number) {
                 $window.open('tel:' + number, '_self');
             };
+
+            // Opens LinkedIn Profile URL from X Person
             dashboard.linkedIn = function(url) {
                 $window.open(url, '_blank');
             };
+
+            // Opens Skype from X Person
             dashboard.skype = function(type, name, $event) {
                 var skypeChannels = JSON.parse(type);
                 dashboard.skypeChannels = skypeChannels;
                 dashboard.openPopover($event);
             };
+
+            // Stores X Person on your device
             dashboard.storeContact = function(id) {
                 window.alert('Store Contact: ' + id);
             };
+
+            // Opens Skype or Skype 4 Business from X Person
             dashboard.openSkype = function(skypeName, skypeType) {
                 switch (skypeType) {
                     case 'skype4business':
@@ -277,6 +297,7 @@
                 }
             };
 
+            // Changes focus from searcbar on the home screen when user is typing to searchbar above 
             function changeFocus(show) {
                 if (show) {
                     console.log('move to top');

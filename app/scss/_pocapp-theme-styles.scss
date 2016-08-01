@@ -139,7 +139,7 @@
     height: 54px;
 }
 .bar-header {
-    background-color: #F2F2F2 !important;
+    background-color: transparent !important;
 }
 .bar-positive {
     background-color: transparent !important;
@@ -174,7 +174,7 @@
     margin-top: -10px;
 }
 .bar-positive .button.button-clear {
-    margin-top: 15px;
+    margin-top: 10px;
 }
 /* IMAGE
 ============================================= */
@@ -219,7 +219,7 @@
 }
 .title.title-center.header-item {
     margin-top: 10px;
-    color: #8D878D;
+    color: #ffffff;
 }
 .has-header {}
 /* QUICK MENU (CONTACTPAGE)

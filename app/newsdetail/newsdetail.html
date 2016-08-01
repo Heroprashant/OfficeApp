@@ -1,13 +1,8 @@
 <ion-view hide-nav-bar="false" class="mainstyle-news" data-cache="false" cache-view="false">
-
     <ion-nav-title>{{newsdetail.data.title}}</ion-nav-title>
-
     <ion-content style="margin-top: 0px; background-color: #ffffff" shrinking-header>
-
         <ion-refresher pulling-text="Pull to refresh..." on-refresh="newsdetail.newsDetailRefresh()"></ion-refresher>
-
         <img src="../images/slider/slider_one.jpeg" height="40%" width="100%" style="margin-top: 40px;"/>
-
         <div class="row">
             <div class="col">
                 <h3>{{newsdetail.data.title}}</h3>
@@ -17,19 +12,16 @@
                 </p>
             </div>
             <div class="col-10">
-              <p>
-                <i class="icon ion-android-mail"></i>
-              </p>
+                <p>
+                    <i class="icon ion-android-mail"></i>
+                </p>
             </div>
         </div>
-
         <div class="row">
             <div class="col">
                 <p>{{newsdetail.data.description_long}}</p>
             </div>
         </div>
-
         <image-zoom-gallery images="newsdetail.allImages"></image-zoom-gallery>
-
     </ion-content>
 </ion-view>

@@ -1,9 +1,9 @@
 <ion-popover-view class="custom-popover" style="background: red !important; height: auto !important;">
-        <div class="list">
-            <div class="item item-avatar" ng-repeat="skype in dashboard.skypeChannels" ng-click="dashboard.openSkype(skype.name, skype.type)">
-                <img ng-src="{{skype.type == 'skype' ? 'images/skype-logo.png' : 'images/skype-for-business-logo.png'}}">
-                <h2>{{skype.name}}</h2>
-                <p>{{skype.type == 'skype' ? 'Skype' : 'Skype for Business'}}</p>
-            </div>
+    <div class="list">
+        <div class="item item-avatar" ng-repeat="skype in dashboard.skypeChannels" ng-click="dashboard.openSkype(skype.name, skype.type)">
+            <img ng-src="{{skype.type == 'skype' ? 'images/skype-logo.png' : 'images/skype-for-business-logo.png'}}">
+            <h2>{{skype.name}}</h2>
+            <p>{{skype.type == 'skype' ? 'Skype' : 'Skype for Business'}}</p>
         </div>
+    </div>
 </ion-popover-view>

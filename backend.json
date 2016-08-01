@@ -1,222 +1,214 @@
 {
-    "contacts": [
-        {
-            "id": 0,
-            "employeeId": 1,
-            "firstname": "Marieke",
-            "lastname": "de Rooy",
-            "role": "UX designer",
-            "dateOfBirth": "01-01-1990",
-            "nationality": "NL",
-            "company": "Experis Ciber Nederland",
-            "department": "ADM",
-            "unit": "Microsoft",
-            "team": "Mobility",
-            "manager": "Raymond van Turnhout",
-            "email": "marieke.de.rooy@ciber.com",
-            "phoneNumber": "+31402850000",
-            "mobileNumber": "+31612345678",
-            "profilephoto": "images/contacts/marieke_de_rooy.png",
-            "linkedIn": "http://www.linkedin.com",
-            "skype": [
-              { "type" : "skype", "name" : "mderooy" },
-              { "type" : "skype4business", "name" : "marieke.de.rooy@ciber.com" }
-            ]
-        },
-        {
-            "id": 1,
-            "employeeId": 2,
-            "firstname": "Oktay",
-            "lastname": "Curebal",
-            "role": "Senior Mobile Developer",
-            "dateOfBirth": "01-02-1980",
-            "nationality": "NL",
-            "company": "Experis Ciber Nederland",
-            "department": "ADM",
-            "unit": "Microsoft",
-            "team": "Mobility",
-            "manager": "Raymond van Turnhout",
-            "email": "oktay.curebal@ciber.com",
-            "phoneNumber": "+31402850000",
-            "mobileNumber": "+31612345678",
-            "profilephoto": "images/no-avatar-male.png",
-            "linkedIn": "http://www.linkedin.com",
-            "skype": []
-        },
-        {
-            "id": 2,
-            "employeeId": 3,
-            "firstname": "Niek",
-            "lastname": "Heezemans",
-            "role": "Managing Consultant Mobile & Online",
-            "dateOfBirth": "01-01-1990",
-            "nationality": "NL",
-            "company": "Experis Ciber Nederland",
-            "department": "ADM",
-            "unit": "Microsoft",
-            "team": "Mobility",
-            "manager": "Raymond van Turnhout",
-            "email": "niek.heezemans@ciber.com",
-            "phoneNumber": "+31402850000",
-            "mobileNumber": "+31647374428",
-            "profilephoto": "images/contacts/niek_heezemans.png",
-            "linkedIn": "https://nl.linkedin.com/in/niek-heezemans-2767297",
-            "skype": [
-              { "type" : "skype", "name" : "nheezemans" },
-              { "type" : "skype4business", "name" : "niek.heezemans@ciber.com" }
-            ]
-        },
-        {
-            "id": 3,
-            "employeeId": 4,
-            "firstname": "Murat",
-            "lastname": "Aydin",
-            "role": "Microsoft Consultant",
-            "dateOfBirth": "01-01-1990",
-            "nationality": "NL",
-            "company": "Experis Ciber Nederland",
-            "department": "ADM",
-            "unit": "Microsoft",
-            "team": "Mobility",
-            "manager": "Raymond van Turnhout",
-            "email": "murat.aydin@ciber.com",
-            "phoneNumber": "+31402850000",
-            "mobileNumber": "+31612345678",
-            "profilephoto": "images/no-avatar-male.png",
-            "linkedIn": "",
-            "skype": [
-              { "type" : "skype", "name" : "m.aydin" }
-            ]
-        }
-    ],
+    "contacts": [{
+        "id": 0,
+        "employeeId": 1,
+        "firstname": "Marieke",
+        "lastname": "de Rooy",
+        "role": "UX designer",
+        "dateOfBirth": "01-01-1990",
+        "nationality": "NL",
+        "company": "Experis Ciber Nederland",
+        "department": "ADM",
+        "unit": "Microsoft",
+        "team": "Mobility",
+        "manager": "Raymond van Turnhout",
+        "email": "marieke.de.rooy@ciber.com",
+        "phoneNumber": "+31402850000",
+        "mobileNumber": "+31612345678",
+        "profilephoto": "images/contacts/marieke_de_rooy.png",
+        "linkedIn": "http://www.linkedin.com",
+        "skype": [{
+            "type": "skype",
+            "name": "mderooy"
+        }, {
+            "type": "skype4business",
+            "name": "marieke.de.rooy@ciber.com"
+        }]
+    }, {
+        "id": 1,
+        "employeeId": 2,
+        "firstname": "Oktay",
+        "lastname": "Curebal",
+        "role": "Senior Mobile Developer",
+        "dateOfBirth": "01-02-1980",
+        "nationality": "NL",
+        "company": "Experis Ciber Nederland",
+        "department": "ADM",
+        "unit": "Microsoft",
+        "team": "Mobility",
+        "manager": "Raymond van Turnhout",
+        "email": "oktay.curebal@ciber.com",
+        "phoneNumber": "+31402850000",
+        "mobileNumber": "+31612345678",
+        "profilephoto": "images/contacts/avatar/no-avatar-male.png",
+        "linkedIn": "http://www.linkedin.com",
+        "skype": []
+    }, {
+        "id": 2,
+        "employeeId": 3,
+        "firstname": "Niek",
+        "lastname": "Heezemans",
+        "role": "Managing Consultant Mobile & Online",
+        "dateOfBirth": "01-01-1990",
+        "nationality": "NL",
+        "company": "Experis Ciber Nederland",
+        "department": "ADM",
+        "unit": "Microsoft",
+        "team": "Mobility",
+        "manager": "Raymond van Turnhout",
+        "email": "niek.heezemans@ciber.com",
+        "phoneNumber": "+31402850000",
+        "mobileNumber": "+31647374428",
+        "profilephoto": "images/contacts/niek_heezemans.png",
+        "linkedIn": "https://nl.linkedin.com/in/niek-heezemans-2767297",
+        "skype": [{
+            "type": "skype",
+            "name": "nheezemans"
+        }, {
+            "type": "skype4business",
+            "name": "niek.heezemans@ciber.com"
+        }]
+    }, {
+        "id": 3,
+        "employeeId": 4,
+        "firstname": "Murat",
+        "lastname": "Aydin",
+        "role": "Microsoft Consultant",
+        "dateOfBirth": "01-01-1990",
+        "nationality": "NL",
+        "company": "Experis Ciber Nederland",
+        "department": "ADM",
+        "unit": "Microsoft",
+        "team": "Mobility",
+        "manager": "Raymond van Turnhout",
+        "email": "murat.aydin@ciber.com",
+        "phoneNumber": "+31402850000",
+        "mobileNumber": "+31612345678",
+        "profilephoto": "images/contacts/avatar/no-avatar-male.png",
+        "linkedIn": "",
+        "skype": [{
+            "type": "skype",
+            "name": "m.aydin"
+        }]
+    }],
 
-    "projects": [
-        {
-            "id": 0,
-            "projectId": 1,
-            "title": "Quander.nl",
-            "description_short": "Lorem ipsum",
-            "description_long": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.",
-            "createDate": "22-12-2015",
-            "year": "2015",
-            "company": "Experis Ciber Nederland",
-            "department": "ADM",
-            "unit": "Microsoft",
-            "team": "Mobility",
-            "manager": "Niek Heezemans",
-            "tags": [
-                "Bootstrap", "Azure", ".Net", "HTML5", "Interaction Design", "Responsive"
-            ],
-            "projectMainPhoto": "images/ciber-inc-logo.jpg",
-            "projectImages": []
-        },
-        {
-            "id": 1,
-            "projectId": 2,
-            "title": "Prorail App",
-            "description_short": "Lorem ipsum",
-            "description_long": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.",
-            "createDate": "02-03-2015",
-            "year": "2015",
-            "company": "Experis Ciber Nederland",
-            "department": "SAP",
-            "unit": "SAP",
-            "team": "SAP",
-            "manager": "Jan Janssens",
-            "tags": [
-                "Bootstrap", "Azure", ".Net", "HTML5", "Interaction Design", "Responsive"
-            ],
-            "projectMainPhoto": "images/ciber-inc-logo.jpg",
-            "projectImages": []
-        },
-        {
-            "id": 2,
-            "projectId": 3,
-            "title": "Tankpas",
-            "description_short": "Lorem ipsum",
-            "description_long": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.",
-            "createDate": "01-01-2015",
-            "year": "2015",
-            "company": "Experis Ciber Nederland",
-            "department": "ADM",
-            "unit": "Microsoft",
-            "team": "Mobility",
-            "manager": "Raymond van Turnhout",
-            "tags": [
-                "Bootstrap", "Azure", ".Net", "HTML5", "Interaction Design", "Responsive"
-            ],
-            "projectMainPhoto": "images/ciber-inc-logo.jpg",
-            "projectImages": []
-        },
-        {
-            "id": 3,
-            "projectId": 4,
-            "title": "Utility in a Box",
-            "description_short": "Lorem ipsum",
-            "description_long": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.",
-            "createDate": "03-04-2015",
-            "year": "2015",
-            "company": "Experis Ciber Nederland",
-            "department": "ADM",
-            "unit": "Microsoft",
-            "team": "Utilities",
-            "manager": "Rob Robsen",
-            "tags": [
-                "Bootstrap", "Azure", ".Net", "HTML5", "Interaction Design", "Responsive"
-            ],
-            "projectMainPhoto": "images/ciber-inc-logo.jpg",
-            "projectImages": []
-        }
-    ],
+    "projects": [{
+        "id": 0,
+        "projectId": 1,
+        "title": "Quander.nl",
+        "description_short": "Lorem ipsum",
+        "description_long": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.",
+        "createDate": "22-12-2015",
+        "year": "2015",
+        "company": "Experis Ciber Nederland",
+        "department": "ADM",
+        "unit": "Microsoft",
+        "team": "Mobility",
+        "manager": "Niek Heezemans",
+        "tags": [
+            "Bootstrap", "Azure", ".Net", "HTML5", "Interaction Design", "Responsive"
+        ],
+        "projectMainPhoto": "images/logo/ciber-inc-logo.jpg",
+        "projectImages": []
+    }, {
+        "id": 1,
+        "projectId": 2,
+        "title": "Prorail App",
+        "description_short": "Lorem ipsum",
+        "description_long": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.",
+        "createDate": "02-03-2015",
+        "year": "2015",
+        "company": "Experis Ciber Nederland",
+        "department": "SAP",
+        "unit": "SAP",
+        "team": "SAP",
+        "manager": "Jan Janssens",
+        "tags": [
+            "Bootstrap", "Azure", ".Net", "HTML5", "Interaction Design", "Responsive"
+        ],
+        "projectMainPhoto": "images/logo/ciber-inc-logo.jpg",
+        "projectImages": []
+    }, {
+        "id": 2,
+        "projectId": 3,
+        "title": "Tankpas",
+        "description_short": "Lorem ipsum",
+        "description_long": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.",
+        "createDate": "01-01-2015",
+        "year": "2015",
+        "company": "Experis Ciber Nederland",
+        "department": "ADM",
+        "unit": "Microsoft",
+        "team": "Mobility",
+        "manager": "Raymond van Turnhout",
+        "tags": [
+            "Bootstrap", "Azure", ".Net", "HTML5", "Interaction Design", "Responsive"
+        ],
+        "projectMainPhoto": "images/logo/ciber-inc-logo.jpg",
+        "projectImages": []
+    }, {
+        "id": 3,
+        "projectId": 4,
+        "title": "Utility in a Box",
+        "description_short": "Lorem ipsum",
+        "description_long": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.",
+        "createDate": "03-04-2015",
+        "year": "2015",
+        "company": "Experis Ciber Nederland",
+        "department": "ADM",
+        "unit": "Microsoft",
+        "team": "Utilities",
+        "manager": "Rob Robsen",
+        "tags": [
+            "Bootstrap", "Azure", ".Net", "HTML5", "Interaction Design", "Responsive"
+        ],
+        "projectMainPhoto": "images/logo/ciber-inc-logo.jpg",
+        "projectImages": []
+    }],
 
-    "news": [
-        {
-            "id": 0,
-            "newsId": 1,
-            "title": "Utility in a Box",
-            "author": "John Doe",
-            "description_short": "Lorem ipsum",
-            "description_long": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.",
-            "createDate": "Januari 8",
-            "year": "2016",
-            "newsMainPhoto": "",
-            "newsImages": []
-        },
-        {
-            "id": 1,
-            "newsId": 2,
-            "title": "Utility in a Box",
-            "author": "John Doe",
-            "description_short": "Lorem ipsum",
-            "description_long": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.",
-            "createDate": "Januari 8",
-            "year": "2016",
-            "newsMainPhoto": "",
-            "newsImages": []
-        },
-        {
-            "id": 2,
-            "newsId": 3,
-            "title": "Utility in a Box",
-            "author": "John Doe",
-            "description_short": "Lorem ipsum",
-            "description_long": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.",
-            "createDate": "Januari 8",
-            "year": "2016",
-            "newsMainPhoto": "",
-            "newsImages": []
-        },
-        {
-            "id": 3,
-            "newsId": 4,
-            "title": "Utility in a Box",
-            "author": "John Doe",
-            "description_short": "Lorem ipsum",
-            "description_long": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.",
-            "createDate": "Januari 8",
-            "year": "2016",
-            "newsMainPhoto": "",
-            "newsImages": []
-        }
-    ]
+    "news": [{
+        "id": 0,
+        "newsId": 1,
+        "title": "Utility in a Box",
+        "author": "John Doe",
+        "description_short": "Lorem ipsum",
+        "description_long": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.",
+        "createDate": "Januari 8",
+        "year": "2016",
+        "newsMainPhoto": "",
+        "newsImages": []
+    }, {
+        "id": 1,
+        "newsId": 2,
+        "title": "Utility in a Box",
+        "author": "John Doe",
+        "description_short": "Lorem ipsum",
+        "description_long": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.",
+        "createDate": "Januari 8",
+        "year": "2016",
+        "newsMainPhoto": "",
+        "newsImages": []
+    }, {
+        "id": 2,
+        "newsId": 3,
+        "title": "Utility in a Box",
+        "author": "John Doe",
+        "description_short": "Lorem ipsum",
+        "description_long": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.",
+        "createDate": "Januari 8",
+        "year": "2016",
+        "newsMainPhoto": "",
+        "newsImages": []
+    }, {
+        "id": 3,
+        "newsId": 4,
+        "title": "Utility in a Box",
+        "author": "John Doe",
+        "description_short": "Lorem ipsum",
+        "description_long": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.",
+        "createDate": "Januari 8",
+        "year": "2016",
+        "newsMainPhoto": "",
+        "newsImages": []
+    }]
 }
