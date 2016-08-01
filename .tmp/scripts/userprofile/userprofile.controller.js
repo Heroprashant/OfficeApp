@@ -71,8 +71,6 @@
                 dataservice.getByEmployeeId($stateParams.empId).then(
                     function(response) {
                         userprofile.data = response.data[0];
-                        console.log(userprofile.data.profilephoto);
-
                         userprofile.convertImgToDataURLviaCanvas(userprofile.data.profilephoto, function(base64Img) {
 
                             imgData = base64Img;
@@ -86,7 +84,6 @@
                 userprofile.storeContact = function() {
 
                     if ($window.cordova) {
-                        console.log('Running!');
 
                         // create contact object
                         var contact = navigator.contacts.create();
