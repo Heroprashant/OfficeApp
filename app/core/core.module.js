@@ -43,6 +43,7 @@
             'Pocapp.core.services',
             'Pocapp.core.layout',
             'Pocapp.core.features',
+            'Pocapp.core.modules'
             /* 3rd-party Modules */
         ]);
 })(); // End Strict
