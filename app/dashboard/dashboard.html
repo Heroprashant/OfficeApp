@@ -23,9 +23,16 @@
             </div>
         </div>
 
+        <!-- <button ng-click="dashboard.testButton()" style="height: 100px; width:100px;"></button>
+        <br/></br/>
+        <button ng-click="dashboard.testButton2()" style="height: 100px; width:100px;"></button> -->
+
         <ion-scroll class="scroll-style" zooming="false" direction="y">
             <!-- Contacts -->
+            <!-- <div contactmodule dashboard="{{dashboard.test}}"></div> -->
+
             <div ng-show="dashboard.subject == 'contacts'">
+                <!--ng-hide="true" -->
                 <div class="list">
                     <div class="item item-avatar custom-item-contacts" ng-repeat="(contactIndex, contact) in dashboard.contacts">
                         <img class="img-profile-photo" src="{{contact.profilephoto}}" ng-click="!dashboard.disabeld && dashboard.contactMenuToggle( contactIndex )">

@@ -10,7 +10,8 @@
 	<plugin name="cordova-plugin-whitelist" spec="1"/>
 	<!-- https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-statusbar/ -->
 	<preference name="StatusBarOverlaysWebView" value="false" />
-	<preference name="StatusBarBackgroundColor" value="#2f1645" />
+	<preference name="StatusBarBackgroundColor" value="#2f1645"/>
+	<preference name="StatusBarStyle" value="lightcontent" />
 	<access origin="*"/>
 	<allow-intent href="http://*/*"/>
 	<allow-intent href="https://*/*"/>

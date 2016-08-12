@@ -31,6 +31,9 @@
         dashboard.subject = 'contacts';
         dashboard.opening = false;
         dashboard.closing = false;
+
+        dashboard.test = 'test jonguh!!';
+
         var channel = [];
 
         // Activate all methods
@@ -70,9 +73,25 @@
                 // Execute action
             });
 
+            dashboard.testButton = function() {
+              dashboard.test = 'button 1';
+              alert(dashboard.test);
+            };
+
+            dashboard.testButton2 = function() {
+              dashboard.test = 'button 2';
+              alert(dashboard.test);
+            };
+
+            //$scope.testButton = dashboard.testButton();
+
             // Search in the DB with the value of textbox
             dashboard.getSearchResult = function() {
+              dashboard.test = 'kei gaaf jonguh!!!';
                 if (dashboard.searchQuery !== '') {
+
+                    dashboard.test = 'kei gaaf jonguh!!!';
+
                     if (dashboard.subject === 'contacts') {
                         $ionicLoading.show({
                             template: 'Loading...'
@@ -297,7 +316,7 @@
                 }
             };
 
-            // Changes focus from searcbar on the home screen when user is typing to searchbar above 
+            // Changes focus from searcbar on the home screen when user is typing to searchbar above
             function changeFocus(show) {
                 if (show) {
                     console.log('move to top');
