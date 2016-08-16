@@ -4,6 +4,10 @@
     content: "";
     font-size: 200%;
 }
+.ion-share:before {
+    content: "\f220";
+    font-size: 200%;
+}
 [nav-bar-transition="ios"] [nav-bar="active"] .bar,
 [nav-bar-transition="ios"] [nav-bar="entering"] .bar {
   background: #34184C !important;

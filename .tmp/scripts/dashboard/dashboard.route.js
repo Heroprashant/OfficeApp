@@ -18,7 +18,7 @@
     function route($stateProvider) {
         $stateProvider
             .state('Pocapp.dashboard', {
-                url: 'dashboard',
+                url: 'dashboard/:personName',
                 views: {
                     appContent: {
                         templateUrl: 'dashboard/dashboard.html',

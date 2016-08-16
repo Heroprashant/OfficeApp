@@ -68,16 +68,17 @@
             </div>
             <div ng-show="userprofile.subject == 'company'">
                 <div class="list">
-                    <a class="item custom-item">
+                    <div class="item custom-item">
                         {{userprofile.data.company}}
-                    </a>
-                    <a class="item custom-item">
+                    </div>
+                    <div class="item custom-item">
                         {{userprofile.data.department}}
                         {{userprofile.data.unit}}
                         {{userprofile.data.team}}
-                    </a>
-                    <a class="item custom-item">
-                        {{userprofile.data.manager}}
+                    </div>
+                    <a ng-show="userprofile.data.manager[0].name != ''" class="item item-icon-right custom-item" ui-sref="Pocapp.userprofile({empId: userprofile.data.manager[0].manId})">
+                        <i class="icon ion-ios-search"></i>
+                        {{userprofile.data.manager[0].name}}
                     </a>
                 </div>
             </div>

@@ -1,7 +1,11 @@
 <div id="imagezoomid">
     <a class="item item-list-detail custom-item-slider">
-        <ion-scroll direction="x">
-            <img ng-repeat="image in allImages" ng-src="{{image.src}}" ng-click="showImages($index)" class="image-list-thumb"/>
-        </ion-scroll>
+        <ion-slide-box show-pager="true">
+            <ion-slide ng-repeat="image in allImages">
+                <ion-scroll direction="x" show-pager="true">
+                    <img ng-src="{{image.src}}" ng-click="showImages($index)" class="image-list-thumb"/>
+                </ion-scroll>
+            </ion-slide>
+        </ionic-slide-box>
     </a>
 </div>

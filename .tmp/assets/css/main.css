@@ -9242,7 +9242,7 @@ a.button {
     border-radius: 50%; }
   .custom-profile-area h2 {
     position: absolute;
-    font-size: 20px;
+    font-size: 1.26em;
     top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -9490,6 +9490,10 @@ a.button {
   content: "";
   font-size: 200%; }
 
+.ion-share:before {
+  content: "\f220";
+  font-size: 200%; }
+
 [nav-bar-transition="ios"] [nav-bar="active"] .bar,
 [nav-bar-transition="ios"] [nav-bar="entering"] .bar {
   background: #34184C !important; }
@@ -9576,7 +9580,7 @@ a.button {
 /* ICONS
 ============================================= */
 .contact-icon-bg-linkedIn {
-  background-image: url("../../images/icons/linkedin.png"); }
+  background-image: url("../../images/icons/linkdin.png"); }
 
 .contact-icon-bg-skype {
   background-image: url("../../images/icons/skype.png"); }

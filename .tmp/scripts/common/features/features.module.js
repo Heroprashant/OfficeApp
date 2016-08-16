@@ -17,7 +17,7 @@
             /* Cross App Modules */
             'feature.imagezoomgallery',
             'feature.shrinkingheader',
-            'feature.information'
+            'feature.skype'
 
             /* 3rd-party Modules */
         ]);

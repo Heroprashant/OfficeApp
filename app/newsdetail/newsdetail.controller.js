@@ -34,12 +34,12 @@
 
     // Inject dependencies
     NewsdetailCtrl.$inject = ['dataservice', '$scope', '$stateParams', '$ionicBackdrop',
-        '$ionicModal', '$ionicSlideBoxDelegate', '$ionicScrollDelegate'
+        '$ionicModal', '$ionicSlideBoxDelegate', '$ionicScrollDelegate', '$ionicPopover'
     ];
 
     // Start the DashboardCtrl
     function NewsdetailCtrl(dataservice, $scope, $stateParams, $ionicBackdrop, $ionicModal,
-        $ionicSlideBoxDelegate, $ionicScrollDelegate) {
+        $ionicSlideBoxDelegate, $ionicScrollDelegate, $ionicPopover) {
         var newsdetail = this;
 
         // Array with images for the slider
@@ -51,10 +51,53 @@
             src: 'images/slider/slider_three.jpg'
         }];
 
+        newsdetail.socialshares = [{
+          channel: 'Email',
+          img: ''
+        }, {
+          channel: 'Facebook',
+          img: ''
+        }, {
+          channel: 'LinkedIn',
+          img: ''
+        }];
+
         // Activate all methods
         activateNewsdetail();
 
         function activateNewsdetail() {
+
+            //  Popover for the skype contact options which is based on the contact details from user
+            $scope.popover = $ionicPopover.fromTemplateUrl('common/features/socialshare/socialshare-popover.html', {
+                scope: $scope
+            }).then(function(popover) {
+                $scope.popover = popover;
+            });
+
+            // Show PopOver
+            newsdetail.openPopover = function($event) {
+                $scope.popover.show($event);
+            };
+
+            // Close PopOver
+            newsdetail.closePopover = function() {
+                $scope.popover.hide();
+            };
+
+            //Cleanup the popover when we're done with it!
+            $scope.$on('$destroy', function() {
+                $scope.popover.remove();
+            });
+
+            // Execute action on hide popover
+            $scope.$on('popover.hidden', function() {
+                // Execute action
+            });
+
+            // Execute action on remove popover
+            $scope.$on('popover.removed', function() {
+                // Execute action
+            });
 
             // Get News by ID from the DB
             dataservice.getByNewsId($stateParams.nId).then(
@@ -80,6 +123,11 @@
                 ).finally(function() {
                     $scope.$broadcast('scroll.refreshComplete');
                 });
+            };
+
+            // Open social share options
+            newsdetail.socialshare = function($event) {
+                newsdetail.openPopover($event);
             };
 
             return newsdetail;

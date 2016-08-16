@@ -84,6 +84,23 @@
             return defer.promise;
         }
 
+        // Get specific employee by Name
+        function getByEmployeeName(employeeName) {
+            defer = $q.defer();
+
+            $http({
+                method: 'GET',
+                url: DATASERVICECONSTANTS.BASE_URL + '/contacts?firstname=' + employeeName,
+                timeout: 5000
+            }).then(function successCallback(response) {
+                defer.resolve(response);
+            }, function errorCallback(response) {
+                defer.reject(response);
+            });
+
+            return defer.promise;
+        }
+
         // Get all projects from DB
         function getAllProjects() {
             defer = $q.defer();

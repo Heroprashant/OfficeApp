@@ -1,5 +1,6 @@
 /* global angular */
 /* global $ */
+/* global device */
 (function() {
     'use strict';
     /**
@@ -18,12 +19,10 @@
         .controller('DashboardCtrl', DashboardCtrl);
 
     // Inject dependencies
-    DashboardCtrl.$inject = ['dataservice', '$scope', '$window', '$ionicLoading',
-        '$ionicPopover', '$timeout', '$interval'
-    ];
+    DashboardCtrl.$inject = ['dataservice', '$scope', '$window', '$ionicLoading', '$ionicPopover', '$timeout', '$stateParams'];
 
     // Start the DashboardCtrl
-    function DashboardCtrl(dataservice, $scope, $window, $ionicLoading, $ionicPopover, $timeout) {
+    function DashboardCtrl(dataservice, $scope, $window, $ionicLoading, $ionicPopover, $timeout, $stateParams) {
         var dashboard = this,
             contactActive = false,
             interVal = 0,
@@ -41,8 +40,26 @@
 
         function activateDashboard() {
 
+            // See if there is a parameter passed trough the navigation
+            // if ($stateParams.personName !== '') {
+            //     dashboard.searchQuery = $stateParams.personName;
+            //     console.log('move to top');
+            //     angular.element(document.querySelector('#searchbar-input'))
+            //         .attr('autofocus', '');
+            //         console.log(angular.element(document.querySelector('#searchbar-input')));
+            //     angular.element(document.querySelector('#searchbar'))
+            //         .removeClass('search-bar-contact');
+            //     angular.element(document.querySelector('#searchbar'))
+            //         .addClass('list list-inset search-bar');
+            //     angular.element(document.querySelector('#searchbar-h2'))
+            //         .attr('hidden', '');
+            //     angular.element(document.querySelector('#searchbar-label'))
+            //         .removeClass('search-bar');
+            //         console.log('het komt hier');
+            // }
+
             //  Popover for the skype contact options which is based on the contact details from user
-            $scope.popover = $ionicPopover.fromTemplateUrl('dashboard/skype-contact.html', {
+            $scope.popover = $ionicPopover.fromTemplateUrl('common/features/skype/skype-popover.html', {
                 scope: $scope
             }).then(function(popover) {
                 $scope.popover = popover;
@@ -74,20 +91,21 @@
             });
 
             dashboard.testButton = function() {
-              dashboard.test = 'button 1';
-              alert(dashboard.test);
+                dashboard.test = 'button 1';
+                alert(dashboard.test);
             };
 
             dashboard.testButton2 = function() {
-              dashboard.test = 'button 2';
-              alert(dashboard.test);
+                dashboard.test = 'button 2';
+                alert(dashboard.test);
             };
 
             //$scope.testButton = dashboard.testButton();
 
             // Search in the DB with the value of textbox
             dashboard.getSearchResult = function() {
-              dashboard.test = 'kei gaaf jonguh!!!';
+                dashboard.test = 'kei gaaf jonguh!!!';
+                console.log(dashboard.searchQuery);
                 if (dashboard.searchQuery !== '') {
 
                     dashboard.test = 'kei gaaf jonguh!!!';

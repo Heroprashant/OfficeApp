@@ -76,7 +76,7 @@
     }
     h2 {
         position: absolute;
-        font-size: 20px;
+        font-size: 1.26em;
         top: 60%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -311,6 +311,9 @@
 .item h2 {
     color: white;
 }
+// .item-avatar h2 {
+//     color: black;
+// }
 .item p {
     white-space: normal;
 }

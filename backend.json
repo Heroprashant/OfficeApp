@@ -11,7 +11,10 @@
         "department": "ADM",
         "unit": "Microsoft",
         "team": "Mobility",
-        "manager": "Raymond van Turnhout",
+        "manager": [{
+          "manId": 5,
+          "name": "Raymond van Turnhout"
+          }],
         "email": "marieke.de.rooy@ciber.com",
         "phoneNumber": "+31402850000",
         "mobileNumber": "+31612345678",
@@ -36,7 +39,10 @@
         "department": "ADM",
         "unit": "Microsoft",
         "team": "Mobility",
-        "manager": "Raymond van Turnhout",
+        "manager": [{
+          "manId": 5,
+          "name": "Raymond van Turnhout"
+          }],
         "email": "oktay.curebal@ciber.com",
         "phoneNumber": "+31402850000",
         "mobileNumber": "+31612345678",
@@ -55,7 +61,10 @@
         "department": "ADM",
         "unit": "Microsoft",
         "team": "Mobility",
-        "manager": "Raymond van Turnhout",
+        "manager": [{
+          "manId": 5,
+          "name": "Raymond van Turnhout"
+          }],
         "email": "niek.heezemans@ciber.com",
         "phoneNumber": "+31402850000",
         "mobileNumber": "+31647374428",
@@ -80,7 +89,10 @@
         "department": "ADM",
         "unit": "Microsoft",
         "team": "Mobility",
-        "manager": "Raymond van Turnhout",
+        "manager": [{
+          "manId": 5,
+          "name": "Raymond van Turnhout"
+          }],
         "email": "murat.aydin@ciber.com",
         "phoneNumber": "+31402850000",
         "mobileNumber": "+31612345678",
@@ -89,6 +101,31 @@
         "skype": [{
             "type": "skype",
             "name": "m.aydin"
+        }]
+    }, {
+        "id": 4,
+        "employeeId": 5,
+        "firstname": "Raymond",
+        "lastname": "van Turnhout",
+        "role": "ADM Practice Director",
+        "dateOfBirth": "01-01-1990",
+        "nationality": "NL",
+        "company": "Experis Ciber Nederland",
+        "department": "ADM",
+        "unit": "Microsoft",
+        "team": "Mobility",
+        "manager": [{
+          "manId": "",
+          "name": ""
+          }],
+        "email": "raymond.van.turnhout@ciber.nl",
+        "phoneNumber": "+31402850000",
+        "mobileNumber": "+31612345678",
+        "profilephoto": "images/contacts/avatar/no-avatar-male.png",
+        "linkedIn": "",
+        "skype": [{
+            "type": "skype",
+            "name": "r.vanturnhout"
         }]
     }],
 

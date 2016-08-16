@@ -15,7 +15,8 @@
             /* Angular Modules */
 
             /* Cross App Modules */
-            'module.contact'
+            'module.contact',
+            'module.information'
 
             /* 3rd-party Modules */
         ]);

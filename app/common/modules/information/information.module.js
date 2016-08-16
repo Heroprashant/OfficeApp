@@ -10,7 +10,7 @@
      the images and a element id.</p>
      */
     angular
-        .module('feature.information', [
+        .module('module.information', [
             // Inject dependencies here
             'ionic'
         ]);

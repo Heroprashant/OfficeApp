@@ -4,16 +4,16 @@
     'use strict';
 
     angular
-        .module('feature.information')
+        .module('module.information')
         .directive('information', information);
 
-    information.$inject = ['$ionicModal'];
+    information.$inject = ['$ionicModal', '$window'];
 
-    function information($ionicModal) {
+    function information($ionicModal, $window) {
         return {
             restrict: 'EA',
             template: '',
-            templateUrl: 'common/features/information/information.html',
+            templateUrl: 'common/modules/information/information.html',
             replace: false,
             controllerAs: 'izg',
             scope: {
@@ -57,6 +57,16 @@
                 $scope.$on('modal.removed', function() {
                     // Execute action
                 });
+
+                //
+                $scope.sendMail = function(email) {
+                    $window.open('mailto:' + email + '?subject=subject&body=test', '_self');
+                };
+
+                //
+                $scope.callPerson = function(number) {
+                    $window.open('tel:' + number, '_self');
+                };
             }
         };
     }

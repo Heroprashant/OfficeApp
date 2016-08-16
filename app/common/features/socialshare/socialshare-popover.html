@@ -1,0 +1,9 @@
+<ion-popover-view class="custom-popover" style="background: red !important; height: auto !important;">
+    <div class="list">
+        <div class="item item-avatar" ng-repeat="social in newsdetail.socialshares" ng-click="newsdetail.openSocialchannel(social.channel)">
+            <img ng-src="{{social.channel == 'Email' ? 'images/icons/_mail.png' : '' || social.channel == 'Facebook' ? 'images/icons/_facbook.png' : '' || social.channel == 'LinkedIn' ? 'images/icons/_linkdin.png' : ''}}">
+            <h2 style="color: black !important;">{{social.channel}}</h2>
+            <p>Deel dit via {{social.channel == 'Email' ? 'Email' : '' || social.channel == 'Facebook' ? 'Facebook' : '' || social.channel == 'LinkedIn' ? 'LinkedIn' : ''}}</p>
+        </div>
+    </div>
+</ion-popover-view>
