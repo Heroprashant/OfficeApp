@@ -29,18 +29,47 @@
 
         // This function is called on start
         function activateCtrl() {
+
             // Wait until IonicPlatform is ready
             $ionicPlatform.ready(function() {
                 /**
                  * Check if this is a device or browser
                  */
-                if ($window.cordova) {
-                    console.log('cordova check => device');
-                    $state.go('Pocapp.dashboard');
-                } else {
-                    console.log('cordova check => browser');
-                    $state.go('Pocapp.dashboard');
-                }
+                 var shrinkAndGrow = function () {
+                   if (stopprocess) {
+                       execute();
+                       return;
+                   }
+                   angular.element(document.querySelector('#testimage')).addClass('shrink');
+                   console.log('shrink')
+                   setTimeout(shrinkAndGrow, 1000);
+                 }
+                 setTimeout(shrinkAndGrow, 1000);
+
+                 function execute() {
+                   console.log('complete')
+                   setTimeout(function () {
+                     if ($window.cordova) {
+                         console.log('cordova check => device');
+                         $state.go('Pocapp.dashboard');
+                     } else {
+                         console.log('cordova check => browser');
+                         $state.go('Pocapp.dashboard');
+                     }
+                   }, 500);
+                 }
+
+                 var stopprocess = false;
+                 setTimeout(function () {
+                   angular.element(document.querySelector('#testimage')).removeClass('displayed-shrink');
+                   angular.element(document.querySelector('#testimage')).removeClass('shrink');
+                   angular.element(document.querySelector('#testimage')).addClass('displayed-grow');
+                   angular.element(document.querySelector('#testimage')).addClass('grow');
+                   console.log('grow');
+                   stopprocess = true;
+                 }, 1950);
+
+
                 return appload;
             });
         }

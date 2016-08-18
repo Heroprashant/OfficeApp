@@ -9498,6 +9498,35 @@ a.button {
 [nav-bar-transition="ios"] [nav-bar="entering"] .bar {
   background: #34184C !important; }
 
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%); }
+
+.grow {
+  transform: scale(7500); }
+
+.shrink {
+  transform: scale(0.6); }
+
+.displayed-grow {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  top: 50%;
+  margin-bottom: auto;
+  transition: transform 20s; }
+
+.displayed-shrink {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  top: 50%;
+  margin-bottom: auto;
+  transition: transform 2s; }
+
 /* PLACEHOLDER
 ============================================= */
 .mainstyle .main-logo {

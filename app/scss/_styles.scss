@@ -12,3 +12,36 @@
 [nav-bar-transition="ios"] [nav-bar="entering"] .bar {
   background: #34184C !important;
 }
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
+.grow {
+    -webkit-transform: scale(7500);
+    -ms-transform: scale(7500);
+    transform: scale(7500);
+}
+.shrink {
+    -webkit-transform: scale(0.6);
+    -ms-transform: scale(0.6);
+    transform: scale(0.6);
+}
+.displayed-grow {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    top: 50%;
+    margin-bottom: auto;
+    transition: transform 20s;
+}
+.displayed-shrink {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    top: 50%;
+    margin-bottom: auto;
+    transition: transform 2s;
+}
