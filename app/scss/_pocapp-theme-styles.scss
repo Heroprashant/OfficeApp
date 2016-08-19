@@ -1,11 +1,121 @@
+/* CUSTOM STYLES -> PLACEHOLDER
+============================================= */
+%custom-tab-bar-item {
+  span {
+      font-weight: 100;
+      font-size: 18px;
+  }
+}
+%custom-item-contacts {
+    background-color: transparent;
+    img:first-child {
+        left: 20px;
+    }
+    h2 {
+        color: white;
+    }
+}
+%custom-item-projects {
+  background-color: transparent;
+  img:first-child {
+      left: 20px;
+  }
+  h2 {
+      color: white;
+      font-size: 24px;
+      font-weight: 400;
+  }
+}
+%custom-profile-area {
+  position: relative;
+  height: 150px;
+  width: 100%;
+  background: transparent;
+  img:first-child {
+      position: relative;
+      top: 30%;
+      left: 50%;
+      /* bring your own prefixes */
+      transform: translate(-50%, -50%);
+      max-width: 100px;
+      max-height: 100px;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+  }
+  h2 {
+      position: absolute;
+      font-size: 1.26em;
+      top: 60%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+  }
+  p {
+      position: absolute;
+      font-size: 10px;
+      top: 89%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+  }
+}
+%custom-bar-header {
+  background-color: transparent !important;
+  h1 {
+      margin-top: 0 !important;
+  }
+  button {
+      background-color: transparent !important;
+  }
+}
+/* CUSTOM STYLES -> MIXIN
+============================================= */
+@mixin custom-tab-bar-item($color_custom-tab-bar-item) {
+  @extend %custom-tab-bar-item;
+  color: $color_custom-tab-bar-item;
+}
+@mixin custom-item-contacts($color_custom-item-contacts) {
+  @extend %custom-item-contacts;
+  p {
+      color: $color_custom-item-contacts;
+      font-weight: bold;
+  }
+}
+@mixin custom-item-projects($color_custom-item-projects) {
+  @extend %custom-item-projects;
+  p {
+      color: $color_custom-item-projects;
+      font-weight: bold;
+  }
+}
+@mixin custom-profile-area($color_custom-profile-area) {
+  @extend %custom-profile-area;
+  h2 {
+    color: $color_custom-profile-area;
+  }
+  p {
+    color: $color_custom-profile-area;
+  }
+}
+@mixin custom-bar-header($color_custom-bar-header) {
+  @extend %custom-bar-header;
+  color: $color_custom-bar-header !important;
+}
 /* CUSTOM STYLES
 ============================================= */
 .custom-tab-bar-item {
-    span {
-        color: #8E7F9C;
-        font-weight: 100;
-        font-size: 18px;
-    }
+    @include custom-tab-bar-item($custom-tab-bar-item-color);
+}
+.custom-item-contacts {
+    @include custom-item-contacts($custom-item-contacts-color);
+}
+.custom-item-projects {
+    @include custom-item-projects($custom-item-projects-color);
+}
+.custom-profile-area {
+    @include custom-profile-area($custom-profile-area-color);
+}
+.custom-bar-header {
+    @include custom-profile-area($custom-profile-area-color);
 }
 .tab-bar-custom {
     padding: 0;
@@ -13,34 +123,6 @@
     border-bottom-style: solid;
     border-bottom-width: 1px;
     border-bottom-color: white;
-}
-.custom-item-contacts {
-    background-color: transparent;
-    img:first-child {
-        left: 20px;
-    }
-    h2 {
-        color: white;
-    }
-    p {
-        color: #8E7F9C;
-        font-weight: bold;
-    }
-}
-.custom-item-projects {
-    background-color: transparent;
-    img:first-child {
-        left: 20px;
-    }
-    h2 {
-        color: white;
-        font-size: 24px;
-        font-weight: 400;
-    }
-    p {
-        color: #8E7F9C;
-        font-weight: bold;
-    }
 }
 .custom-item-news {
     h2 {
@@ -57,108 +139,113 @@
         margin-bottom: 0 !important;
     }
 }
-.custom-profile-area {
-    position: relative;
-    height: 150px;
-    width: 100%;
-    background: transparent;
-    img:first-child {
-        position: relative;
-        top: 30%;
-        left: 50%;
-        /* bring your own prefixes */
-        transform: translate(-50%, -50%);
-        max-width: 100px;
-        max-height: 100px;
-        width: 100%;
-        height: 100%;
-        border-radius: 50%;
-    }
-    h2 {
-        position: absolute;
-        font-size: 1.26em;
-        top: 60%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: #ffffff;
-    }
-    p {
-        position: absolute;
-        font-size: 10px;
-        top: 89%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: #ffffff;
-    }
-}
+
 .custom-item {
     padding: 10px;
-}
-.custom-bar-header {
-    background-color: transparent !important;
-    h1 {
-        margin-top: 0 !important;
-        color: #ffffff !important;
-    }
-    button {
-        background-color: transparent !important;
-    }
 }
 .custom-item-slider {
     padding: 0;
 }
+/* SUBJECT -> PLACEHOLDER
+============================================= */
+%active-subject {
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  span {
+      font-weight: 100;
+      font-size: 18px;
+  }
+}
+%inactive-subject {
+
+}
+%inactive-subject-hover {
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  span {
+      font-weight: 100;
+      font-size: 18px;
+  }
+}
+/* SUBJECT -> MIXIN
+============================================= */
+@mixin active-subject($color-border-bottom, $color-active-subject) {
+  @extend %active-subject;
+  border-bottom-color: $color-border-bottom;
+  span {
+      color: $color-active-subject;
+  }
+}
+@mixin inactive-subject($color-inactive-subject) {
+  background-color: $color-inactive-subject;
+}
+@mixin inactive-subject-hover($color-border-bottom-hover, $color-inactive-subject-hover) {
+  @extend %inactive-subject-hover;
+  border-bottom-color: $color-border-bottom-hover;
+  span {
+      color: $color-inactive-subject-hover;
+  }
+}
 /* SUBJECT
 ============================================= */
 .active-subject {
-    border-bottom-style: solid;
-    border-bottom-width: 3px;
-    border-bottom-color: white;
-    span {
-        color: white;
-        font-weight: 100;
-        font-size: 18px;
-    }
+    @include active-subject($active-subject-border-bottom-color, $active-subject-color);
 }
 .inactive-subject {
-    background-color: transparent;
+    @include inactive-subject($inactive-subject-color);
 }
 .inactive-subject:hover {
-    border-bottom-style: solid;
-    border-bottom-width: 3px;
-    border-bottom-color: white;
-    span {
-        color: white;
-        font-weight: 100;
-        font-size: 18px;
-    }
+    @include inactive-subject-hover($inactive-subject-border-bottom-color, $active-subject-hover-color);
+}
+/* CUSTOM BAR STYLES -> PLACEHOLDER
+============================================= */
+%bar-positive {
+  border-bottom: 0 !important;
+  border: none !important;
+}
+%bar-balanced {
+  border-bottom: 0 !important;
+  border: none !important;
+}
+/* CUSTOM BAR STYLES -> MIXIN
+============================================= */
+@mixin bar-header($background-color) {
+  background-color: $background-color !important;
+}
+@mixin bar-positive($background-color) {
+  @extend %bar-positive;
+  background-color: $background-color !important;
+}
+@mixin bar-balanced($background-color) {
+  @extend %bar-balanced;
+  background-color: $background-color !important;
+}
+@mixin bar-button($background-color) {
+  background-color: $background-color;
 }
 /* CUSTOM BAR STYLES
 ============================================= */
+.bar-header {
+    @include bar-header($bar-header-bg-color);
+}
+.bar-positive {
+    @include bar-positive($bar-positive-bg-color);
+}
+.bar-balanced {
+    @include bar-balanced($bar-balanced-bg-color);
+}
+.bar .button {
+    //@include bar-balanced($bar-button-bg-color);
+}
 .bar {
     background-image: none;
     height: 54px;
 }
-.bar-header {
-    background-color: transparent !important;
-}
-.bar-positive {
-    background-color: transparent !important;
-    border-bottom: 0 !important;
-    border: none !important;
-}
 .bar.bar-positive {
     background-image: none;
 }
-.bar-balanced {
-    background-color: #FFB71D !important;
-    border-bottom: 0 !important;
-    border: none !important;
-}
 .bar.bar-balanced.bar-footer {
     background-image: none;
-}
-.bar .button {
-    background-color: #FFB71D;
 }
 .bar .button.back-button,
 .bar button.back-button {
@@ -169,6 +256,9 @@
 }
 .bar .title {
     margin-top: 20px;
+}
+.button.button-balanced {
+    background-color: #FFB71D;
 }
 .bar .title .title-footer {
     margin-top: -10px;
@@ -201,10 +291,27 @@
     background-repeat: no-repeat;
     background-position: center, center;
 }
+/* COMPONENTS -> PLACEHOLDER
+============================================= */
+%title-title-center-header-item {
+  margin-top: 10px;
+}
+/* COMPONENTS -> MIXIN
+============================================= */
+@mixin transparent($transparancy) {
+  background: $transparancy;
+}
+@mixin title-title-center-header-item($background-color) {
+  @extend %title-title-center-header-item;
+  color: $background-color;
+}
 /* COMPONENTS
 ============================================= */
 .transparent {
-    background: rgba(0,0,0,0.7);
+    @include transparent($transparency);
+}
+.title.title-center.header-item {
+    @include title-title-center-header-item($title-title-center-bg-color);
 }
 .scroll-content {
     position: absolute;
@@ -217,24 +324,55 @@
     position: absolute;
     z-index: 2;
 }
-.title.title-center.header-item {
-    margin-top: 10px;
-    color: #ffffff;
-}
 .has-header {}
+/* QUICK MENU (CONTACTPAGE) -> PLACEHOLDER
+============================================= */
+%slide-icon {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  -webkit-animation: slide 0.5s forwards;
+  -webkit-animation-delay: 2s;
+  animation: slide 0.5s forwards;
+  animation-delay: 2s;
+}
+%togglemenu {
+  width: 100%;
+  left: 0;
+  position: absolute;
+  z-index: 1;
+  padding: 0 20px;
+  .contactQuickMenu {
+      height: 40px;
+      width: 40px;
+      border-radius: 20px;
+      transition: width 0.65s ease;
+  }
+  .contactQuickMenuActive {
+      width: 100% !important;
+  }
+}
+/* QUICK MENU (CONTACTPAGE) -> MIXIN
+============================================= */
+@mixin slide-icon($bg-color) {
+  @extend %slide-icon;
+  background: $bg-color;
+}
+@mixin togglemenu($bg-color) {
+  @extend %togglemenu;
+  .contactQuickMenu {
+      background: $bg-color;
+  }
+}
 /* QUICK MENU (CONTACTPAGE)
 ============================================= */
 .slide-icon {
-    position: absolute;
-    top: 10px;
-    left: 0;
-    width: 20px;
-    height: 20px;
-    background: blue;
-    -webkit-animation: slide 0.5s forwards;
-    -webkit-animation-delay: 2s;
-    animation: slide 0.5s forwards;
-    animation-delay: 2s;
+  @include slide-icon($slide-icon-bg-color);
+}
+.toggleMenu {
+  @include togglemenu($togglemenu-bg-color);
 }
 @-webkit-keyframes slide {
     100% {
@@ -249,35 +387,31 @@
 .expanded {
     width: 100% !important;
 }
-.toggleMenu {
-    width: 100%;
-    left: 0;
-    position: absolute;
-    z-index: 1;
-    padding: 0 20px;
-    .contactQuickMenu {
-        background: #988AA4;
-        height: 40px;
-        width: 40px;
-        border-radius: 20px;
-        transition: width 0.65s ease;
-    }
-    .contactQuickMenuActive {
-        width: 100% !important;
-    }
+/* SEARCH-BAR -> PLACEHOLDER
+============================================= */
+%search-bar-contact {
+  position: relative;
+  padding: 10px;
+  margin: 50% 20px 20px;
+  height: 200px;
+  h2 {
+      text-align: center;
+      color: #ffffff;
+  }
+}
+/* SEARCH-BAR -> MIXIN
+============================================= */
+@mixin search-bar-contact($bg-color, $color) {
+  @extend %search-bar-contact;
+  background-color: $bg-color;
+  h2 {
+      color: $color;
+  }
 }
 /* SEARCH-BAR
 ============================================= */
 .search-bar-contact {
-    position: relative;
-    padding: 10px;
-    margin: 50% 20px 20px;
-    background-color: transparent;
-    height: 200px;
-    h2 {
-        text-align: center;
-        color: #ffffff;
-    }
+  @include search-bar-contact($searchbar-contact-bg-color, $searchbar-contact-color);
 }
 .search-bar {
     border-radius: 50px;
@@ -306,32 +440,55 @@
     opacity: 1;
     transition: opacity 0.10s ease;
 }
+/* ITEM STYLES -> PLACEHOLDER
+============================================= */
+/* ITEM STYLES -> MIXIN
+============================================= */
+@mixin item-h2($color) {
+  color: $color;
+}
+@mixin item-divider($bg-color, $color) {
+  background-color: $bg-color;
+  color: $color;
+}
 /* ITEM STYLES
 ============================================= */
 .item h2 {
-    color: white;
+  @include item-h2($item-color);
 }
-// .item-avatar h2 {
-//     color: black;
-// }
+.item-divider {
+  @include item-divider($item-divider-bg-color, $item-divider-color);
+}
 .item p {
     white-space: normal;
 }
-.item-divider {
-    background-color: #FFB71D;
-    color: #ffffff;
+/* INFORMATION PAGE -> PLACEHOLDER
+============================================= */
+%information-page-layout {
+  box-shadow: none;
+}
+%information-page-layout-transprarent {
+  img {
+      filter: brightness(1000%);
+  }
+}
+/* INFORMATION PAGE -> MIXIN
+============================================= */
+@mixin information-page-layout($bg-color) {
+  @extend %information-page-layout;
+  background: $bg-color;
+}
+@mixin information-page-layout-transprarent($bg-color) {
+  @extend %information-page-layout-transprarent;
+  background-color: $bg-color;
 }
 /* INFORMATION PAGE
 ============================================= */
 .information-page-layout {
-    background: transparent;
-    box-shadow: none;
+  @include information-page-layout($information-page-bg-color);
 }
 .information-page-layout .transparent {
-    background-color: transparent;
-    img {
-        filter: brightness(1000%);
-    }
+  @include information-page-layout-transprarent($information-page-bg-color-transparent);
 }
 /* BUTTON
 ============================================= */

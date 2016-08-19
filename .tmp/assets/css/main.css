@@ -9172,24 +9172,25 @@ a.button {
 /* NEWS - */
 /* INFORMATION - */
 /* ICONS */
+/* .POCAPP-THEME-STYLES.SCSS */
+/* '' -> CUSTOM STYLES */
+/* '' -> SUBJECT */
+/* '' -> CUSTOM BAR STYLES */
+/* '' -> COMPONENTS */
+/* '' -> QUICK MENU (CONTACTPAGE) */
+/* '' -> SEARCH-BAR */
+/* '' -> ITEM STYLES */
+/* '' -> INFORMATION PAGE */
 /**
  * Import fonts either via @import url (e.g. from Googlee Fonts)
  * or via @font-face when font files are stored locally in /app/fonts
  */
 @import url(http://fonts.googleapis.com/css?family=Roboto:700,400,300);
-/* CUSTOM STYLES
+/* CUSTOM STYLES -> PLACEHOLDER
 ============================================= */
 .custom-tab-bar-item span {
-  color: #8E7F9C;
   font-weight: 100;
   font-size: 18px; }
-
-.tab-bar-custom {
-  padding: 0;
-  margin-top: 65px;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-  border-bottom-color: white; }
 
 .custom-item-contacts {
   background-color: transparent; }
@@ -9197,9 +9198,6 @@ a.button {
     left: 20px; }
   .custom-item-contacts h2 {
     color: white; }
-  .custom-item-contacts p {
-    color: #8E7F9C;
-    font-weight: bold; }
 
 .custom-item-projects {
   background-color: transparent; }
@@ -9209,9 +9207,69 @@ a.button {
     color: white;
     font-size: 24px;
     font-weight: 400; }
-  .custom-item-projects p {
-    color: #8E7F9C;
-    font-weight: bold; }
+
+.custom-profile-area, .custom-bar-header {
+  position: relative;
+  height: 150px;
+  width: 100%;
+  background: transparent; }
+  .custom-profile-area img:first-child, .custom-bar-header img:first-child {
+    position: relative;
+    top: 30%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+    max-width: 100px;
+    max-height: 100px;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%; }
+  .custom-profile-area h2, .custom-bar-header h2 {
+    position: absolute;
+    font-size: 1.26em;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  .custom-profile-area p, .custom-bar-header p {
+    position: absolute;
+    font-size: 10px;
+    top: 89%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+
+/* CUSTOM STYLES -> MIXIN
+============================================= */
+/* CUSTOM STYLES
+============================================= */
+.custom-tab-bar-item {
+  color: #8E7F9C; }
+
+.custom-item-contacts p {
+  color: #8E7F9C;
+  font-weight: bold; }
+
+.custom-item-projects p {
+  color: #8E7F9C;
+  font-weight: bold; }
+
+.custom-profile-area h2 {
+  color: #ffffff; }
+
+.custom-profile-area p {
+  color: #ffffff; }
+
+.custom-bar-header h2 {
+  color: #ffffff; }
+
+.custom-bar-header p {
+  color: #ffffff; }
+
+.tab-bar-custom {
+  padding: 0;
+  margin-top: 65px;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: white; }
 
 .custom-item-news h2 {
   font-size: 24px;
@@ -9224,101 +9282,77 @@ a.button {
 .custom-popover .list {
   margin-bottom: 0 !important; }
 
-.custom-profile-area {
-  position: relative;
-  height: 150px;
-  width: 100%;
-  background: transparent; }
-  .custom-profile-area img:first-child {
-    position: relative;
-    top: 30%;
-    left: 50%;
-    /* bring your own prefixes */
-    transform: translate(-50%, -50%);
-    max-width: 100px;
-    max-height: 100px;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%; }
-  .custom-profile-area h2 {
-    position: absolute;
-    font-size: 1.26em;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #ffffff; }
-  .custom-profile-area p {
-    position: absolute;
-    font-size: 10px;
-    top: 89%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #ffffff; }
-
 .custom-item {
   padding: 10px; }
-
-.custom-bar-header {
-  background-color: transparent !important; }
-  .custom-bar-header h1 {
-    margin-top: 0 !important;
-    color: #ffffff !important; }
-  .custom-bar-header button {
-    background-color: transparent !important; }
 
 .custom-item-slider {
   padding: 0; }
 
-/* SUBJECT
+/* SUBJECT -> PLACEHOLDER
 ============================================= */
 .active-subject {
   border-bottom-style: solid;
-  border-bottom-width: 3px;
-  border-bottom-color: white; }
+  border-bottom-width: 3px; }
   .active-subject span {
-    color: white;
     font-weight: 100;
     font-size: 18px; }
+
+.inactive-subject:hover {
+  border-bottom-style: solid;
+  border-bottom-width: 3px; }
+  .inactive-subject:hover span {
+    font-weight: 100;
+    font-size: 18px; }
+
+/* SUBJECT -> MIXIN
+============================================= */
+/* SUBJECT
+============================================= */
+.active-subject {
+  border-bottom-color: #ffffff; }
+  .active-subject span {
+    color: #ffffff; }
 
 .inactive-subject {
   background-color: transparent; }
 
 .inactive-subject:hover {
-  border-bottom-style: solid;
-  border-bottom-width: 3px;
-  border-bottom-color: white; }
+  border-bottom-color: #ffffff; }
   .inactive-subject:hover span {
-    color: white;
-    font-weight: 100;
-    font-size: 18px; }
+    color: #ffffff; }
 
+/* CUSTOM BAR STYLES -> PLACEHOLDER
+============================================= */
+.bar-positive {
+  border-bottom: 0 !important;
+  border: none !important; }
+
+.bar-balanced {
+  border-bottom: 0 !important;
+  border: none !important; }
+
+/* CUSTOM BAR STYLES -> MIXIN
+============================================= */
 /* CUSTOM BAR STYLES
 ============================================= */
-.bar {
-  background-image: none;
-  height: 54px; }
-
 .bar-header {
   background-color: transparent !important; }
 
 .bar-positive {
-  background-color: transparent !important;
-  border-bottom: 0 !important;
-  border: none !important; }
+  background-color: transparent !important; }
+
+.bar-balanced {
+  background-color: #FFB71D !important; }
+
+.bar {
+  background-image: none;
+  height: 54px; }
 
 .bar.bar-positive {
   background-image: none; }
 
-.bar-balanced {
-  background-color: #FFB71D !important;
-  border-bottom: 0 !important;
-  border: none !important; }
-
 .bar.bar-balanced.bar-footer {
   background-image: none; }
-
-.bar .button {
-  background-color: #FFB71D; }
 
 .bar .button.back-button,
 .bar button.back-button {
@@ -9329,6 +9363,9 @@ a.button {
 
 .bar .title {
   margin-top: 20px; }
+
+.button.button-balanced {
+  background-color: #FFB71D; }
 
 .bar .title .title-footer {
   margin-top: -10px; }
@@ -9361,10 +9398,20 @@ a.button {
   background-repeat: no-repeat;
   background-position: center, center; }
 
+/* COMPONENTS -> PLACEHOLDER
+============================================= */
+.title.title-center.header-item {
+  margin-top: 10px; }
+
+/* COMPONENTS -> MIXIN
+============================================= */
 /* COMPONENTS
 ============================================= */
 .transparent {
   background: rgba(0, 0, 0, 0.7); }
+
+.title.title-center.header-item {
+  color: #ffffff; }
 
 .scroll-content {
   position: absolute; }
@@ -9377,11 +9424,7 @@ a.button {
   position: absolute;
   z-index: 2; }
 
-.title.title-center.header-item {
-  margin-top: 10px;
-  color: #ffffff; }
-
-/* QUICK MENU (CONTACTPAGE)
+/* QUICK MENU (CONTACTPAGE) -> PLACEHOLDER
 ============================================= */
 .slide-icon {
   position: absolute;
@@ -9389,18 +9432,10 @@ a.button {
   left: 0;
   width: 20px;
   height: 20px;
-  background: blue;
   -webkit-animation: slide 0.5s forwards;
   -webkit-animation-delay: 2s;
   animation: slide 0.5s forwards;
   animation-delay: 2s; }
-
-@keyframes slide {
-  100% {
-    left: 100px; } }
-
-.expanded {
-  width: 100% !important; }
 
 .toggleMenu {
   width: 100%;
@@ -9409,7 +9444,6 @@ a.button {
   z-index: 1;
   padding: 0 20px; }
   .toggleMenu .contactQuickMenu {
-    background: #988AA4;
     height: 40px;
     width: 40px;
     border-radius: 20px;
@@ -9417,16 +9451,41 @@ a.button {
   .toggleMenu .contactQuickMenuActive {
     width: 100% !important; }
 
-/* SEARCH-BAR
+/* QUICK MENU (CONTACTPAGE) -> MIXIN
+============================================= */
+/* QUICK MENU (CONTACTPAGE)
+============================================= */
+.slide-icon {
+  background: blue; }
+
+.toggleMenu .contactQuickMenu {
+  background: #988AA4; }
+
+@keyframes slide {
+  100% {
+    left: 100px; } }
+
+.expanded {
+  width: 100% !important; }
+
+/* SEARCH-BAR -> PLACEHOLDER
 ============================================= */
 .search-bar-contact {
   position: relative;
   padding: 10px;
   margin: 50% 20px 20px;
-  background-color: transparent;
   height: 200px; }
   .search-bar-contact h2 {
     text-align: center;
+    color: #ffffff; }
+
+/* SEARCH-BAR -> MIXIN
+============================================= */
+/* SEARCH-BAR
+============================================= */
+.search-bar-contact {
+  background-color: transparent; }
+  .search-bar-contact h2 {
     color: #ffffff; }
 
 .search-bar {
@@ -9456,29 +9515,40 @@ a.button {
   opacity: 1;
   transition: opacity 0.10s ease; }
 
+/* ITEM STYLES -> PLACEHOLDER
+============================================= */
+/* ITEM STYLES -> MIXIN
+============================================= */
 /* ITEM STYLES
 ============================================= */
 .item h2 {
-  color: white; }
-
-.item p {
-  white-space: normal; }
+  color: #ffffff; }
 
 .item-divider {
   background-color: #FFB71D;
   color: #ffffff; }
 
+.item p {
+  white-space: normal; }
+
+/* INFORMATION PAGE -> PLACEHOLDER
+============================================= */
+.information-page-layout {
+  box-shadow: none; }
+
+.information-page-layout .transparent img {
+  -webkit-filter: brightness(1000%);
+          filter: brightness(1000%); }
+
+/* INFORMATION PAGE -> MIXIN
+============================================= */
 /* INFORMATION PAGE
 ============================================= */
 .information-page-layout {
-  background: transparent;
-  box-shadow: none; }
+  background: transparent; }
 
 .information-page-layout .transparent {
   background-color: transparent; }
-  .information-page-layout .transparent img {
-    -webkit-filter: brightness(1000%);
-            filter: brightness(1000%); }
 
 /* BUTTON
 ============================================= */

@@ -43,3 +43,45 @@ $icon-skype: url('../../images/icons/skype.png');
 $icon-email: url('../../images/icons/mail.png');
 $icon-mobileNumber: url('../../images/icons/mobile.png');
 $icon-storeContact: url('../../images/icons/more.png');
+
+/* .POCAPP-THEME-STYLES.SCSS */
+/* '' -> CUSTOM STYLES */
+$custom-tab-bar-item-color: #8E7F9C;
+$custom-item-contacts-color: #8E7F9C;
+$custom-item-projects-color: #8E7F9C;
+$custom-profile-area-color: #ffffff;
+$custom-bar-header-color: #ffffff;
+
+/* '' -> SUBJECT */
+$active-subject-border-bottom-color: #ffffff;
+$active-subject-color: #ffffff;
+$inactive-subject-color: transparent;
+$inactive-subject-border-bottom-color: #ffffff;
+$active-subject-hover-color: #ffffff;
+
+/* '' -> CUSTOM BAR STYLES */
+$bar-header-bg-color: transparent;
+$bar-positive-bg-color: transparent;
+$bar-balanced-bg-color:  #FFB71D;
+$bar-button-bg-color: #FFB71D;
+
+/* '' -> COMPONENTS */
+$transparency: rgba(0,0,0,0.7);
+$title-title-center-bg-color: #ffffff;
+
+/* '' -> QUICK MENU (CONTACTPAGE) */
+$slide-icon-bg-color: blue;
+$togglemenu-bg-color: #988AA4;
+
+/* '' -> SEARCH-BAR */
+$searchbar-contact-bg-color: transparent;
+$searchbar-contact-color: #ffffff;
+
+/* '' -> ITEM STYLES */
+$item-color: #ffffff;
+$item-divider-bg-color: #FFB71D;
+$item-divider-color: #ffffff;
+
+/* '' -> INFORMATION PAGE */
+$information-page-bg-color: transparent;
+$information-page-bg-color-transparent: transparent;
